@@ -1,13250 +1,4777 @@
-### 001-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p01 Where We're Going - 我们去向何方.ai-zh
-欢迎欢迎
 
-欢迎来到面向真实工程师的AI编码学习营
+### 001-AI Coding for Real Engineers p01 001 Where We're Going Before We Start
 
-我非常兴奋能来主持
+Welcome, welcome, welcome to the AI Coding for Real Engineers cohort. I'm super excited to be
 
-这是这个学习营的第二版
+running version 2 of this cohort. We've learned a lot since version 1 and I just can't wait to show
 
-自从第一版以来
+you the material. Since around December last year coding agents have taken a massive leap
 
-我们学到了很多
+forward in terms of capabilities and the stuff that you can do with them is just gone through
 
-我已经迫不及待想展示给大家了
+the roof in terms of power level, in terms of the stuff you can build and the speed at which
 
-这是课程内容
+you can build it at. This has resulted in lots of folks getting very very excited and building
 
-自去年12月左右以来
+these huge great complex frameworks around AI coding agents to help you build stuff faster. You
 
-编码智能体取得了巨大的飞跃
+guys may have used some of them like you know GSD or SpecKit or B-Mad or lots of things like
 
-就能力而言
+this. However I personally believe and have really always believed that you as a developer
 
-你能用他们做到的事情简直突飞猛进
+should own your process and what we're going to be doing in this course is teaching you a
 
-就能力层级而言
+process that you can then iterate on and build on and make your own. And at the core of this
 
-就你能构建的东西以及你构建的速度而言
+approach our reliance on real engineering skills, on heuristics and knowledge built up
 
-把它做出来
+from 30 years of development experience throughout the industry. Periodically throughout the course
 
-这让很多人变得非常兴奋
+I'm going to be waving actual books at you and we're going to be quoting from various sources
 
-并着手构建
+taking real development advice from people who've been doing it for a long time. And
 
-这些庞大的围绕AI编码智能体的复杂框架
+we're going to end up with a seven phase process that looks something like this, that
 
-很棒
+takes in grilling or interviewing, research, prototyping, creating documents that get us where
 
-他们能帮你更快的构建东西
+we need to go, turning those documents into issues, implementing those issues and then
 
-你们可能已经我用过其中一些
+reviewing what we've done. One of the main key pillars here is making sure that our implementation
 
-比如你知道的gsd spectcs b map
+step runs completely AFK, in other words away from keyboard, allowing you to parallelise your
 
-还有很多类似的东西
+work with the agent. One of the things I see people say all the time is it's so annoying
 
-不过我个人相信
+that I just have to sit there and watch the agent do its work. Well with AFK you don't have
 
-而且一直坚信
+to and that's one of the core tenets of this whole system. But getting it working and
 
-作为开发者
+getting it producing good code regularly is difficult and requires real engineering skills.
 
-你应该掌握主动权
+In order to make these exercises stick this is not just going to be lectures, these are
 
-你的流程
+interactive exercises. So we have an entire 20,000 line of code playground for you to
 
-而我们将在这门课里做的就是教你一套流程
+do your work in. We're going to be getting stuck in, we're going to be building real
 
-你可以在此基础上不断迭代扩展
+features inside this application. However I wanted to leave this door open to you which is
 
-并把它变成你自己的东西
+you don't have to use this repo. You can take the exercises that I'm giving you like
 
-而这一切的核心在于
+building a feature or making a product requirements document and you can use it on
 
-我们的方法是依赖真实的工程技能
+your own repo if you like. If you choose the cohorts project then of course you'll be able
 
-启发式方法以及长期积累的知识
+to follow along exactly, you'll be able to get support, whereas if you choose your own repo then
 
-来自行业30年的开发经验
+you'll be able to actually apply what we're learning directly into your own code. However
 
-在整个课程的各个阶段
+because it's your code I won't be able to offer as good support as if you're using
 
-我会拿着真正的书在你面前挥动
+the actual project. So I would say beginners or folks who are just starting out with this stuff
 
-我们还会引用各种来源的内容
+then use the cohort project, but if you're really confident or if you're just desperate
 
-向那些长期实战的人汲取真正的开发建议
+to get your own work and you don't mind a little less support then use your own repo.
 
-我们这就开始
+The cohort project itself is written in TypeScript and Node and React but you don't
 
-最终形成一个七阶段的流程
+really need to know that much about those technologies in order to be productive with
 
-大致如下所示
+the course. I'm going to walk you through exactly how to set up everything for the
 
-他会接收面试或访谈调研
+playground so you don't have to worry about that either. By the end of this course you
 
-研究原型
+will be able to take any coding agent and wrap it in a process so that you can start using it to
 
-验证编写能把我们带到目标位置的各类文档
+ship code on your own code bases. You'll be able to move faster than you've ever done before
 
-把这些文档转化为任务单
+because you'll be able to parallelise yourself with the AI. You'll be planning while the AI is
 
-落实这些任务
+shipping. You'll know when to intervene as the human in order to prototype and research
 
-然后复盘我们完成的内容
+and get a sense for imposing your taste on the project. Your code base will be healthier
 
-这里的一个关键支柱
+than it's ever been before because we know that agents thrive in good code bases and you'll be
 
-就是确保我们的实现步骤能够完全AFK运行
+able to build PRDs, you'll be able to turn those PRDs into issues and you'll be able to plan
 
-换句话说就是离开键盘
+huge tranches of work for your agent to pick up. Now if that sounds good then you are in the
 
-让你能够与智能体并行开展工作
+right place. Nice work and I will see you in the next one.
 
-我经常听到人们说的一件事
 
-就是真烦人啊
+### 002-AI Coding for Real Engineers p02 002 Navigating The Discord Before We Start
 
-我只能干坐着在那儿看着智能体干活
+One of the most useful resources you will have during the cohort will be the Discord server.
 
-有了a ask
+The Discord server is a place where you can get your questions answered,
 
-你就不必这么做
+where you can have discussions, where you can talk about stuff that's out of scope for the cohort
 
-而这正是其中一点
+or stuff that you've kind of discovered while going through the cohort material.
 
-这是整个系统的核心原则
+Inside the Discord server then we have a bunch of stuff that's actually not related to the course.
 
-但让它跑起来
+So I have anyone who's really part of my community is in here.
 
-并让它产出优质代码
+We have the text channels where we have a general channel for just sort of general chat.
 
-经常性的做到这一点很难
+For any stuff that's specific to AI Hero there's a channel here.
 
-并且需要真正的工程技能
+Then I have some for my prominent open source repositories.
 
-为了让这些练习会真正落地
+So Everlight has a repo or a Discord channel here.
 
-这不仅仅是讲座
+Sandcastle has one here.
 
-还有互动练习
+The Skills repo has one here.
 
-我们为你准备了一个完整的
+Then there's a showcase channel for people to showcase whatever they want.
 
-约2万行的代码练习场
+And then a channel for random folks.
 
-你可以在其中完成你的作业
+So these channels up here these are general use channels.
 
-我们要真正动手了
+So anyone who's even if you've not bought a course you can access these channels.
 
-我们会在这个应用里构建真正的功能
+However the stuff that you get with your course is down here.
 
-不过我想把这个选择留给你
+If you have the cohort 004 role in Discord you can see this.
 
-你不必非得用这个仓库
+One thing I've done with this cohort is that folks who bought the previous cohort,
 
-你可以把我给你的练习拿来用
+cohort 003, can also access these channels.
 
-比如构建一个功能
+So you can see in here that we actually have a bunch of folks already chatting
 
-或者做一个产品需求文档
+and these guys have the cohort 003 role.
 
-如果你愿意
+So AI Coding Cohort General this is for anyone who's taken the AI Coding Cohort.
 
-也可以把它用在你自己的仓库上
+And AI Coding Cohort Random is the same kind of vibe
 
-如果你选择训练营项目
+except it's just for out of scope stuff, off topic stuff.
 
-当然就能完全跟着一起做
+We've then got two channels specifically for cohort 004.
 
-你可以获得支持
+So this one is for questions.
 
-而如果你选择用自己的仓库
+This one is really important for getting your questions answered
 
-然后你就能把我们正在学的内容
+about specific things inside the course.
 
-真正应用到你自己的代码里
+For instance in cohort 003 we did the same thing
 
-不过因为这是你的代码
+and we got many many different questions here
 
-我无法像对待你自己的项目那样
+all about different topics from within the course.
 
-提供同样好的支持
+So if you have any questions regarding setup, anything that you need answers to
 
-使用实际项目
+then you can open up a thread inside one of those questions
 
-所以我会说初学者或者刚入门的人
+and you can get your question answered.
 
-如果你已经掌握了这些内容
+We also have a separate one of these for questions that you want answered
 
-那就去做学习赢的项目
+specifically by me in the office hours.
 
-但如果你非常有把握
+During the office hours I will be answering your questions
 
-或者你如果你只是迫切想推进自己的工作
+that's the whole purpose of the thing
 
-而且不太在意支持少一点
+and so I'll be looking in here to see your questions
 
-或者你也可以用自己的仓库
+and the best questions or the most popular questions will be floated up to the top.
 
-这个训练营的项目本身就是用tyt script
+For the duration of the cohort I'm going to be sitting in the Discord server
 
-node js和react写的
+answering your questions.
 
-不过要高效地使用它们
+And I'm also going to be nominating heroes.
 
-你其实不需要对这些技术了解的那么深
+So for instance El Gordino here and Kamel
 
-这门课里
+both not only have the cohort 003 role
 
-我会一步步带你把playground所需的一切都配置好
+they've also got this little red hero role here
 
-所以你也不用担心这个问题
+and you get the hero role for being heroic.
 
-到这门课结束时
+So for being really really helpful for posting interesting tips
 
-你将能够把任意编码智能体装进一套流程里
+or for just generally showing up inside the cohort and answering folks questions.
 
-这样你就能开始用它来交付代码
+So if you see any heroes in the Discord
 
-你自己的代码库
+then feel free to thank them for their generosity
 
-你将能够以前所未有的速度推进
+and treat them with the respect they deserve.
 
-因为你可以让你能与AI并行工作
+If you have any issues and you can't see the channels below
 
-当AI在交付代码时
+then make sure you click the link below
 
-你就在做规划
+which will take you to an interactive setup
 
-你会知道何时作为人类介入
+where you can just recover the role that you've purchased.
 
-以便进行原型设计和研究
+Hopefully that all makes sense
 
-并体会如何施加你的来感受一下这个项目吧
+and feel free to ask in the Discord if you have any queries.
 
-你的代码库会比以往任何时候都更健康
+Nice work and I'll see you in the next one.
 
-因为我们知道这些智能体
 
-会在良好的代码库里如鱼得水
+### 003-AI Coding for Real Engineers p03 003 Repo Setup Before We Start
 
-而你将能够编写P2D
+Okay, let's clone the repo and pull down the actual workspace we're going to be doing the course in.
 
-也能够把把这些PRD转成issue
+The repo is at AI Hero Dev Cohort 004 Project, and I will put a link below for you.
 
-你就能规划出大块的工作
+You can clone it to your local setup by pressing the code button here, by pressing HTTPS here,
 
-让你的智能体去接手
+and by pressing copy, and then by going into a terminal and writing git clone,
 
-如果这听起来不错
+and then pasting in the URL that you got.
 
-那你就来对地方了
+Again, I'll have this command below for you so that you can easily run it.
 
-干得好
+Next, you will need to download Node.js in order to complete the exercises.
 
-我们下一期见
+You can go to the link below and choose your version.
 
-### 002-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p02 Navigating The Discord - 导航Discord.ai-zh
-在学习班期间
+I recommend you choose either LTS version is fine, so either 22 or 24 is the current state.
 
-你最有用的资源之一就是discord服务器
+You can follow the instructions here.
 
-这个disport服务器是一个你可以得到问题解答的地方
+Make sure you select the right platform.
 
-也是一个你可以进行讨论区
+And once that's done, you should be able to open up the project inside VS Code,
 
-你可以在这里聊一些超出本学习班范围的话题
+open the integrated terminal, and then run Node-v, and it will tell you some version.
 
-或者你我在浏览学习班的资料时
+If you get some kind of unexpected error here or you see something that isn't this little version number,
 
-偶然发现在discord服务器里
+it means that Node has not been properly installed.
 
-然后我们还有一些其实跟课程无关的内容
+Once that's done, you're going to run corepack-enable here.
 
-所以我让任何人都可以
+And what this does is it installs a really important little bit of kit called PNPM.
 
-我的社区很大一部分就在这里
+PNPM is just a lot faster than NPM.
 
-我们有文字频道
+It saves a lot more disk space.
 
-其中有一个综合频道
+And in my mind, it's the industry standard.
 
-一个用于随便聊聊的普通频道
+Once you've run corepack-enable, you should be able to run PNPM-v
 
-至于和AI hero相关的具体事项
+and see some kind of version printed out.
 
-有专门的频道这里
+And then you will be able to run PNPM-install to install all of the packages in the repo.
 
-然后我也为我知名的开源项目准备了一些东西
+You should see some kind of output like this, which has all of the packages here.
 
-ever light有一个代码仓库和一个discord
+And you should also see a Node-modules folder that has been added.
 
-这里有一个频道
+If I refresh there, there it is.
 
-San castle
+There's my Node-modules folder with a bunch of stuff in.
 
-在这里也有一个skills仓库
+Once that's done, we're going to set up the playground here.
 
-在这里也有一个
+So we're going to go to the bottom and we're going to run PNPM-db colon seed.
 
-然后还有一个作品展示
+What this is going to do is just seed a little database that runs locally with our project.
 
-一个让大家展示自己想展示内容的频道
+The project is a course platform.
 
-还有一个给随便聊聊的人用的频道
+And so inside the database, we've created some user tables, some categories tables,
 
-这些就是上面的这些频道是通用频道
+quizzes, enrollments, lesson progress, records, quiz attempts, video watch events, all sorts of stuff.
 
-也就是说任何人都可以使用
+And so now we can go to the bottom and run PNPM-dev.
 
-即使你还没有购买
+And this runs a script to run the application locally on localhost, in my case, 5175.
 
-当然你可以访问这些频道
+If I go to visit that URL, then I should see a cadence video platform here.
 
-不过随课程提供的内容在下面
+If I click on courses, we can see some courses in theory.
 
-在这里
+There we go. Node.js and TypeScript looking good.
 
-如果你在discord拥有cohort004的身份组
+There is even a dev UI at the bottom here where we can log in as a user.
 
-你就能看到这个我在这上面做的一件事
+We're not going to explore this too thoroughly because one of the lessons that we're going to do in the course is exploring new code bases.
 
-是关于这个学习班
+So don't get too familiar with how this works yet.
 
-之前购买了上一个班次
+Let's not use our human eyes. Let's let the robots do it.
 
-0037的同学也可以访问这些频道
+Why not? Finally, you should install the agents that you're using if you don't already have one.
 
-你可以看到这里已经有不少人在聊天了
+In my case, I'm going to be using Claude code while we're walking through the course.
 
-这些人拥有学习班003的身份组
+But the stuff we cover in the course will be workable with nearly any CLI based agents.
 
-至于AI coding cohort general
+So for Claude code, I can run this command here and then I should be able to run Claude.
 
-这个频道面向所有上过AI编码学习班的
+And then I'll be prompted to log in, follow the prompts to log in with my account, and we should be good to go.
 
-都知道这个AI编码学习班的随机频道也是同样的氛围
+Once that's done, you should be able to run Claude like this and open up the.
 
-不过它只用于超出范围的内容
+Yeah, here we go. Let me trust this folder.
 
-离题的内容
+You should see a UI that looks something like this, although they may have changed it by the time that you see this.
 
-接下来我们有两个频道
+There should be some variety of text input here that you can say hello and it should reply to you back with some message.
 
-这是专门为第四期学习班的
+If you have any setup issues or weirdnesses at all, make sure you head to the Discord so that people can help you out.
 
-所以这个频道是用来提问的
+But if all went smoothly, then you are ready to take the course.
 
-这个频道对于获取帮助非常重要
+Nice work, and I'll see you in the next one.
 
-你的问题会得到解答
 
-尤其是关于课程内部的具体事项
+### 004-AI Coding for Real Engineers p04 004 Database Migrations Before We Start
 
-比如在003班次里
+One thing that a lot of folks got confused about when I first ran this course was how database and
 
-我们做了同样的事情
+database migrations work. If you are an experienced developer you probably don't need to watch this bit
 
-结果在这里收到了很多很多不同的问题
+but if you need a bit of kind of catching up on how databases function then this is the lesson
 
-都是关于不同的来自课程内容的话题
+for you. The type of database that we're using is an SQLite database and that sounds pretty
 
-所以如果你在设置方面有任何问题
+scary if you're a newbie but really what this means is it's a type of database that you can
 
-如果你有任何需要解答的问题
+save as a file on your file system. This is very different from databases like Postgres for instance
 
-可以在其中一个问题下开启一个话题串
+that you need to host on a remote server or run in let's say a docker container. If you ran the
 
-你的问题也能得到解答
+db seed script then you should see these little files here data.db data.bd shm data.db wow.
 
-我们还有一个单独的频道用于那些的问题
+If we want to we can totally delete these files from our code base that's a very simple
 
-你希望我本人在办公时间里专门回答的问题
+way that we can just reset the database back to nothing. And now if we try to run pnpm
 
-在办公时间期间我会回答你们的问题
+dev let's say and visit localhost 5175 then we're going to get an error that looks like this
 
-这就是这件事的全部目的
+saying no such table courses because it's trying to fetch a courses table that doesn't actually
 
-所以我会在那里查看
+exist because the database isn't there. So this means we can come back into here we can
 
-我会在这里查看大家的问题
+control c out of the dev script and run pnpm db colon seed again which will reseed it.
 
-以及那些最棒或最受欢迎的问题
+And just like that if we look at our file system again we can see that data.db is back.
 
-在整个学习班期间都会被置顶
+The way that we manage changes to the database is by looking at first of all the schema.ts file.
 
-我会一直在线
+Inside here we can see there are multiple different tables that represent the different
 
-我会在discord服务器里回答你们的问题
+things inside the database. So we have a users table, a categories table, a courses table,
 
-同时我也会提名一些英雄
+modules table, lessons table, enrollments table etc. You don't need to like look at this in
 
-所以比如这里的ALGORDINO和camel
+depth but this is an important thing to see. This is a drizzle schema and drizzle is a
 
-他们不仅都有003学习班的身份组
+library that we're using drizzle orm up here to manage our database. But changes to this schema
 
-这里还有一个红色的小英雄身份组
+won't automatically synchronize over to that database. To synchronize it over you can see
 
-只要你表现英勇
+the script that we might want to run. Inside your package.json file there are some scripts
 
-就能获得这个身份组
+inside here and these are the ones that we have been running with pnpm. So pnpm run db seed
 
-因为真的非常乐于助人
+that was the script that we've run. We ran the seed scripts just here.
 
-或者发布了有趣的技巧
+We've run pnpm dev to run react router dev to start the dev server. There's a couple of other
 
-又或者只是总体上表现的很棒
+db scripts that you need to be aware of. First of all is db generate. Every time you make a
 
-在学习班里积极参与并回答大家的问题
+change to the schema a new one of these will be created when you run db generate. If we go back
 
-所以如果你看到任何英雄出现在在discord上
+to package.json and usually your agent will be smart enough to work this out itself. The
 
-如果他们很慷慨
+thing the agent probably doesn't know to do is to run db colon migrate. What this migrate
 
-尽管感谢他们
+script does is it looks at all of the migration scripts just up here and then if any haven't been
 
-并以应有的尊重对待他们
+run it runs them. So this means that you need to deliberately keep your database in sync with
 
-如果你遇到任何问题
+the state of your code. So the whole process looks like this. You have a schema.ts file
 
-看不到下面的频道
+which is the kind of drizzle source of truth. You run db generate to turn that into migration
 
-请确保你点击了下方的链接
+files and then you run db migrate to actually migrate it to the database. This is how a lot
 
-会带你进入一个交互式设置页面
+of production setups actually work and this is the setup I want you to bear in mind anytime
 
-你可以在那里直接恢复你购买的身份组
+you're doing work with the database. And remember if you get into trouble and you need to reset
 
-希望这些都说清楚了
+you can always just delete this data.db file run pnpm db seed just here and you should be
 
-欢迎随时提问
+fine to start again. There are no actual users relying on this data it's just a dummy database
 
-如果在discord上有任何问题
+so you can feel free to just delete it and refresh anytime. Nice work and I will see you in the next one.
 
-随时提问
 
-做得好
+### 005-AI Coding for Real Engineers p05 005 Setting Up Claude For The Course Before We Start
 
-我们下期见
+Okay, now the repo is fully set up.
 
-### 003-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p03 Repo Setup - 仓库设置.ai-zh
-好的我们先克隆这个仓库
+We are now going to be setting up the agent
 
-把我们要上课用的实际工作区拉下来
+that I'll be using throughout this course,
 
-这个仓库是我们的AI hero def cohort004项目
+which is Claude Code.
 
-我会在下方放上链接
+If you want to follow along with Claude Code,
 
-你可以把它clone下来
+you are absolutely welcome to,
 
-点击这里的code按钮
+but you're also welcome to use
 
-选择HTTPSS
+any kind of CLI based coding agent.
 
-然后点击复制
+But for those who've never used a coding agent before,
 
-把仓库地址复制到你的本地环境
+I recommend you do use Claude Code.
 
-然后打开终端
+And the video here is advice
 
-输入git clone
+for what you should do if you do use it.
 
-再把刚才复制的那个URL粘贴进去
+And the first question you probably have
 
-好的我会把下面的这条命令也给你准备好
+is which model should I choose?
 
-方便你直接运行
+You can choose your model by specifying forward slash model
 
-接下来你会你需要下载node js才能完成练习
+and running this and you can set the model for Claude Code.
 
-你可以访问下面的链接
+So what I recommend is going with the defaults.
 
-然后选择你的版本
+But the tricky thing is that your defaults will be different
 
-我建议你选择LTS版本
+based on which subscription you have.
 
-22或24都可以
+So for me, I'm on 5x max.
 
-当前状态你可以按照这里的说明操作
+So my default model is Opus 4.6 currently.
 
-确保选择正确的平台
+However, if you're on the pro subscription,
 
-完成后
+then your default will be Sonnet 4.6 instead.
 
-你应该就能在vs code里打开这个项目
+I do not recommend using Haiku
 
-打开集成终端
+at any point during the course.
 
-然后运行node v
+Basically, it's just not capable enough.
 
-它会显示一个版本号
+And even though it's fast,
 
-如果你得到
+it just won't handle some of the workflows
 
-如果这里出现某种意外错误
+that we're gonna throw at it.
 
-或者你看到的内容不是这个小版本号
+So those are my recommendations.
 
-这意味着note没有正确
+If you're on 5x max or the max max plan,
 
-安装完成后
+then go for Opus 4.6.
 
-你要运行corpd enable
+If you're not, then I recommend going to 4.6 Sonnet.
 
-在这里启用
+And I also recommend choosing medium effort.
 
-它的作用是安装一个非常重要的小工具
+You can choose low effort
 
-叫做pm pm p npm比NPM快的多
+just by adjusting left and right here or high effort.
 
-还能节省更多磁盘空间
+I basically recommend whatever the default
 
-在我看来
+the harness suggests is.
 
-他就是行业标准
+For instance, recently they defaulted to high
 
-运行完kpack enable后
+for Opus 4.6 and then they lowered the default
 
-你应该可以执行PPMV
+to medium again.
 
-并看到一些版本信息
+They must have done some internal evaluations
 
-会打印出版本号之类的信息
+that actually checks that okay,
 
-然后你就可以运行偏pm install来安装所有依赖仓库里的各个包
+medium is fine for most work.
 
-你应该会看到类似这样的输出里面列出了所有包
+So to select the model and the effort,
 
-你还应该看到一个新增的node下划线modules文件夹
+I can just press enter here
 
-如果我刷新一下这里好了
+and then we can see set model to default Opus 4.6.
 
-我的note下划线modules文件夹出来了
+So your next question probably is
 
-里面有一堆东西
+which subscription should I get?
 
-等这个完成
+There are several options.
 
-我们就继续
+You can go for pro, you can go for max 5x
 
-为了在这里设置好playground
+or you can go for max 20x.
 
-我们要滚动到页面底部
+Now I can't give you a recommendation
 
-然后运行pp m dB seed
+because I don't know what your constraints are
 
-运行p p m DB seed
+in terms of cost.
 
-它的作用只是为本地运行的数据库填充一些初始数据
+I don't know what your constraints are
 
-我们的项目是一个课程平台
+in terms of how much you're gonna use this going forward.
 
-因此在数据库里我们已经创建了一些用户一些分类表测验
+What I would say is that I created the course
 
-报名记录
+with max 5x on this price point.
 
-记录测验
+So if you want to use the best model Claude has available
 
-尝试记录视频
+which is Opus 4.6,
 
-观看事件各种东西
+then I do recommend getting that max 5x
 
-现在我们可以到最下面运行pm pm def
+even if it's just for a month.
 
-这会启动一个脚本
+But if you can't stretch that far
 
-用于在本地运行应用
+or you just wanna try it out,
 
-在我的环境里是local host
+then pro with Sonnet 4.6 will be good enough.
 
-5175
+I can't guarantee that if you're not like
 
-如果我访问这个地址
+diving deep into every lesson,
 
-那么我应该在这里看到一个cadence video platform
+diving deep into every section
 
-如果我点击cos
+that you won't come up against usage limits,
 
-我们可以看到一些课程在搞定node js和type script
+but you should be able to get through it
 
-看起来都没问题
+with pro for sure.
 
-底部这里甚至还有一个开发用的UI
+So those are my recommendations.
 
-在这里我们可以用户身份登录
+Use the default model for your subscription tier
 
-我们不会深入探索这部分
+and decide between pro or 5x max
 
-因为其中一个我们在课程中会做的练习之一就是探索新的代码库
+depending on what your budget is.
 
-所以不要过于担心
+Nice work and I will see you in the next one.
 
-如果你还不熟悉它的工作原理
+Hello folks, edit Matt here just to say that
 
-那就别用我们的人眼去看
+the models have changed slightly
 
-让机器人来处理吧
+since I first ran this course,
 
-为什么不呢
+but the actual subscription tiers
 
-最后如果你还没有的话
+and the underlying ideas have absolutely not.
 
-应该把你打算使用的那些agent都装上
+Whichever model provider you use,
 
-就我而言
+they are gonna have a sort of Opus level,
 
-在咱们一起过这门课的时候
+top level model.
 
-我会用cloud code
+They're probably gonna have a mid tier model
 
-不过我们在课程里讲的内容几乎适用于所有基于CI的智能体
+and they're probably gonna have
 
-对于cloud code
+a very cheap Haiku level model.
 
-我可以在这里运行这个命令
+If you have any further questions about which model,
 
-然后应该就能运行cloud
+which agent setup you should use,
 
-然后我会被提示登录
+then do feel free to ask in the Discord.
 
-按照提示用我的账户登录
+Nice work, edit Matt out.
 
-这样应该就可以开始了
 
-完成后你应该就能像这样运行cloud
+### 006-AI Coding for Real Engineers p06 006 How To Take This Course Before We Start
 
-然后打开这个好了
+This course is structured into a bunch of interactive exercises,
 
-让我信任这个文件夹
+and these interactive exercises all happen in the playground.
 
-你应该会看到一个界面
+Now in order to run those exercises and do them yourself,
 
-看起来类似这样的东西
+you're going to need to get your repo into the same state that mine was when
 
-不过等你看到的时候
+I recorded the exercise.
 
-可能已经改了
+I've given you a really simple,
 
-这里应该有一个文本输入框
+easy to use tool that you can use to get your repo into the same state as
 
-你可以在里面打个招呼
+mine.
 
-然后他应该会我会回复你一些消息
+The way this works is you can go into the playground and run PNPM reset.
 
-如果你在环境搭建过程中遇到任何问题或奇怪的情况
+And what this will do is give you a bunch of commits that you can choose from,
 
-记得去discord
+from a history that I've provided for the entire course here.
 
-这样大家才能帮你解决问题
+For instance, we can reset to main, which is the starting point,
 
-如果一切顺利的话
+the main branch of the repo.
 
-那就你已经准备好开始这门课程了
+Or if we want to reset to a future point to maybe do a lesson further on
 
-干得漂亮
+in the course, then we can reset to that point.
 
-我们下节课见
+I'm navigating down this by just pressing up and down like this,
 
-### 004-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p04 Database Migrations - 数据库迁移.ai-zh
-我第一次开这门课时
+but I can also search.
 
-很多人困惑的一点是数据库和
+So if I want to look for the grill me skills section,
 
-数据库迁移是这样工作的
+then I can type grill me and that will show up.
 
-如果你是经验丰富的开发者
+Or I can search by number.
 
-可能不需要看这部分
+So oh four point oh five point oh one, for instance.
 
-不过如果你需要稍微补一下
+Then we've got this skill as a demo.
 
-数据库是如何运作的基础知识
+We are going to reset to this little point here.
 
-那么这就是给你上一课
+Oh one point oh one point oh one.
 
-我们使用的数据库类型是sq light
+And here what you'll notice is that we're on main right now and inside
 
-这听起来如果你是新手的话
+the package doc Jason file, there's a description saying,
 
-会有点吓人
+it's an awesome horse platform.
 
-但其实他的意思是
+That doesn't seem right.
 
-这是一种数据库
+This is a course platform, not a horse platform.
 
-它你可以把它作为文件保存在你的文件系统里
+So what we can do is we can use reset to reset to the point where I
 
-这何像比如POSTGRESQL
+fixed that package doc Jason description.
 
-你需要把它托管在远程服务器上
+And if we select this, then it says you cannot reset the main branch.
 
-或者用docker来运行容器里
+So we're not on the correct branch.
 
-如果你运行dB CD脚本
+So it's now giving me the option to choose a new branch name.
 
-就应该会看到这些小小的文件
+I'm going to call this dev for instance.
 
-比如data dB
+This is going to be my working branch throughout the course.
 
-data bb s h m data dB哇
+And now it creates a new branch dev and it's switched to the version of
 
-如果我们想的话
+the course or the version in the history where I've got an awesome
 
-完全可以把这些文件从我们的回到代码库
+course platform instead of an awesome horse platform.
 
-这是一种非常简单的方法
+So two things happen there at once.
 
-我们可以直接把数据库重置为空
+We switch branches to a new branch.
 
-现在如果我们试着运行偏pm def
+So if I run git status, we can see we're on branch dev.
 
-比如说然后访问local host
+And if I run git log like this, we can see that the commit here is
 
-5175
+the one with the fixed package Jason description.
 
-我们就会得到一个像这样的错误提示
+If I want to, I can run PM PM reset again, and now I can go back to main.
 
-说没有名为CORIS的表
+So I can reset to the starting point.
 
-因为他尝试去获取一个那个cos表
+And when I do this, then if I choose that, I can either reset the current
 
-其实并不存在
+branch or create a new branch from the commit.
 
-因为数据库还没创建
+I'm going to choose to reset the current branch.
 
-所以这个这意味着我们可以回到这里
+And now we've got an awesome horse platform back.
 
-先用control加C退出def脚本
+So we're back at the starting point.
 
-然后运行pp m dB
+Now, PM PM reset is a destructive action.
 
-再次执行seed
+That means it deletes existing work when it finds it.
 
-它就会重新填充
+This is really useful if you want to totally reset your repo to the state
 
-就这样
+that it was when I recorded the video, but it's less useful if you have
 
-如果我们再看一眼文件系统
+some cool work that you want to preserve.
 
-我们可以看到data dB又回来了
+For instance, let's say you added an NPM script here saying pizza that
 
-我们管理数据库变更的方式是查看
+just echoes an emoji of a pizza.
 
-首先是steam ts文件
+You commit it and you want to preserve it.
 
-在这里我们可以看到有多个不同的表
+And let's just grab that in there.
 
-它们代表数据库中的不同实体
+Then we're going to run PM PM reset again.
 
-所以我们有一个用户表
+And if we reset to main or we really reset anywhere actually, and let's
 
-一个分类表
+just reset the current branch, then we are going to, if we see pizza
 
-一张表
+is still there and then we reset the current branch and now the
 
-比如课程表
+pizza script has gone.
 
-模块表
+So unrelated changes get removed when you reset.
 
-课时表
+You're resetting the entire branch to the state that I recorded it in.
 
-报名记录表等等
+If you have some work that you want to preserve, then you can run PM
 
-你不需要我们稍后会深入看看这个
+PM cherry pick, and this preserves existing work.
 
-但这是个很重要的点
+So I've reset our repo back to the main branch and you can see
 
-这是drizzle
+we're back at horse platform here.
 
-至于schema
+If I go in and add our pizza script again, and I will generate a
 
-我们用的是drizzle
+thingy thing here and I've committed.
 
-这个库
+Now, if we try to let's go PM PM cherry hyphen pick instead.
 
-也就是上面的DRIZORM
+When we go to cherry pick the commit here, we should now should just work
 
-用来管理我们的数据库
+because all we're changing is this course platform and our existing
 
-但对这份STA所做的更改
+work gets preserved.
 
-不会自动同步到那个数据库里
+However, if I reset back to main, so let's just go PM PM reset
 
-要同步的话
+heading back to main here.
 
-看这里你可以看到我们可能要运行的脚本
+I'm going to reset the current branch.
 
-在你的package jsn文件中
+So we go back to horse platform.
 
-这里面有一些脚本
+If instead I go to frog platform like this, you can tell I've got a
 
-这些就是我们一直在运行的那些
+two year old cause I just think in farm animals and I commit it here.
 
-用的是PMPM
+Now, when I go to run PM PM cherry pick and I cherry pick the course commit,
 
-也就是p npm run
+we're going to get a merge conflict because it's attempting to preserve my
 
-Db seed
+previous work, but we have a merge conflict between the both here.
 
-这是我们之前跑过的那个脚本
+We can see the incoming change here is the course platform, which is the
 
-我们执行过这个seed脚本
+one that we're attempting to cherry pick.
 
-就在这里
+And the current change that we have is the frog platform.
 
-我们运行了pp m def
+Now, if you get into a situation like this where you want to cherry pick,
 
-也就是启动react router的开发服务器
+but you have a gnarly merge conflict, then AI is actually really good at
 
-还有几个你需要了解的dB脚本
+helping you out.
 
-首先是dB generate
+You can just say Claude, fix this merge conflict for me.
 
-每当你修改一次CHEMA运行的时候
+And it will guide you through it.
 
-就会创建一个新的这种文件
+Or if you just want to get out of there, you can run git cherry
 
-回到package js m看dB generate
+pick hyphen hyphen abort, and it will abort the cherry pick.
 
-通常你的AI智能体会足够聪明的
+And you'll still end up with your work preserved.
 
-让他自己搞定这个智能体
+Finally, the way these courses generally work is I'll be pushing
 
-很可能不知道要做的一件事
+updates to the course while you're taking the course, either to fix
 
-是运行DB DB migrate
+local issues or update packages, things like that.
 
-这个迁移脚本的作用是查看所有的迁移
+So this means that your dev branch, the one that you're working on
 
-这些脚本就在上面列着
+will get out of date with what I've prepared locally.
 
-然后如果有还没执行过的
+So what I've done here is I've provided for you.
 
-他就会去跑一遍
+Let's just do a git status.
 
-也就是说
+We're on the dev branch and we are going to run PNPM pull here.
 
-你需要刻意让数据库与代码状态保持同步
+And PNPM pull is kind of like an analogy to git pull, except it fetches
 
-所以
+all the stuff from the parent repo and pulls them into your branch.
 
-整个流程是这样的
+And in theory, this will just preserve everything.
 
-你有一个steam ts文件
+So it's not going to be a reset.
 
-它是追走的那种
+It's not going to reset it to any state.
 
-这是唯一的真相来源
+It's just going to grab all of the changes to main and pull them
 
-你运行dB generate
+into your branch.
 
-把它转换成迁移文件
+If you do get any merge conflicts here, then you should head into
 
-然后你再运行dB migrate
+Claude and say, just fix the merge conflicts.
 
-然后执行dB migrate
+So those are the three commands you need to know PNPM reset, which
 
-把改动真正同步到数据库里
+totally resets your work to the state that I recorded it in.
 
-很多生产环境就是这么做的
+Cherry pick that allows you to cherry pick existing commits and PNPM
 
-这些设置确实有效
+pull, which pulls in upstream changes as I make them to the repo.
 
-而这就是我希望你随时记在心里的配置
+Hopefully that all makes sense and feel free to ask in the
 
-来处理数据库相关的工作
+discord if you have any questions.
 
-记住如果你遇到问题需要重置
+Nice work and I'll see you in the next one.
 
-你随时都可以直接删掉这个data dB文件
 
-然后在这里运行pn p m dB seat
+### 007-AI Coding for Real Engineers p07 007 Office Hours Before We Start
 
-这样你就可以重新开始
+As part of this course, you get office hours with me.
 
-不会有问题
+This is about a 30 to 45 minute live stream that we do on day one, day five and day eight.
 
-毕竟没有真实用户依赖这些数据
+It's a YouTube live stream.
 
-这只是一个示例
+So you can just log in with your YouTube account and comment there.
 
-数据库
+And I'll be able to see your comments and we'll have a nice chat.
 
-所以你随时可以把它删掉
+And we can basically talk about anything.
 
-然后刷新干的漂亮
+This could be stuff in the course or it could be stuff that's happened
 
-我们下期见
+while the course has occurred.
 
-### 005-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p05 Setting Up Claude For The Course - 为课程设置Claude.ai-zh
-好了
+The videos for the office hours will be just available as YouTube VOD.
 
-现在代码仓库已经完全设置好
+So I'll keep them up there.
 
-接下来我们要配置我将要使用的智能体
+This is absolutely not mandatory viewing.
 
-在整个课程中
+It's mostly just for vibes and for having a bit of fun during the course.
 
-我们将使用cloud code
+Though, of course, if there is something that you want to walk through in depth
 
-如果你想跟着一起操作cloud code
+with me, then that is absolutely the time to do it as well.
 
-你完全可以这么做
+If interesting stuff comes out from the office hours, I usually record it
 
-但也欢迎使用任何基于CII的工具编码智能体
+as a little explainer somewhere in the course.
 
-不过对于那些从未使用过编码智能体的人
+So don't feel like you have to watch the whole thing just to catch any golden
 
-我建议你们一定要用cloud code
+nuggets that might fall from this particular goose or eggs, I suppose, if it's a goose.
 
-这个视频是给那些确实打算用它的人提供建议
+But anyway, I won't be laying eggs on stream, that's for sure.
 
-你首先可能会问的是我该选哪个模型
+The links for all of the office hours are below.
 
-你可以选择
+Nice work and I'll see you in the next one.
 
-你可以通过指定model来切换你的模型
 
-运行这个命令就能设置关于cloud code的模型设置
+### 008-AI Coding for Real Engineers p08 008 Intro Getting To Know Claude Code
 
-我建议直接使用默认值
+In this course I'm going to be primarily using Claude Code as my agent for driving the lessons,
 
-棘手的是
+for demonstrating things and for showing you how, you know, agents in general work.
 
-你的默认设置会根据你拥有的订阅而有所不同
+I'm doing this because it's a very popular harness, you may have used it yourself,
 
-就我而言
+and it's the one that I personally use the most right now.
 
-我用的是max5X
+But this course is harness agnostic, so you can choose whatever harness you like,
 
-所以我当前的默认模型是opp4.6
+as long as it runs in a CLI.
 
-不过如果你用的是pro订阅
+However, for folks who've never used a coding harness before,
 
-那么默认会是sonnet4.6
+or who just want a bit more out of Claude Code,
 
-我不建议在课程中的任何时候使用sq
+I've given you this section here so that you can get the basics before we get started.
 
-基本上他的能力就是不够
+It will give you a nice grounding of all of the things that you'll need to know about Claude Code
 
-尽管他很快
+before getting started with the course.
 
-但有些任务他就是应付不了
+And if you're experienced with Claude Code, then you'll probably still pick up a few tips,
 
-我们要让他去跑的工作流
+because I'm not just covering the basics, there are a couple of advanced things in there too.
 
-以上就是我的建议
+So, nice work, and I will see you in the next one.
 
-如果你用的是max5X或者最高档的max计划
 
-那就选open4.6
+### 009-AI Coding for Real Engineers p09 009 Managing Your Claude Code Session Getting To Know Claude Code
 
-如果不是的话
+All right, so you got Claude code ready to go and installed.
 
-那我推荐切换到sonnet4.6
+Let's open it up and check out the first few commands that I want you to learn.
 
-同时也建议选择中等effort
+For this entire course, I'm going to be running Claude from within VS code.
 
-你可以在这里左右调整
+We're going to talk about the relationship between Claude code and VS code.
 
-来选择低effort或者高effort
+But for now, it's OK just to run Claude inside the integrated terminal.
 
-我基本上就推荐采用工具链
+What you should see is a UI kind of like this.
 
-默认建议的那个设置
+I can't promise that they haven't changed the UI since they've recorded this.
 
-比如最近他们把opp4.6的默认值设成了高
+But something they will definitely keep is this enormous input box here.
 
-然后他们又把默认值降回medium
+We can say to Claude, hello, how are you?
 
-他们肯定做了一些内部评估
+And then to send it, we can press return inside the terminal.
 
-他确实会做检查
+It comes back with, hi, I'm doing well.
 
-好的medium对大多数工作来说就够了
+Thanks for asking. How can I help you today?
 
-那么要选择模型和effort
+In other words, this so far is so much like any other AI chat
 
-我只需要在这里按下回车
+application that you've used already.
 
-然后我们可以看到
+At this point, I would like you to run something.
 
-将模型设置为默认的opp s4.6
+I'd like you to run forward slash then terminal hyphen setup.
 
-所以你接下来的问题可能是我该选哪个
+It should turn this nice shade of lilac when you've completed the command here.
 
-定远有几种选项
+You can then use enter to initiate the command.
 
-你可以选择pro
+And this will set up a couple of key bindings for you.
 
-也可以选择max5X或者选择max20X
+In my case, because I'm on Windows Subsystem Linux,
 
-现在无法给你推荐
+then I have to install this manually myself.
 
-因为我不知道你在方面的约束条件是什么
+But if you're on a different operating system,
 
-成本方面我不清楚你在使用量上有什么限制
+like such as Windows or like Mac, you're going to just have it installed for you.
 
-接下来要说的是
+But once it is installed, you'll be able to do something very nice,
 
-我正式以这个价位创建了这门课程
+which is you'll be able to press shift enter to add new lines into your input here,
 
-用的是max5X
+which is really important when you want to express more complicated things.
 
-所以如果你想用cloud目前最好的模型
+For instance, I can type thank you and then add a couple of new lines
 
-也就是open4.6
+and then say very much like this for sort of dramatic effect.
 
-那我确实建议你开通max5X
+So from here, let's show a couple of really important commands
 
-哪怕只用一个月也行
+that we're going to be using on every single time that we use Claude Code.
 
-但如果你预算有限
+The first one here is forward slash usage, which shows your plan usage limits.
 
-或者只是想先试试
+So again, just to show you that again, because I did that quite fast,
 
-那么pro搭配sonnet4.6就足够了
+we go forward slash then usage.
 
-我不能保证
+And I can even use tab here to complete the command there.
 
-如果你不是那种每一刻都深入钻研的人
+So again, usage like that.
 
-深入讲解每个部分
+And then I run it with return.
 
-确保你不会遇到用量限制
+And this shows me how much Claude Code usage I have left in my current session
 
-但你肯定能用pro完成它
+on my current week.
 
-以上就是我的建议
+And there's a separate one for current week, Sony only.
 
-使用与你订阅等级相匹配的默认模型
+Now, this will probably look different based on which plan you're on
 
-然后根据你的预算在pro和max5X之间做选择
+and what Claude plans even look like in the future.
 
-干得漂亮
+For me, I'm on 5x max, and this is what it looks like with 5x max.
 
-我们下期见
+I can then press escape to cancel out of this.
 
-大家好
+Another really important command is to run forward slash context here.
 
-我是edit matt
+And what context is going to do is show me a graph of all of the different ways
 
-只是想提醒一下
+I'm using up my context window.
 
-自从我最初发布以来
+We are currently using about 21,000 tokens out of a maximum of 200k tokens.
 
-这些模型已经发生了一些细微的变化
+So we're using around 10% here.
 
-这门课程是我开的
+We're going to be talking a lot, lot more about context throughout this entire course.
 
-不过实际的订阅档位和背后的理念完全没有变
+And so this is a great way of giving you the ability to introspect the context
 
-无论你用的是哪家模型提供商
+that you're using and how much you have left.
 
-他们都会有一个类似欧帕斯级别的顶级模型
+The next command you definitely need to know about is to go down to the bottom
 
-他们很可能会推出一个终端模型
+and run clear here, which clears the entire conversation history.
 
-也很可能会推出一个非常便宜的模型
+Clear resets that context window back to zero.
 
-CQ级别的模型
+So it's kind of like you started up a whole new chat with Claude code.
 
-如果你还有关于选哪个模型的进一步问题
+It's forgotten everything that you talked about in your last chat.
 
-如果你不确定该用哪种智能体配置
+Again, we're going to be talking a lot about when to clear the context window,
 
-欢迎在disport里提问
+but this is how you do it.
 
-干的漂亮
+You either, of course, you can either just cancel out of code
 
-把edit net剪掉
+by pressing control C twice and just starting up a new Claude session here,
 
-### 006-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p06 How To Take This Course - 如何学习本课程.ai-zh
-这门课程由一系列互动练习构成
+or you can clear the current session by just running clear.
 
-这些互动练习都在playground中进行
+Now, finally, how do you interrupt Claude when it's running?
 
-现在为了运行这些练习
+Well, I'm going to ask it a question that's going to take a little longer to answer,
 
-并自己动手做
+which is tell me about this code base here.
 
-你需要把你的仓库调整到我在录制这个练习时
+And any time I want to, I can just press escape to interrupt it.
 
-所处的相同状态
+Once I've interrupted it, if I wanted to go again, I can just say go as well.
 
-我为你准备了一个非常简单好用的工具
+And that was me literally just typing in the word go and sending it on its way again.
 
-能让你的仓库和我的保持相同的状态
+And if I want to interrupt it again, I can just press escape
 
-它的用法是你可以进入playground
+and then it stopped doing what it's doing.
 
-然后运行pnp m reset
+OK, so we've learned how to add basic prompts inside here.
 
-它的作用是给你提供一系列提交
+We've learned that we can do shift enter to add new lines.
 
-你可以从我为整个课程准备的
+We've learned how to invoke commands with forward slash and using tab
 
-历史记录中进行选择
+to get to the end of the command.
 
-比如我们可以reset回main
+We've learned how to run usage here to check our plan usage limits.
 
-也就是起点及这个仓库的main分支
+We've learned how to run context here to visualize the current context.
 
-或者如果我们想重置到一个更后面的点
+And we've learned how to clear the context with forward slash clear.
 
-以便做课程里更靠后的某节课
+So I would say those are the basics done.
 
-我们也可以把分支重置到那个位置
+Nice work. And I will see you in the next one.
 
-我像这样按上下方向键来浏览
 
-但我也可以搜索
+### 010-AI Coding for Real Engineers p10 010 Prompting In The Terminal Getting To Know Claude Code
 
-所以如果我想找grime技能部分
+Now we understand the basics about Claw Code, I want to give you some nice little tips that you can use to improve your prompting.
 
-我可以输入grill me
+You may want to reference individual files when you're using Claw Code.
 
-它就会显示出来
+For instance, you may want to say, tell me lots of information about this file or make some changes to this specific file.
 
-或者我也可以按编号搜索
+To do that, you can use the at command and start typing inside here.
 
-比如04年5月1日
+For instance, I might want something inside the roots.ts file and it's just right here.
 
-我们就有一个技能作为演示
+So I can auto complete by pressing up and down on the keyboard.
 
-我们要把分支reset到这个点
+When I want to select something, I can press tab here.
 
-01年1月1日
+And of course, if I want to add another file, I can just go through that process again, where I can say app and then DB.
 
-你会注意到我们现在是在main上
+And let's see what's in here.
 
-而在package jsn文件里有一段描述写着
+Maybe DB schema is what I need.
 
-这是一个很棒的马平台
+So I tab and I complete that.
 
-这看起来不太对劲
+When I then run this by pressing return, these files will be automatically read into the context window here.
 
-这是一个课程平台
+This means that it doesn't need to go and find those files manually.
 
-不是赛马平台
+It's just read them automatically.
 
-我们可以做的是用reset把分支回退到
+This does cost you a little bit of upfront time, in other words, having to find these files.
 
-我修复那个package js o n描述的那次提交
+But it is worth it because it gives Claude exactly what it needs to succeed.
 
-如果我们选择这个
+One other tip you might not know about, even if you've been using Claude code for a while, is if you have a big prompt here and you want to,
 
-它会提示你不能reset main分支
+let's say, not do this now, but do it later, you can press control S and it will stash it.
 
-所以我们现在不在正确的分支上
+This has now stashed my command inside Claude's memory here.
 
-现在他让我选择一个新的分支名称
+And I can now submit another command, let's say hello, like this.
 
-我会把这个分支叫做def
+And it will then rehydrate and sort of come back to me here.
 
-比如他将是我在整个课程中的工作分支
+So again, I can stash with control S.
 
-现在他会创建一个名为death的新分支
+I can submit something says I'm good.
 
-并切换到课程的某个版本
+Thanks.
 
-也就是历史上的那个版本
+And when I submit, it will then restore after that.
 
-我现在有了一个超棒的课程平台
+This is really useful when you're giving Claude some feedback, let's say on some code that it's not done very well.
 
-而不是一个超棒的马匹平台
+And then you realize, oh, I just need to tell it something first, stash my current command, bring it back later.
 
-这里同时发生了两件事
+If you then realize, oh, I don't need this command at all, you can press control C and get rid of it.
 
-我们切换到一个新的分支
+One other really sweet thing you can do is you can copy and paste images into Claude code.
 
-如果我运行DISTATUS
+I've got this lovely image of Lake Bled in Slovenia.
 
-可以看到我们目前在def分支上
+I can right click it, copy the image and go to Claude code.
 
-如果我像这样运行git log
+And if you copy and paste it in, it can then reference that image.
 
-我们可以看到这里的这个提交
+Annoyingly, I'm on Windows Subsystem Linux and this doesn't actually work on WSL.
 
-就是修复了package jsm描述的那个
+But if you try it for yourself and press return, then it should be able to tell you where am I in the world?
 
-如果我想的话
+And it should tell you Lake Bled in Slovenia.
 
-我可以再次运行p m p m v set
+Pretty cool.
 
-现在我可以切回main
+So to summarize, then we've covered referencing particular files with this at symbol here.
 
-这样就能reset回到起点
+We've covered stashing with control S and we've covered pasting in images, which I'm kind of gutted not to be able to show you.
 
-当我这么做时
+And hopefully you were able to follow along clearly and nothing went wrong or did anything weird.
 
-如果我选择那个选项
+Nice work. And I will see you in the next one.
 
-我可以把当前分支reset
 
-或者从那次提交创建一个新分支
+### 011-AI Coding for Real Engineers p11 011 Claude And Your IDE Getting To Know Claude Code
 
-我选择把当前分支reset
+Let's now talk about how Claude integrates with your IDE of choice.
 
-现在我们又有这个超棒的horse平台回来了
+I'm using VS Code for this course, but you do not have to.
 
-所以我们又回到了起点
+You can use Cursi, you can use Windsurf, Antigravity,
 
-现在pp m reset是一个破坏性操作
+whatever fancy tools are available now.
 
-这意味着当他发现已有改动时
+The way that Claude integrates with it is via this IDE command here,
 
-会将其删除
+where it says you can manage the IDE integrations and show the status.
 
-如果你想把仓库完全重置到我录视频时的状态
+If we run this, we can see that we are connected to Visual Studio Code.
 
-这会非常有用
+I've got this working because I have installed the Claude code for VS Code extension here.
 
-但如果你有一些很棒的成果
+But if you run IDE in your terminal here,
 
-想保留下来
+then it should show you how to install your version for your IDE that you're using.
 
-它的用处就不大了
+If you're following along, let's press Enter to confirm and get out of this.
 
-比如说你在这里加了一个NPM脚本叫披萨
+The IDE integration is really for diff management.
 
-他只是打印一个披萨表情
+That's the thing that comes up most often.
 
-你已经提交了他
+For instance, if we prompt Claude to say,
 
-并且想要保留它
+remove the test watch command from package.json,
 
-我们就把它拿进来吧
+we can see that it read one file.
 
-然后我们会再次运行p m p m reset
+So it read the package.json and now it's made an update to package.json.
 
-如果我们reset到main
+Now, if we weren't connected to the IDE,
 
-或者其实reset到任何地方都可以
+then this would show as a diff inside the terminal, which is a little bit awkward.
 
-我们就把当前分支reset一下
+But since we're connected to VS Code,
 
-然后我们会这样做
+we can actually close this and we can see the diff in VS Code.
 
-如果看到pizza还在
+This is really nice because this is much, much richer.
 
-那就把当前分支reset
+And it lets us actually scroll and see what's going on in the file.
 
-现在那个披萨脚本已经没了
+And we can see that this is a decent edit.
 
-当你执行reset时
+We can then either press this accept proposed changes up here
 
-无关的改动会被移除
+or we can click inside here and save the file.
 
-你会把整个分支重置到我录制时的状态
+And by saving the file, we agree to the changes.
 
-如果你有想保留的工作成果
+This is the reason that I'm running Claude code inside VS Code.
 
-可以运行p m p m cherry pick
+It's really nice to be able to dive in sometimes
 
-它会保留你现有的改动
+and just tweak some things about Claude code's output.
 
-我已经把我们的仓库重置回main分支了
+And if I need to update any diffs or review any diffs,
 
-你可以看到我们现在又回到了horse platform
+it's so much nicer doing that in a proper IDE
 
-如果我再进去把我们的披萨脚本加回来
+than just doing it in the terminal.
 
-我会在这里生成一个东西
+There are more features and there are more ways
 
-并且我已经提交了
+that VS Code integrates with Claude code
 
-现在如果我们试试改成运行p m p m cherry pick
+and your IDE probably does too.
 
-当我们去cherry pick这里的这个提交时
+But this diff feature was the one I wanted to show off
 
-现在应该就能正常工作了
+because it's the one I end up using, you know, 99% of the time.
 
-因为我们只改动的是这个课程平台
+So hopefully you were able to follow along with that.
 
-而现有的工作都会被保留
+Feel free to go back through the video if you weren't
 
-不过如果我要回退到main
+and ask any questions on the Discord if you ran into trouble.
 
-那就先执行p m p m v set
+Nice work and I will see you in the next one.
 
-把这里回到main
 
-我要把当前分支reset一下
+### 012-AI Coding for Real Engineers p12 012 Going Forwards And Backwards In Time Getting To Know Claude Code
 
-让我们回到horse platform
+One really important thing that Claude code allows you to do is go backwards and forwards in the conversation.
 
-如果换成这样去frog平台
+This is really important for when you're trying something out that maybe you later want to revert.
 
-你就能看出我有个两岁的孩子
+For instance, in the previous video, we just did a change where we removed a dev script.
 
-因为我满脑子都是农场动物
+Now, what I could say to Claude is just revert that, please,
 
-然后我在这里把它提交了
+and it will go and undo the change that it just did before by just rewriting, re-adding it back in.
 
-现在当我运行pn p m cherry pick
+And I'm just going to accept this by pressing Ctrl S to save the diff.
 
-并把课程的提交cherry pick过来时
+But there's another option here.
 
-我们会遇到一个合并冲突
+I can press Escape Escape in quick succession to enter rewind mode.
 
-因为他试图保留我之前的工作
+And in rewind mode, I get to restore the code and or the conversation to this point.
 
-但我们在这里
+For instance, if I just want to revert the command that I just did, I can just choose this one.
 
-两者之间出现了合并冲突
+This one at the bottom is the current state.
 
-我们可以看到这里的传入变更是课程平台
+This one is the point at which I said revert that, please.
 
-也就是我们正常是进行cherry pick的那个
+And so I can select it with enter.
 
-而我们当前的改动是青蛙平台
+Now, there's a few different options here that I can choose.
 
-如果你遇到这种情况
+The first one will be to restore the code and the conversation.
 
-你想做cherry pick
+In other words, to just rewind my session to the point before this code edit was made.
 
-但一开始就遇到了合并冲突
+Or I could restore the conversation, but keep the code as it was.
 
-其实AI真的很擅长帮你解决问题
+That would be number two.
 
-你只需说cloud帮我解决这个合并冲突
+Or I could restore the code, but keep the conversation how it is.
 
-他就会一步步引导你完成
+The one I choose most often is just to restore the full code and conversation.
 
-或者如果你只是想退出这个操作
+So I'll do that now.
 
-你可以运行git cherry pick board
+And we can see that the code has been reverted.
 
-它会终止这次cherry pick
+So now we are back to the point at which we had test watch deleted.
 
-而你现有的工作仍然会被保留
+If I want to go back further, I can open up the terminal again and just press escape twice to go back.
 
-最后这些课程的运作方式一般是在你上课期间
+And let's choose we go back to the point where we remove the test watch command completely.
 
-我会持续向课程推送更新
+Another interesting option is this summarize from here command, but we'll talk about that later.
 
-要么是为了修复本地问题
+I'm actually going to cancel this by choosing never mind and just sticking to the current state.
 
-要么是更新包之类的
+One of the things that's also really important is the fact that Claude actually persists its sessions locally.
 
-这意味着你正在工作的def分支
+What this means is you can quit out of Claude by pressing control C twice and then you can resume it in a bunch of different ways.
 
-会和我本地准备的内容不同步
+You can either resume the session by running this command directly that you get from the output of the previous command.
 
-我在这里做的是给你们准备了一些东西
+So I can just run Claude resume and then the UUID.
 
-我们先来执行一下git status
+And then I just go back into the exact state that I left previously.
 
-我们现在在def分支上
+Another way of doing this is if I can just control C twice again to exit and I opened up a new session just by typing Claude.
 
-接下来要在这里运行pm pm p
+This one is a totally clear session.
 
-而pm pm pull有点像GPO的类比
+Inside here, I can press forward slash resume and resume a previous conversation.
 
-只不过他会从副仓库抓取所有东西
+And now I get to choose all of the conversations that I've had here.
 
-并将他们拉取到你的分支
+I can even search through all of the sessions that I've had in the repo if I want.
 
-理论上
+Let's go back to the one that we were just using and I can press return to go into that.
 
-这会保留所有东西
+And again, I'm back in that same session.
 
-所以他不会执行reset
+So if your session is interrupted for any reason, then you can always resume it because Claude persists it locally.
 
-也不会把它重置到某个状态
+So that's how Claude allows you to go backwards and forwards in the conversation, either by entering rewind mode by pressing double escape and just kind of like zooming through all of the content here.
 
-他会抓取所有对main的更改
+Or I can cancel out of this and restart my session any time.
 
-并将他们拉取到你的分支
+I can even just choose to resume the previous session by running Claude hyphen hyphen continue.
 
-如果你在这里遇到任何合并冲突
+And again, this pulls me into exactly where I was.
 
-那就打开cloud
+Beautiful. So very nice work and I will see you in the next one.
 
-告诉他把合并冲突修好就行
 
-以上就是你需要掌握的三个命令
+### 013-AI Coding for Real Engineers p13 013 Running Bash Commands Getting To Know Claude Code
 
-P m p m reset
+One super important part of working with Claw Code is running bash commands.
 
-会把你当前的工作完全重置到我录制时的状态
+Bash commands turn your agent from just a passive code writer into something that can actually seek feedback loops,
 
-cherry pick可以让你把已有的提交挑选出来
+can actually work with your project and can use all the power of bash at its disposal to find information and to do stuff.
 
-还有PNPN破
+Now we can just manually ask Clawed, OK, run the dev server for me.
 
-他会在我向仓库推送更改时
+And because it's quite smart, it will understand, OK, I need to read the package.json.
 
-把上游改动拉取进来
+I need to find where the dev server is and then I need to run it like this.
 
-希望这些都说清楚了
+We'll get into what this is doing here in this kind of approval setup here.
 
-如果有任何问题
+But suffice to say, there are sometimes when you just know what command you want to run and you just want to run it and then put the results into Clawed's context.
 
-欢迎在disport里提问
+So the way you do that is I've just restarted my Clawed code instance.
 
-干得好
+I'm going to just put an exclamation mark and now I've entered bash mode.
 
-我们下期见
+And now anything I put in here will be turned into a bash command and actually run for Clawed.
 
-### 007-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p07 Office Hours - 办公时间.ai-zh
-作为这门课的一部分
+So, for instance, why don't I run npm run type check inside here?
 
-你可以参加我的办公时间
+And now it just runs the command after I press enter.
 
-这是在第一天进行的一场大约30到45分钟的直播
+Now, because I haven't run npm install in my setup here, I'm getting a lot of errors and these errors are now present to Clawed in its context.
 
-第五天和第八天
+So I'm going to get it to help me solve these errors and it will be able to see the errors and actually work with them.
 
-这是YOUTUBE上的直播
+And there we go. It's figured out that Zod is in package.json, but not installed.
 
-所以你只需用你的YOUTUBE账号登录
+I should run npm install. There we go.
 
-并在那里留言
+Now, this works well for commands that essentially have a start and an end.
 
-我可以看到你的评论
+But what about commands that are supposed to persist, like long running dev servers?
 
-我们还能好好聊一聊
+Well, for that, we can run npm run dev inside bash mode here.
 
-我们基本上可以聊任何事情
+And what we can do is while it's running, we can actually press control B to run it in the background.
 
-这可能是课程里的内容
+And in this version of Clawed code, something appears that says command was manually background with user with ID this.
 
-也可能是最近发生的事情
+And any output in that task goes into a local file.
 
-在课程进行期间
+You can then see that underneath our status line here, there is a little background task that's showing.
 
-办公时间的视频将仅以YOUTUBE点播录像的形式提供
+And so I can zoom downwards with just the down arrow there and I can press return to see it.
 
-我会把他们一直留在那
+And now I can actually view the shell.
 
-这绝对不是必看的内容
+I can view what's going on here and I can see that it's on localhost 5175.
 
-这主要是为了营造氛围
+I've got lots of options here.
 
-也让课程期间有点乐趣
+I can stop it with X if I want to, or I can just press left to go back.
 
-不过当然如果你有想深入讲解的内容
+And now I'm back in my Clawed code instance.
 
-那就绝对也是跟我一起做的最佳时机
+This is really useful when you're debugging a problem with your dev server, let's say, or with a long running command,
 
-如果办公时间里出现了有意思的内容
+because Clawed can see where all of the logs are being written to.
 
-我通常会在课程的某个地方把它录成一段小讲解
+It can try something out in the UI maybe or send a curl request.
 
-所以别觉得非得把整段都看完才能跟上
+And then it can actually see the output of the dev server.
 
-我想这只特别的鹅可能会掉下来的金块或者蛋
+So I've just reset my instances so we can see another feature, which is suspending Clawed code.
 
-如果他是支额的话
+If, for instance, I want to run something that I don't want Clawed to see the results of, or I don't care to show it,
 
-不过总之我不会在直播时下单
+and I have some state inside Clawed that I want to preserve, then I can use suspend.
 
-那是肯定的
+I can press control Z inside here and Clawed code has been suspended.
 
-所有办公时间的链接都在下方做的不错
+This means I can now run any command I want to.
 
-我们下期见
+I can just echo foo inside here.
 
-### 008-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p08 Using Claude Code - 使用Claude Code.ai-zh
-在这门课程里
+And this is not visible to Clawed code.
 
-我将主要使用cloud code作为驱动课程的智能体
+If I want to bring Clawed code back, I can just run FG here and I get my Clawed code instance back with all of its state.
 
-用来演示一些操作
+So this is great if you just want to go, OK, don't care about Clawed code, do something like whatever command I want,
 
-也让你了解智能体一般是如何工作的
+and then FG to bring it back.
 
-我之所以这么做
+So the decision tree for this really looks like this.
 
-是因为这是一个非常流行的工具框架
+If you want the output of the bash command that you're running to be visible to Clawed,
 
-你可能已经用过它
+then you can use bash mode here by using the exclamation mark.
 
-而且这也是我个人使用的那个
+And you can background that with control B and then manage those backgrounded tasks.
 
-现在就用最顺手的那个
+Again, really, really useful for dev servers.
 
-但本课程是工具无关的
+I don't use it every single time, but when I do use it, it's usually for debugging some kind of dev server issue.
 
-因此你可以选择任意你喜欢的工具
+But if you want the command to be totally hidden from Clawed, you can just suspend it quickly with control Z.
 
-只要他能在CII里运行就行
+And of course, these are Windows shortcuts, so you might be needing to do something different if you're on Mac.
 
-不过对于那些从未用过编码
+So those are all the different ways that you can manage bash commands in Clawed code.
 
-智能体工具的人来说
+Nice work, and I'll see you in the next one.
 
-或者只是想从cloud coat里多榨取一点价值的人
 
-我给你们准备了这一节
+### 014-AI Coding for Real Engineers p14 014 Permissions Getting To Know Claude Code
 
-这样在我们正式开始之前
+Whenever you're working with an agent, you always need to think about risk versus reward.
 
-你就能先掌握基础知识
+Especially in how much power you give over to it.
 
-他会为你打下扎实的基础
+If I were to give Claude infinite power like many people have done,
 
-在开始这门课程之前
+then I would be understandably nervous that it would do something crazy with that power.
 
-你需要了解的关于cloud code的所有事项
+For instance, you know, delete my entire file system by accident.
 
-而如果你已经熟悉cloud code
+To mitigate that Claude code has a very detailed permissions model
 
-你大概也还能学到一些小技巧
+and by default is very strict with itself with what it allows the agent to actually go and do.
 
-因为我不仅讲基础知识
+For instance, I'm going to tell Claude code to run a bash command to run echo hello.
 
-里面还包含一些进阶内容
+And because echo is an extremely safe command, Claude code thinks this command is fine for it to run.
 
-做的很棒
+But if I get it to do something else, such as run a type check on the project,
 
-我们下期见
+then it might do something differently.
 
-### 009-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p09 Intro - 简介.ai-zh
-好了
+We can see it's now requesting to run a command here.
 
-既然你已经安装并准备好使用cloud code
+So it's trying to run PMPM type check.
 
-那就打开它看看吧
+So we see a few things here.
 
-先讲几个
+We see first of all the command, the exact command it's going to run.
 
-我希望你掌握的基础命令
+We then see the reason it wants to run it.
 
-在整个课程里
+It wants to run a type check using react router type gen and TSC.
 
-我都会在vs code里配合cloud code来演示
+And we have three options here.
 
-在vs code里运行cloud
+We can say, yes, you're allowed to do this this time or yes.
 
-我们要谈谈cloud之间的关系
+And you're allowed to then from now on, run any PMPM type check command inside this project.
 
-当然也可以在vs code里运行
+Or we say no.
 
-不过目前直接在集成终端里跑cloud也没问题
+And inside here, we can do something clever.
 
-你应该会看到一个类似这样的界面
+If, for instance, we don't want it to do this exact command,
 
-我不能保证他们没有改过他界面
+we can press tab and we can give a reason here.
 
-在他们录制这段之后可能会有变化
+For instance, we might just want to use NPX TSC instead for some reason.
 
-但有样东西他们肯定会保留
+And now it's asking us if it wants to if we can run NPX TSC instead.
 
-就是这个巨大的输入框
+So let's say we agree to this and we say, yep,
 
-这里的输入框我们可以对cloud说hello
+and you don't need to ask again inside this project, what actually happens?
 
-How are you
+Well, first of all, for some reason, it's actually failed the type check on this branch,
 
-然后要发送的话
+which is, I think, my fault.
 
-可以按下在终端里回车
+As we can see, it actually reported the results from the type check
 
-他会回复说嗨
+and they were reported back to the LLM.
 
-我很好
+But crucially, our preferences here were recorded inside a file just at the top here.
 
-谢谢关心
+This is inside the .clawed folder and this is inside settings.local.json.
 
-有什么可以帮你的
+Here we have a permissions property on side this piece of JSON here.
 
-今天我能帮你吗
+And inside this allow array are all of the things we are allowing for this project.
 
-换句话说
+The syntax is really important to understand here because we can actually edit this ourselves
 
-到目前为止
+if we want to ahead of time, allow things to happen in the repo.
 
-它和其他任何AI聊天应用都非常相似
+For instance, if we want to, we can say bash here and just say, let's say, PNPM type check.
 
-以至于你已经用过它了
+And this means that the PNPM type check command will now be automatically allowed by Claude code.
 
-现在我想让你运行点东西
+If instead we want to say that all PNPM commands are available,
 
-我想让你继续往下走
+then we can replace this with a wildcard here.
 
-先输入斜杠
+We can also disallow Claude from doing things by using the deny inside here.
 
-然后输入terminal setup
+For instance, we might not want it to run bash, let's say, git push, for instance.
 
-设置成功后
+And so git push with a wildcard would be a safe one here to deny it always.
 
-它应该会变成这种漂亮的淡紫色
+However, it's not just bash commands that Claude code needs permission in order to be able to run.
 
-在这里完成命令后
+Claude code can also search the web and fetch web pages in order to back up what it's seeing locally.
 
-你可以按回车来执行它
+So for instance, I can get it to fetch info about React router type gen from the web.
 
-然后这个我会为你设置几个快捷键绑定
+And it's now asking me to do a web search for React router type gen.
 
-就我而言
+If I say yes and don't ask again for web search commands,
 
-因为我用的是windows subsystem for linux
+then it's going to add it to the settings.local.json up here.
 
-在LINUX上我就得自己手动安装它
+And we can see that it's then going to fetch from this website, reactrouter.com.
 
-但如果你用的是其他操作系统
+So now it's fetched from there and it's given me a summary of how React router type gen works based on the actual documentation.
 
-比如在windows或者Mac上
+The final thing to say is that these settings.local.json are in my project, they git ignore, so they apply only for me.
 
-它会自动为你安装好
+But if I wanted to share these with my team, let's say,
 
-但一旦它安装完成后
+and have a specific set of things that were always allowed within this repo that were part of those project settings,
 
-你就能做一件很棒的事
+then I would rename settings.local.json to settings.json.
 
-也就是你可以按下
+These can then be shared with your team or any Claude code instance that's running on your repo.
 
-在这里用shift加enter
+And they will pick these up too.
 
-可以在你的输入中添加新行
+This can be incredibly powerful for anyone starting on your repo for the first time.
 
-这在你想要时非常重要
+They just run Claude and Claude then knows what's allowed for that repo,
 
-来表达更复杂的内容
+which can be a lot faster than having to manually set up the permissions for yourself each time.
 
-比如我可以先输入
+We're going to be touching on permissions more throughout the course, of course,
 
-Thank you you
+but I just wanted to give you an intro so you understand what the approval flow looks like
 
-然后再补充几句
+and you can edit these permissions if you like.
 
-多换几行
+Nice work and I will see you in the next one.
 
-然后像这样说话带点戏剧效果
 
-那么从这里开始
+### 015-AI Coding for Real Engineers p15 015 The Constraints Of LLMs Day 1 Fundamentals
 
-让我们我来展示几个非常重要的命令
+Before we even touch Claude code, we need to understand the constraints of LLMs because they come with some extremely strange ones.
 
-我们几乎每次都会用到
+A lot of people think of LLMs as like a really enthusiastic junior developer who can work 24-7, but it really is a lot weirder than that.
 
-我们用的是cloud code
+And understanding this stuff is so fundamental because if you don't understand it, you're going to end up blaming AI when in fact you're just working against how the models are supposed to work.
 
-这里第一个是usage
+In this video, I'm going to walk through each of these constraints and explain how they affect your usage of tools like Claude code.
 
-它会显示你的计划用量限制
+And let's start with the biggest constraint, which is the scaling laws around tokens and the context window.
 
-再说一遍
+The way that LLMs work is they take input text like this, they split it up and then they tokenize it into numbers here.
 
-刚才我做的有点快
+You don't really need to know why they do this. I've talked about this in separate videos.
 
-我们输入斜杠
+But when you get these lists of tokens here, all of the tokens that the LLM can see are its context window.
 
-然后是usage
+We've only got three tokens here in this very small example, but a typical context window maxes out around 200,000 tokens.
 
-我还可以在这里用tab来补全这个命令
+Now, if we were to add another token to this context window here, you might think, okay, all we got to do here is just store an extra number in memory, right?
 
-再说一次
+But that's not quite right. Not only are we storing the actual token in memory, we're also storing all of its relationships to every other token.
 
-像usage这样
+So for four tokens, that means six relationships.
 
-然后按下回车运行
+For eight tokens, we've immediately scaled up to 28 relationships.
 
-它会显示我在当前周期还剩多少
+And if I were to draw 100 tokens here, that would mean roughly 5000 arrows here.
 
-coud code的使用额度
+In other words, every time we add a token, the number of things the LLM has to track and keep hold of scales quadratically.
 
-当前绘画在我的本周里
+It's not like appending a character to a document.
 
-还有一个专门用于锦本周sonnet的绘画
+It's like adding a team to a football league where the number of games played massively increases as you add teams.
 
-现在这可能会因你使用的套餐不同
+Now, what this means in practice is as you're using your coding agent, as you're adding more messages to the context window, you are really putting a huge strain on the LLM.
 
-而看起来不一样
+And this means as you fill up the context window, the model will start to struggle and you end up in what I call the dumb zone.
 
-也取决于cloud的套餐具体是什么样子
+In the smart zone, early in the context window, the LLM has lots of memory to spare.
 
-比如将来对我来说
+Its attention relationships are not very strained and it can reason really clearly.
 
-我目前开到最大五倍速
+It can attend to all the information in its context window and in general it makes smart decisions.
 
-这就是在五倍速下的样子
+But later, when it starts getting a little bit more strained, it goes up into the dumb zone.
 
-我可以然后按下escape
+This is where hallucinations start to creep in.
 
-取消当前操作
+And reasoning gets a lot worse and sometimes it will struggle to recall information that's just sitting there in its context window.
 
-另一个非常重要的命令是输入斜杠
+Now, where this dumb zone actually starts is a matter of some controversy and it will probably change over time.
 
-这里的context它的作用是向我展示一个图表
+But I start getting paranoid around the 40% mark.
 
-显示所有不同的方式
+In other words, in a 200,000 token window, I would start getting scared around the 80,000 token mark.
 
-我正在消耗我的上下文窗口
+Some might say this is too aggressive and that, you know, maybe 60% or 70% is where the dumb zone starts.
 
-目前我们用了大约2万1000个token
+But everyone agrees that it does exist and whenever you're using LLMs you need to bear it in mind.
 
-上限是20万
+Now, the smart zone and dumb zone is the main constraint that we're going to be working against throughout this entire course really.
 
-Token
+But I wanted to mention some others because they really inform how you use LLMs too.
 
-所以我们这里大约用了10
+One of the main failure modes I see is from people trying to use LLMs as a database to just perfectly retrieve information from its pre-trained knowledge.
 
-接下来我们会更深入的讨论上下文
+That's because it's very tempting, right?
 
-贯穿整个课程
+If I say to be or not to be, that is the question, whether it is noble or unreminded, to suffer the slings and arrows of outrageous fortune.
 
-因此这是一种很好的方式
+LLMs do kind of behave like a database sometimes, just spewing out information from their training data.
 
-让你能够进行自我审视
+However, we need to be super careful when we think of LLMs as a database or try to use them in that way.
 
-你正在使用的上下文
+If we're training a relatively small model, we might take, let's say, 10 terabytes of training data, like all of human knowledge.
 
-以及还剩多少
+In reality, this data would be much, much bigger for the massive models, especially the ones we're using with coding agents.
 
-下一个命令你一定要需要知道的是
+And then we compress all of that down into a set of parameters, which is a decent enough size that it can fit on a GPU.
 
-可以滚动到底部
+In other words, the right mental model for LLMs as databases is that they've seen all of human knowledge, but they've got it as a kind of fuzzy JPEG.
 
-并在这里运行
+They've compressed it down to a point where it's hardly even visible to them.
 
-Clear
+So when you ask an LLM a question, it's not referencing the training data directly.
 
-它会清空整个对话历史记录
+It's referencing this fuzzy JPEG that it has, which means that its answers are by design unreliable.
 
-clear会把那个上下文窗口重置为零
+This is not true, however, of stuff in its context window. Of stuff in its context window, it has access to the entire raw information.
 
-就像你刚启动了一个新绘画一样
+So if you ask it questions about stuff that it has in its context window, it's going to give you pretty reliable answers.
 
-全新的cloud code对话开始了
+However, of course, the more you stuff the context window, the more you put it into the dumb zone, the less reliable those answers are going to be for reasons we discussed earlier.
 
-他已经把你上次聊过的所有内容都忘了
+Another key constraint that emerges from the way that LLMs are trained are knowledge cutoff dates.
 
-好的
+This pre-training process we talked about here is prohibitively expensive, and the process for testing a model too is often really elaborate and expensive too.
 
-我们还会经常讨论
+So models are not kept up to date with the latest information when they're deployed.
 
-什么时候应该清空上下文窗口
+If you have a model deployed in January, it won't know anything that's happened in the world since January.
 
-不过这次就是这样操作的
+For AI coding, this means it won't have any information about the latest React version if they've pushed that.
 
-当然你可以通过按下某个按键来退出cloud code
+And so this all of human knowledge, it's all of human knowledge up to a certain date.
 
-连按两次CTRL加C
+However, because LLMs are compressors anyway, and this is just like a fuzzy JPEG of all of its information,
 
-然后在这里启动一个新的cloud绘画
+I tend to put less focus on knowledge cutoff dates than other educators.
 
-或者你也可以清空
+Because I distrust the LLM as a database so much that I wouldn't expect it to kind of have any background knowledge whatsoever.
 
-只需运行clear即可清空当前会话
+That's the mental model I'm coming in with.
 
-最后如何在使用时中断cloud
+Finally, the weirdest constraint is that LLMs are completely stateless.
 
-它正在运行吗
+This means LLMs behave kind of like that guy from Memento, where every time he woke up, he would completely forget his entire life.
 
-嗯我准备问他一个问题
+In practice, this means that as you're working with the LLM, kind of adding things and adding stuff into here,
 
-这个问题可能需要稍长一点的时间来回答
+when you clear the context, you completely reset back to nothing.
 
-比如让他介绍一下这个代码库的情况
+And you then need to build it back up again, right?
 
-而且任何时候我想停止
+So when you clear the context and start fresh, you're losing the tribal knowledge that the LLM has built up over your code base.
 
-我都可以直接按escape
+This means that documentation and code base quality and organization become absolutely key.
 
-要打断他的话
+But we're going to explore that more in the steering section.
 
-一旦我把他打断了
+So those are the main constraints of LLMs, that they have a smart zone and a dumb zone,
 
-如果我还想继续
+that they have seen all of the world's information,
 
-就只需要说够也一样
+but it's kind of like it was written scribbly on the back of a napkin somewhere and they can only half remember it.
 
-刚才我就是直接敲了个够
+And they were pre-trained at a certain point in time, which means that their knowledge only goes to a certain date anyway.
 
-然后再次把它发出去
+And they are totally stateless, which means that every time you clear the context, you are essentially wiping their memory.
 
-如果我想再次打断它
+All of their feelings, all of their experiences are just BOOM, gone.
 
-只需按下escape
+As developers or as managers, these are the weirdest set of constraints we've ever had to work around.
 
-它就会停止运行
+When you have a new starter joining your team, at least, you know, they might rock up at 10am or something,
 
-他正在做什么
+but at least they have a memory.
 
-好的
+At least they can learn over time and at least they don't have such a narrow window in which to work before they just forget all of their memories.
 
-我们已经学会了如何在这里添加基本的提示
+During this course and throughout this cohort, we are going to be working with Claude Code to get the most out of these constraints,
 
-我们也已经学会了
+because when you work within them, you realise, ah, there are actually many techniques I can use to get the most out of these tools without bumping into their weirdnesses.
 
-我们可以用shift加enter来添加新行
+Hello, folks. Edit Matt here.
 
-我们已经学会了如何调用命令
+Since this course was recorded, or rather parts of this course were recorded,
 
-通过斜杠加上用tab跳到命令末尾
+the kind of dominant context window has gone from 200k tokens to 1 million tokens.
 
-我们已经学会了如何在这里运行usage
+And for most people now, the default context window size in Claude Code is 1 million tokens,
 
-来查看我们的计划用量限制
+and that's what I've recorded some parts of the course with, but some parts of the course were recorded with the 200k version.
 
-我们已经学会了如何在这里运行context
+So you probably have an immediate question. What does this do to the smart zone, dumb zone calculation?
 
-即可视化当前的上下文
+Is 40% still the correct metric?
 
-我们已经学会了如何通过clear来清空上下文
+Well, in my opinion, all that's changed with these big context windows is they've shipped a lot more dumb zone to you.
 
-所以我将以上就是基础部分的内容干得漂亮
+So now you can do a lot more work in the dumb zone, if you like.
 
-我们下期再见
+But the actual size of the smart zone has not changed all that much.
 
-### 010-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p10 Managing Your Claude Code Session - 管理Claude Code会话.ai-zh
-既然我们已经了解了cloud code的基础用法
+Since the first time I recorded this video, we are now, I would say, at around 100k tokens is the smart zone.
 
-我想给你分享几个不错的小技巧
+So whenever you see a percentage calculation for the rest of the course,
 
-你可以用来改进你的提示
+remember that that was done with a 200k token window, not the 1 million token window.
 
-在使用cloud code时
+So really now we're thinking in terms of just raw numbers of tokens instead of percentages.
 
-你可能需要引用单个文件
+So there we go. Edit Matt out.
 
-比如你可能会想说
 
-告诉我关于这个文件的很多信息
+### 016-AI Coding for Real Engineers p16 016 What Are Subagents Day 1 Fundamentals
 
-或者对他做一些修改
+Now we understand some of the constraints of LLMs, let's start talking about how
 
-特定文件
+Claude Code tries to mitigate them.
 
-要做到这一点
+Specifically, there's a super important strategy that Claude Code implements to
 
-你可以使用at it命令
+squeeze more juice out of its context window.
 
-然后在这里开始输入
+I've got a little visualization of the context window here.
 
-比如我可能想要roots ts s文件里的某个东西
+We can imagine that each of these sections are different tasks that Claude
 
-而它就在那
+Code needs to do in that session.
 
-在这里
+This gray bit I'm imagining is the system prompt, the bit that we saw in the
 
-我可以通过键盘上的上下方向键来自动补全
+context, the stuff that's always in there, the system prompt, the system
 
-当我想选择某个选项时
+tools, the stuff that's always been passed to the LLM to tell it how to behave
 
-我可以在这里按tab
+like Claude Code.
 
-当然如果我还想添加另一个文件的话
+Then the first thing the agent might need to do is let's say explore the
 
-我可以重复这个过程
+repo.
 
-比如先输入app
+It comes in with zero memory, right?
 
-再输入dB
+So it needs to do a bit of exploration before it then goes onto the green,
 
-看看这里面有什么
+which in this case is implementation.
 
-也许数据库模式正是我需要的
+And then in this example, this dark gray is stuff that's just empty space
 
-所以我按下tab就在那里完成了补全
+in the context window that hasn't been filled up yet.
 
-然后我按下回车
+Now the dream for any kind of harness, any kind of Claude Code like
 
-运行后
+application would be to make these chunks smaller, right?
 
-这些文件会被自动读入这里的上下文窗口
+Because the less tokens we spend on exploration, the more tokens we have
 
-这意味着他不需要手动去找那些文件
+available in the smart zone for the implementation.
 
-他只是会自动读取它们
+But of course, if we spend less effort in the exploration mode, we were
 
-这确实会让你在前期多花一点时间
+probably going to end up with a worse exploration, which means probably the
 
-换句话说
+LLM will have fewer, less context about our repo, which probably means a
 
-你得先找到这些东西
+worse implementation.
 
-虽然要处理文件
+So it's hard to see how you bridge this divide.
 
-但这很值得
+So Claude Code and agent tools like it employ a really smart solution.
 
-因为他能给cloud提供他成功所需的全部信息
+In the agent that you talk to, which is the orchestrator agent, it then spawns
 
-还有一个你可能不知道的小技巧
+a sub agent.
 
-即使你已经在用cloud cobe段时间了
+In other words, it creates a new context window and prompts that sub
 
-同时如果你在这里有一个很长的提示
+agent to do this task here.
 
-而你又不想现在就执行它
+So the sub agent can then spend lots of tokens doing the task all within
 
-比如说先别做这个
+its smart zone, and then it reports a summary of its results back to the
 
-现在先放着
+orchestrator agent.
 
-但稍后执行的话
+In other words, this is a delegation mechanism.
 
-你可以按control加S
+It's kind of like the orchestrator is the lead developer and it just
 
-它会把它暂存起来
+pawns off a task to a junior developer to say, explore this repo for me, and
 
-现在他已经把这条命令暂存在cloud的记忆里了
+then report back your findings.
 
-我现在就可以提交了另一个命令
+The orchestrator can spawn multiple sub agents too.
 
-比如打个招呼
+So you can have multiple sub agents doing work in parallel.
 
-像这样
+And when they're all finished, they report back to the parent
 
-然后他就会重新加载
+orchestrator.
 
-并我有点回到正题了
+These sub agents can be spawned with different system prompts and
 
-再说一次
+different models too.
 
-我可以用control s暂存提交点东西
+So we can even use a cheaper model for the sub agents.
 
-然后说我搞定了
+If it's a relatively simple task like exploration, it's super common to
 
-谢谢
+see Claude Code spawn with Haiku for instance, for exploration, which
 
-而当我提交后
+is really fast and really high quality.
 
-他会在那之后恢复
+So this is what sub agents are.
 
-当你要给club1些反馈时
+They are a context saving mechanism for the orchestrator agent and
 
-这真的很有用
+Claude Code uses them extremely aggressively.
 
-比如说关于有些代码写的不太好
+So you're going to see them everywhere when you use Claude Code.
 
-然后你意识到哦
+Nice work.
 
-我只是需要先告诉他一些事
+And I will see you in the next one.
 
-把我当前的命令暂存起来
 
-稍后再把它拿回来
+### 017-AI Coding for Real Engineers p17 017 Codebase Exploration Day 1 Fundamentals
 
-如果你随后意识到我根本不需要这条命令
+Of all of the constraints that we explored in the previous exercise, the most onerous, the strangest, and the one you have to think about first is the fact that the LLM is stateless.
 
-你可以按下按control加C把它关掉
+The statelessness means that the LLM is dropped into your code base every single time with no memory of exploring it before.
 
-另一个非常棒的功能是
+This means that every time the LLM needs to get up to speed with the code base and explore it to understand its patterns, understand the way it's laid out and understand even what the code base does.
 
-你可以复制并粘贴图片进入cloud code
+And this means that exploration is a foundational skill that you need to understand in order to get good with coding agents.
 
-我有一张很漂亮的斯洛文尼亚布莱德湖的图片
+Unfortunately, we have a big old repo here for you to explore.
 
-我可以右键点击它
+You should hopefully have had a chance to click around the app a little bit and understand kind of what it's doing at least at a basic level.
 
-把图片复制一下
+But in this exercise, we're going to use Claude to explore the repo for us.
 
-然后打开cloud code
+I'm going to start by going into VS Code as we've done before and running Claude.
 
-如果你把它复制粘贴进去
+And I'm going to prompt it by saying, tell me what the tech stack of this repo is and what its intended purpose is.
 
-他随后就可以引用那张图片
+Now, at this point, I'm going to pause and we are going to see what happens on my machine in the solution.
 
-烦人的是
+But I would like you to run the exact same thing inside the project and look out for some different things.
 
-我在适用于LINUX的windows系统上
+First, I'd like you to know when you think a sub agent is being used.
 
-而这个其实并不在WSL上也能运行
+You might be able to tell this from the user interface.
 
-但如果你自己试试并按回车的话
+So see if you can figure it out.
 
-那么他应该能告诉你
+Second, when the LLM responds with a response, query it and ask it some more questions and then see what happens.
 
-我现在在世界上哪个地方
+By the end of this exercise, I do want you to have a really good understanding of the repo.
 
-他应该会告诉你
+So I've given you a bunch of questions that you can ask down below.
 
-这是斯洛文尼亚的布莱德湖
+Once that's done, head to the solution and I will break down exactly what's happening.
 
-挺酷的
+So good luck and I will see you in the solution.
 
-那么总结一下
 
-我们已经讲了如何引用特定文件
+### 018-AI Coding for Real Engineers p18 018 Codebase Exploration Solution
 
-通过这个艾特符号
+All right, let's kick this off and let's see what happens.
 
-我们已经讲过了
+We can see first of all that it's searching for two patterns
 
-用control s暂存
+and reading six files,
 
-我们也讲了粘贴图片的功能
+and you can press Control-O to expand here.
 
-这让我有点失望
+If I press Control-O to expand,
 
-没法给你展示
+I enter a kind of verbose mode
 
-希望你已经能够清楚的跟上
+where I can see all of the commands that it's done,
 
-而且一切正常
+where it's calling the bash commands,
 
-没有出现任何奇怪的情况
+where it's reading certain files,
 
-干得好
+and it gives me a brief summary of the repo,
 
-我们下期见
+including the tech stack here.
 
-### 011-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p11 Claude And Your IDE - Claude与你的IDE.ai-zh
-现在我们来谈谈cloud如何与你常用的id集成
+I'm going to untoggle this UI here
 
-我在这个课程里用的是vs code
+so we end up with the kind of default.
 
-但你不必非得用它
+And what I can see here is that it did not spawn
 
-你可以用cursor
+any subagents.
 
-也可以用win surf antigravity
+So in my case, with this model,
 
-或者现在流行的各种花手工具
+with this version of the repo,
 
-cloud与它集成的方式是通过这里的这个IDE命令
+with this particular prompt,
 
-上面写着
+it did not spawn any explore subagents.
 
-你可以管理id集成并显示状态
+And what this meant is we didn't actually read
 
-如果我们运行这个
+that many files.
 
-就能看到我们已经连接到visual studio code
+We only read six files throughout this.
 
-我已经把它弄好了
+That's not going to give me a full breakdown
 
-因为我安装了这里的cloud code for vs code扩展
+of what's happening in this repo.
 
-但如果你在终端里运行id的话
+So let's go to the bottom here
 
-它应该会显示如何安装你的版本
+and prompt it a little bit deeper.
 
-针对你正在使用的id
+I'm especially curious
 
-如果你正在跟着操作
+about the power purchasing parity implementation.
 
-就按下回车确认
+And when I do this, I'm going to use a special word.
 
-然后退出这一步
+I'm going to use the word explore.
 
-IDE集成的真正用途其实是做DIF管理
+I'm going to say explore how PPP works
 
-这是最常出现的情况
+in this repo.
 
-比如如果我们提示cloud说
+And if I kick this off,
 
-从package jsn中移除测试监听命令
+we're going to see something really interesting.
 
-我们可以看到它读取了一个文件
+Now what we can see here is that now it spawned
 
-也就是package js o n
+an explore subagents.
 
-现在它已经更新了package js m
+You see here explore with a kind of title
 
-现在如果我们没有连接到IDEE
+inside the brackets here.
 
-那么这会在terminal中以DIF的形式显示出来
+And this explore is running a bunch
 
-这有点别扭
+of different tool calls
 
-不过既然我们已经连接到vs code
+and it's very aggressively searching for files.
 
-其实可以直接关掉这个
+If I press control O to expand here,
 
-我们可以在vs code中看到DF
+we can see, wow, it's reading a lot more files here,
 
-这真的很棒
+searching for a lot more different things.
 
-因为它要丰富的多
+And I'll untoggle this to just let it run.
 
-而且它让我们可以滚动查看
+So what happened here under the hood
 
-文件中到底发生了什么
+was that our orchestrator agent,
 
-我们可以看到这是一处不错的修改
+the one that we're talking to,
 
-然后我们可以点击这里上方的接受提议更改
+spawned an explore subagents
 
-或者我们可以在这里点击并把文件保存下来
+with a customized system prompt
 
-保存文件后我们就接受了这些更改
+to explore the repo for us.
 
-这就是我在vs code里运行cloud code的原因
+We can see that inside the subagents context window,
 
-有时候能够深入进去
+it took 60 seconds to complete its task.
 
-真的很棒
+It used 64,000 tokens,
 
-然后只需对cloud code的输出做一些微调
+which is about 32% of its context window,
 
-如果我需要更新任何diff或者省略任何diff
+which is pretty gnarly.
 
-在真正的id里做这件事舒服太多了
+That's a lot of tokens burned.
 
-而不仅仅是在terminal里操作
+And it called 25 tools here.
 
-还有更多功能
+So tools can be things like bash commands
 
-也有更多方法
+or file reads and writes.
 
-vs code可以cloud code集成
+And then it came back with a summary
 
-你的id很可能也支持
+to our parent orchestrator agent
 
-但这个diff功能才是我想展示的
+and the orchestrator agent spat out this for us.
 
-因为它是我最终有99的时间
+This looks like a really in-depth exploration
 
-都在用的
+for how PPP works.
 
-那个希望刚才的内容你能跟上
+Honestly, almost as good
 
-如果你之前没跟上
+as if we'd just written it ourself.
 
-随时可以回看这段视频
+And so we notice how powerful that subagent is there
 
-如果遇到问题
+and how important our word choice was.
 
-欢迎在discord上提问
+Here, we use the explore verb,
 
-干得好
+which kind of connected Claude code
 
-我们下期见
+and sort of triggered something in its latent space
 
-### 012-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p12 Going Forwards And Backwards In Time - 在时间中前进与后退.ai-zh
-cloud code的一个非常重要的功能
+to say, okay, I need to use the explore subagents.
 
-是让你可以在对话中向前和向后跳转
+Whereas first, in our previous prompt,
 
-当你尝试某些东西之后
+we just said, tell me what the tech stack of this repo is.
 
-可能想撤销时
+So that's a good hint when you want
 
-这一点非常重要
+a really in-depth exploration
 
-比如在上一个视频中
+is to actually use the word explore.
 
-我们刚刚做了一个改动
+So now you should take the opportunity
 
-移除了一个开发脚本
+to run any more exploration commands
 
-现在我可以对cloud说
+that you want on the repo
 
-请把它还原回去
+to really deepen your understanding,
 
-他会去撤销刚才做的改动
+because soon we're gonna be getting to building features.
 
-只需重写一遍
+Nice work, and I will see you in the next one.
 
-把它重新加回去
 
-我就按下control加S来保存这个DF
+### 019-AI Coding for Real Engineers p19 019 Build A Feature Day 1 Fundamentals
 
-不过这里还有另一个选项
+Alright, we've explored the codebase. You understand the vague structure of what's going on.
 
-我可以快速连按两次ESC进入倒带模式
+Now it's time to build our first feature.
 
-在倒带模式下
+We're going to build a course review system where students can leave reviews on courses.
 
-我可以把代码和或对话恢复到这个时间点
+I've chosen this feature because it's fairly meaty.
 
-比如如果我只想撤销刚才那条命令
+You need to touch all areas of the codebase, but it's not that intense in terms of user interface.
 
-我直接选这个就行
+To give you an idea here, we need to go into the Dev UI, log in as a student.
 
-底部这个是当前状态
+We are now Emma Wilson and then go to, let's say, Node.js for instance.
 
-这就是我当时说请把它还原的那个时间点
+The idea would be that we want to be able to leave a review on this page as the user.
 
-然后我就可以按enter选中它
+We don't want to leave a written review or anything like that. We really just need a star rating.
 
-现在这里有几个不同的选项可以让我选择
+So the first thing you'll need to do is get Claude running inside VS Code again.
 
-第一种是同时恢复代码和对话
+Or if you've got an existing Claude code set up, then run clear to clear the conversation history.
 
-换句话说
+From there, we're going to put together our initial prompt, which is just going to be a couple of sentences about what we want to build.
 
-就是把我的绘画倒回到
+I've gone for this simple prompt. I would like to create a course review system where students can review courses by leaving a star rating.
 
-这次代码编辑之前的状态
+We don't want to add written reviews, just star rating.
 
-或者我也可以只恢复对话
+These reviews will then be visible everywhere that courses are visible.
 
-但让代码保持原样
+We want to show the average rating on the courses in the list page and on the course page itself.
 
-那会是第二个
+Your prompt may look different from mine.
 
-或者我也可以只恢复代码
+You may want to go further, add more detail or even pull it back and keep it simpler.
 
-但保持对话不变
+Now we're going to pause here, but once you have sent that, then I want you to start steering Claude.
 
-我最常用的选项是直接恢复完整的代码和对话
+I want you to be watching it closely, see if it spawns an explore sub agent, for instance,
 
-那我现在就来演示一下
+and try to understand everything it's doing as it's going through.
 
-我们可以看到代码已经被还原了
+It might start wanting to change files or ask you permissions, which you should be prepared for.
 
-现在我们回到了测试监视被删除的那个时间点
+You should also make sure you're running forward slash context to check on your context usage as you're going through.
 
-如果我想回到更早的状态
+If you've built features with LLMs before, then this will feel familiar.
 
-我可以再次打开终端
+But the thing I want you to get out of this is the level of context paranoia that I have when I'm using LLMs.
 
-只需连按两次ESC就能继续往回走
+Remember, around 40% usage of the main orchestrator agent is when we should start getting a bit nervous.
 
-我们选择回到完全移除
+So let yourself be guided by what Claude does.
 
-测试监听命令的那个时间点
+Just put yourself in a more observational mode, give it a little bit of steering,
 
-另一个有趣的选项是
+but mostly we just want to observe the default behavior of Claude code.
 
-这个从此处开始总结的命令
+Good luck and I will see you in the solution.
 
-不过我们稍后再谈
 
-这个我打算取消这个操作选择算了
+### 020-AI Coding for Real Engineers p20 020 Build A Feature Solution
 
-并且只停留在当前状态
+All right, let's fire this off and see what happens.
 
-还有一点也非常重要
+We can see it's entered something called plan mode here,
 
-那就是cloud实际上会把绘画在本地持久化
+which is fairly self-explanatory,
 
-这意味着你可以连按两次CTRL加C退出cloud
+but we're gonna dive much deeper into that
 
-然后你可以通过多种不同的方式来恢复它
+later in this section.
 
-你可以运行这个命令来恢复绘画
+And we can see it's kicked off
 
-直接来自上一条命令的输出
+an explore subagents here, beautiful.
 
-所以我可以直接运行cloud resume
+Let's check in again once the explore agent has finished.
 
-然后加上那个UID
+Okay, it's now finished with the explore phase.
 
-然后我就能回到之前离开时的确切状态
+It had quite a meaty explore, which is nice.
 
-另一种做法是
+It's now reading some key files
 
-我只需再按两次CTRL加C就能退出
+in the orchestrator agent.
 
-我只需要输入cloud就打开了一个新绘画
+And now it has come back with a couple of questions.
 
-这是一个完全干净的绘画
+These are things which obviously were not present
 
-在这里我可以输入resume并恢复先前的对话
+in my initial prompt or not clear from my initial prompt.
 
-现在我可以选择我在这里进行过的所有对话
+I can navigate this by using tab or arrow keys
 
-我甚至可以在所有绘画中进行搜索
+to navigate up and down.
 
-如果我想的话
+And the first question it's asking me
 
-我可以回到我在这个仓库里做过的任何改动
+should only enrolled students be able
 
-我们回到刚才用的那个吧
+to leave a star rating on a course?
 
-然后我可以按下回车键进入那个
+That makes sense to me because only those
 
-我又回到了同一个会话
+who've actually paid for the course
 
-因此如果你的绘画因任何原因被中断
+should be able to rate it.
 
-你随时都可以恢复它
+That means that the reviews are gonna be more reliable.
 
-因为cloud会在本地持久化保存
+So I'll press return to select this.
 
-这就是cloud让你可以往回走的方式
+What star rating scale should we use?
 
-并在对话中向前推进
+A one to five stars, that feels most appropriate.
 
-或者通过连按两次ESC进入倒带模式
+So I press return.
 
-然后就像快速浏览这里的所有内容一样
+And should the dashboard page also display
 
-或者我也可以随时取消当前操作
+average ratings on course cards?
 
-并重新开始我的绘画
+Now I'm not actually sure what's shown
 
-我甚至可以直接选择继续上一个绘画
+on the dashboard page.
 
-运行cloud continue
+So I'm actually going to ask the LLM here.
 
-而且他会把我拉回到我当时的精确位置
+So I'm gonna press four and chat about this.
 
-漂亮非常棒的工作
+This should let me quit out of the ask questions flow
 
-我们下期再见
+but it appears that I just seem to have
 
-### 013-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p13 Running Bash Commands - 运行Bash命令.ai-zh
-在使用cloud cook时
+gone in there again.
 
-一个非常重要的部分就是运行bash命令
+So I'm gonna press escape and get out of there.
 
-bash命令
+I'm just going to ask it
 
-让把你的AI智能体从一个被动的代码写手
+what is currently shown on the dashboard?
 
-变成真正能够主动寻求反馈循环的工具
+Give me a list of all of the things
 
-它实际上可以与你的项目协作
+that are shown there so I can work out
 
-并且可以利用手头的全部bash能力来查找
+whether adding the star ratings would clutter the UI.
 
-以及去做一些事情
+So you notice I can kind of kick off another exploration
 
-现在我们可以直接手动让cloud去跑开发服务器
+or it might already have the information in its context.
 
-而且因为他很聪明
+I'm gonna press return here and just see what it does.
 
-他会明白好的
+So it's given me a description here of the dashboard code
 
-我需要读取package jsn
+and what's actually shown there.
 
-我需要先找到开发服务器在哪
+I think based on the fact that this seems
 
-然后我需要像这样启动它
+like a private dashboard to me,
 
-稍后我们会详细说明这是什么
+I'm gonna say to it,
 
-在这种审批设置里
+let's not bother with the dashboard page.
 
-具体是怎么做的
+Let's only put it on places
 
-就不展开了
+where we're intending to sell the course.
 
-总之就是有时候你明明知道自己要跑什么命令
+So now I press return.
 
-就是想直接把它跑起来
+Now that it's got all of the information
 
-然后把结果放进cloud的上下文里
+from all of the questions that it asked me,
 
-具体做法是
+it should be able to come up with a decent plan
 
-我刚才我重启了我的cloud code实例
+that it's then going to put into action.
 
-现在我就输入一个感叹号
+So as we can see here,
 
-然后我已经已进入bash模式
+it's kicked off now a plan subagent.
 
-现在我在这里输入的任何内容
+This is another context saving mechanism
 
-都会被当做bash命令来执行
+where it dives deep into the files again
 
-实际上是为cloud而运行
+in order to read through everything,
 
-比如我为什么不在这里跑一下npm run up check呢
+design a perfect implementation plan
 
-现在我一按回车
+that it's then going to follow.
 
-它就会执行这条命令
+So let's wait for the plan agent to complete
 
-由于我还没在这个项目里跑过
+and see what it produces.
 
-Npm install
+Okay, the plan subagent has now completed
 
-我这边一跑就报一堆错
+and it's now actually creating a final plan.
 
-这些错误现在都在cloud的上下文里
+So this plan here is pretty meaty
 
-所以我打算让他帮我解决这些错误
+and it is a multi-step plan.
 
-他就能看到这些报错
+It includes the code that we're probably going to add
 
-然后真正和他们一起工作好了
+to the schema here,
 
-他已经发现ZZ就在package JSON n里
+then the rating service
 
-但还没安装
+that follows existing service conventions.
 
-我应该先跑一下NPMINSTSTORE好了
+When I'm reading these plans,
 
-现在这些命令就能正常工作了
+I generally just read the top level items here,
 
-有些命令本质上是有开始也有结束的
+understanding all the steps are going to be completed.
 
-但那些应该持续运行的命令该怎么办呢
+So it's then going to update the course list page,
 
-比如长时间运行的开发服务器
+update the course detail page.
 
-我们可以在bash模式下运行npm run def
+It's going to touch some files here
 
-我们可以在它运行时
+and then run some verification steps.
 
-按下control加B把它放到后台运行
+It's also important to check the top of the file too
 
-在这个版本的cloud code里会出现一条提示
+just to check the kind of top level context here.
 
-写着command was mainly background
+Students need a way to rate courses
 
-使用该id的用户以及该任务中的任何输出
+with a one to five star rating.
 
-都会被写入一个本地文件之后
+Only enrolled students can rate.
 
-你就可以查看了
+Average rating should display on the course list page,
 
-在我们底部的状态栏下面
+on the course detail page, the dashboard is excluded.
 
-有一个小背景任务正在显示
+So this looks fine to me.
 
-所以我我可以用下箭头向下滚动
+We can now scroll all the way to the bottom
 
-然后按回车查看它
+and we can check out our options here.
 
-现在我就可以实际上我可以查看这个shell
+We have four main options.
 
-看看这里发生了什么
+We have to say yes, go ahead and auto accept any edits.
 
-而且我可以看到它运行在local host
+In other words, I trust that this plan looks great.
 
-我这儿有很多选项
+Just go ahead.
 
-想停的话
+I don't need to approve any file rights here.
 
-可以用X或者直接按左方向键也行
+Just feel free to write any code that you fancy.
 
-要回到刚才的状态
+Or we could say yes, go ahead
 
-现在我已经回到了我的cloud code实例里
+and I need to still manually approve
 
-这在以下情况下非常有用
+any stuff that you write.
 
-比如你在排查开发服务器的问题
+Or let's clear the context,
 
-或者某个长时间运行的命令出了问题
+put the plan into context only
 
-因为cloud可以看到所有日志都写入到哪里了
+and then automatically accept any edits.
 
-他也许可以在界面上尝试点什么
+Or of course, if I don't like the plan,
 
-或者发送一个curl请求后
+then I can type into number four
 
-他就能看到开发服务器的输出了
+to tell Claude what to change
 
-所以我刚刚让我在这里重置一下实例
+and it will update that plan.
 
-这样我们可以看到另一个功能
+So I'm deciding between one and two here.
 
-如果需要的话
+One would clear the context
 
-可以暂停cloud code
+but two would just keep the current context
 
-比如我想跑某个东西
+and then just barrel on.
 
-但不想让cloud看到他的结果
+In order to make that decision,
 
-或者我不在乎展示给他看
+I need to check what current context we're on
 
-那么我可以用挂起功能
+because I'm feeling a little bit paranoid
 
-我可以在这里按下CTRL加z cloud code就被挂起了
+about the context.
 
-这意味着我现在可以运行任意命令
+I can't exactly recall how to escape from here
 
-我可以在这里直接echo fo
+but it's either escape, yeah, escape works.
 
-而如果我愿意的话
+I was gonna try control C if that didn't work.
 
-cloud code是看不到这个操作的
+This lets us quit out into Claude here
 
-把cloud code换回也很简单
+and we can run forward slash context
 
-我只需要在这里运行FG
+to check out what current context we're on.
 
-就能把cloud code实例带回来
+And there we go.
 
-并且它保留着所有的
+We are at 36% context already.
 
-所以如果你只是想好吧
+We have a ton of messages in the context
 
-我不关心cloud code去做点类似的事情
+and we're just pushing up
 
-这就很棒
+into the kind of bottom of the dumb zone.
 
-想运行什么命令就运行什么命令
+We might be able to get away with this
 
-然后用FG把它带回来
+but my context paranoia is starting to creep in.
 
-所以这个决策树看起来就像
+So I'm gonna go back to where we were
 
-如果你希望让cloud
+by going down to the prompt and saying,
 
-看到你正在运行的bash命令的输出
+give me the chance to review the plan again.
 
-就使用这个
+This should just open up the UI,
 
-在这里你可以用感叹号进入bash模式
+yet here we go where it gives me the option
 
-并且还能把命令放到后台
+to clear context or not.
 
-配合control加B
+So because we're already pretty high on context,
 
-然后再次管理这些被放到后台的任务
+I'm gonna accept, yes, clear the context
 
-这对开发服务器真的非常有用
+and then automatically accept edits.
 
-我不是每次都用它
+So because we've now bumped it back
 
-但当我用时
+to only the context that's in the plan,
 
-通常是为了调试某种问题
+it reads some of the key files again,
 
-关于开发服务器的问题
+it checks for existing patterns
 
-但如果你想让这条命令完全不被cloud看到
+and actually kicks off another explore agent.
 
-你可以直接用control加Z快速把它挂起
+So that's the downside there of clearing the context,
 
-当然这些是windows快捷键
+you then have to run the explore agent again
 
-所以你可能会
+to catch up to where you were,
 
-如果你在Mac上就需要做些不同的设置
+but it tends to be worth it to avoid the dumb zone.
 
-以上就是各种不同的方法
+All right, we are finally at the implementation stage
 
-你可以在cloud code里管理bash命令
+and it's now started creating a list of tasks for itself
 
-干得好
+and now it started actually implementing
 
-我们下期见
+and it's now referencing the steps in the plan
 
-### 014-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p14 Permissions - 权限.ai-zh
-每当你和智能体一起工作时
+as it's going.
 
-你都需要权衡风险与回报
+So it's added the course ratings table to the schema,
 
-尤其是在你赋予他多少权利这件事上
+it has created the rating service
 
-像很多人那样做的话
+and it's really starting to cook now
 
-我会理所当然的担心他会做出什么举动
+so I'm just gonna let it run
 
-这种能力太疯狂了
+until it reaches a stopping point.
 
-比如他可能会不小心
+Okay, we are now at a state
 
-把我的整个文件系统都删掉
+where it's done four out of five tasks,
 
-为了降低这种风险
+so one is currently in progress
 
-cloud code有一套非常细致的权限模型
+and the one that it's trying to run
 
-并且默认情况下他对自己非常严格
+is the database migration.
 
-只允许智能体实际去做被许可的事情
+So this is the first time it's asked me
 
-比如我要让cloud code运行一个bash命令来执行echo hello
+for a permissions thing.
 
-而且由于echo是一个非常安全的命令
+Now database migrations are something
 
-cloud code认为这条命令对他来说没问题运行
+that I always want personal control over
 
-但如果我让他做别的事
+so I'm gonna say yes,
 
-比如对项目进行类型检查
+but I'm not gonna give it the license
 
-那么他可能会采取不同的做法
+to always run it automatically.
 
-我们可以看到他现在在这里请求运行一个命令
+It's doing the same with the dbmigrate command as well
 
-所以他正在尝试运行pp m type check
+to apply the database migration to my local database
 
-我们在这里看到几件事
+and I'm gonna say yes, go for it.
 
-首先我们看到这条命令
+Now I've hit a slight error in my local setup
 
-也就是他将要运行的确切命令
+where it needs to run like a manual SQLite 3 command.
 
-接着我们会看到他想运行这条命令的原因
+SQLite 3 has not been found
 
-他想使用react router type GAM和TSC
+and so I'm sort of walking through some steps
 
-运行一次类型检查
+with the LLM here to actually just try
 
-我们这里有三个选项可以选
+to fix my local setup.
 
-可以说是这次允许你这么做
+We can see that here it's trying to run
 
-或者是从现在起一直允许你这么做
+an arbitrary script in order to get this fixed
 
-在这个项目里
+and the interesting keeping this video relatively short,
 
-运行任意一个PMPM的类型检查命令
+I'm gonna skip over this fix
 
-或者我们说不同意
+until I actually manage to get it sorted.
 
-然后在这里面我们可以做点巧妙的安排
+All right, that is now fixed
 
-比如如果我们不想让他执行这条确切的命令
+and it's now asking me whether I want to run
 
-我们可以按下tab
+the database seed command,
 
-然后在这里给出理由
+so seed this nice fresh database.
 
-比如我们可能只是想使用
+Okay, and after a couple more permissions checks,
 
-不知为何他改成了MPXTXC
+it is now complete.
 
-现在他在问我们是否可以运行NPXTXC
+If you ran into any issues with the setup
 
-就这样吧
+or with the LLM there,
 
-假设我们同意了
+then please go and ping in the Discord,
 
-说好的
+but hopefully the model that you're using
 
-并且让他在这个项目中不再反复询问
+was smart enough that it was able
 
-项目里到底发生了什么
+to navigate around them.
 
-首先出于某种原因类型检查其实失败了
+So now let's check our context one more time
 
-检查一下这个分支
+just to see where we're at.
 
-这大概是我的锅
+Nice, so we ended up on 32% usage.
 
-我们可以看到他确实报告了类型
+That's good, that's nice and comfortably
 
-检查的结果已经反馈给了LOLM
+within the smart zone.
 
-但关键在于
+So it was worth clearing out all that early context
 
-我们的这里的偏好设置
+so that our implementation stayed within the smart zone.
 
-被记录在顶部的一个文件里
+Nice.
 
-就在cloud文件夹内
+So I'm gonna open up a separate terminal here
 
-这是在settings local jsn里
+inside VS Code and I'm going to run
 
-这里我们有一个permissions属性
+pnpm dev inside of it.
 
-位于这段
+And when I go there,
 
-这里是JSON
+I can see that if I log in as Emma Wilson here
 
-在这个allow数组里
+and I check out some courses,
 
-列出了我们为这个项目所允许的所有事项
+the ones that I'm enrolled in here,
 
-这个语法在这里非常重要
+then just under your progress here,
 
-因为我们其实可以自己编辑它
+I'm able to rate this course.
 
-如果我们想提前在仓库里允许某些操作发生
+Nice.
 
-比如我们想比如我们可以在这里写上bash
+And now that my rating has been saved,
 
-然后就说假设是p np m type check
+we can see it on this course up here.
 
-这就意味着这个p m p m type
+If I change it to a three, for instance,
 
-现在check命令将被cloud code自动允许
+then it's gonna change on the global course straight away.
 
-如果我们想改为表示所有
+That's quite nice.
 
-如果PNPM命令可用
+And if I switch now to Olivia Martinez,
 
-我们就可以在这里用一个通配符替换塔
+who also has access to this course
 
-我们也可以禁止通过在这里设置DMI
+and I give it a five star rating,
 
-来阻止cloud做某些事情
+we can see up here it changes to 4.5 as the average.
 
-比如我们可能不希望它运行
+So that to me is looking pretty good for a first pass.
 
-比如bash
+What I'd now like you to do is go back to Claude
 
-拿git push来说吧
+and just type in commit here.
 
-那么代通配符的git push
+This is gonna get Claude Code
 
-在这里就是一个安全的选项
+to add the relevant files to staging
 
-那就一直拒绝他
+and then commit your code.
 
-不过需要cloud code申请权限的不只是bash命令
+And we can see here it's asked for permission
 
-为了能够运行cloud code
+to write a commit message
 
-也可以搜索网络并抓取网页
+and I think yes, that looks good.
 
-以便把他在本地看到的内容备份下来
+All right, so we have built our first feature
 
-比如我可以让他去获取关于react的信息
+with Claude Code.
 
-从网络获取router type jam
+What I want you to do right now
 
-现在他让我去网上搜索react路由类型生成
+is to open up a notes app
 
-如果我选择同意
+and write down anything that you noticed
 
-并且不再询问网页搜索命令
+about your session with Claude Code.
 
-那么他就会继续把它添加到上面的settings
+Write down any unresolved questions that you have
 
-local jo n里
+such as what is plan mode, for instance.
 
-我们可以看到他随后会去获取这个网站
+How do I successfully debug with the agent?
 
-是react router点com
+How much should I be reviewing the code?
 
-现在他已经从那里获取了数据
+We're gonna be coming back to these questions
 
-并且给了我一个关于如何的摘要
+throughout the course
 
-react router type gm是基于实际文档工作的
+and hopefully we're gonna get you
 
-最后要说的是
+some good answers for them.
 
-这些settings local gsm在我的项目里
+But well done.
 
-他们会被忽略
+This was a long solution video, a long exercise.
 
-所以他们只对我生效
+So hopefully the ones after this
 
-但是如果我想把这些分享给团队
+should be a bit easier
 
-比如说设定一组特定的操作
+now we've built the foundations.
 
-在这个仓库里总是被允许的
+Nice work and I will see you in the next one.
 
-那些属于项目设置的
 
-然后我将settings local g sn重命名为SETTGSOM
+### 021-AI Coding for Real Engineers p21 021 Non Determinism Day 1 Fundamentals
 
-这样他们就可以与你的团队共享
+I want to take a quick detour and talk about what you might expect from the outputs of your
 
-或者任何在你仓库上运行的cloud code实例
+agents you're using during this course.
 
-也会读取这些配置
+Now when I ran this course the first time, the exercise we've just done is actually
 
-这对第一次接触你们仓库的人来说会非常强大
+the most talked about exercise.
 
-他们只需运行cloud
+So many folks were saying, why didn't my agents do the thing that yours did?
 
-然后cloud就知道这个仓库允许做什么
+Surely given the same inputs, the same code base, I repeated your steps exactly,
 
-这样通常会快很多
+surely it would act exactly the same.
 
-而不必每次都自己手动去设置权限
+And I want to hammer this idea into your head that agents are non-deterministic.
 
-我们将要
+Agents are essentially next token machines, or rather LLMs are next token chooser machines.
 
-当然我们会在课程里更详细的讨论权限问题
+And what they do is they choose their next token based on a set of a little bit of
 
-但我只是想先简单提一下
+probabilities.
 
-先给你个简介
+It's not the same every single time.
 
-让你了解审批流程是什么样的
+This means that you can ask the same question to the LLM twice and it will give
 
-并且你可以进行编辑
+you two different answers.
 
-如果你愿意的话
+In other words, the responses that you're going to get from your agent at any point
 
-可以调整这些权限
+in time are going to be somewhere on a curve, on a probability distribution.
 
-干得好
+Some of the answers you're going to get are really good and some of them mostly
 
-我们下期见
+will group towards the middle, the most sort of sensible route, but sometimes you
 
-### 015-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p15 The Constraints Of LLMs - LLM的约束.ai-zh
-在我们开始接触cloud code之前
+will get weird responses, weird little outliers.
 
-我们需要先理解LOLM的限制
+When I first taught this course I taught it to around 2,500 students and a couple
 
-因为它们也伴随着一些极其奇怪的特性
+of them had really strange experiences on some exercises where it was doing something
 
-很多人把LM想象成一种
+completely different to what I was showing.
 
-非常一个可以全天候工作的热情初级开发者
+What I'm here to say is this is a normal part of working with agents.
 
-但实际情况远比这更奇怪
+The non-determinism is baked in.
 
-而且理解这些东西非常关键
+So what you have to do is ride the wave.
 
-因为如果你不理解他
+You can definitely make agents more consistent, especially when we get to the AFK phase,
 
-你就会最后却把锅甩给AI
+when we start talking about feedback loops, but you will always get a little bit of
 
-其实是你自己在逆转模型的设计方式来工作
+this behaviour where it just sometimes does something odd.
 
-才能发挥作用
+So hopefully that sets your expectations for the rest of the course and for working
 
-在这段视频中
+with agents in general.
 
-我会逐一讲解这些限制
+Nice work and I will see you in the next one.
 
-并说明他们如何
 
-他们会影响你使用像cloud code这类工具的方式
+### 022-AI Coding for Real Engineers p22 022 Showing Context In The Status Line Day 1 Fundamentals
 
-我们先从最大的限制说起
+One thing that drives me crazy about Claude Code's default UI is how hard it is to monitor the context usage as you're using Claude Code.
 
-也就是围绕token和上下文窗口的缩放定律
+If you look at other tools in the space like Cursor or OpenCode, they're really, really clear about what your context percentage usage is at any time.
 
-LLM的工作原理是
+And so that makes it really simple to stay in the smart zone because you're able to see when you're going over 40 percent.
 
-它们拿到像这样的输入文本后
+In the previous exercise, we had to exit out of plan mode, get out of our flow in order to run forward slash context in order to see it.
 
-他们会先把它拆分
+It was just gross. But fortunately, Claude Code gives us the ability to customize what we see in our UI via a status line.
 
-然后在这里将其标记化为数字
+And I'm going to be showing you how to use a community package in order to get the context window usage in your viewpoint at all times.
 
-其实不需要知道他们为什么会这样
+So just like me, you can max out on context window paranoia.
 
-我在其他视频里已经讲过这一点
+The first thing I'd like you to do is to clear your context window with forward slash clear here and then use shift tab to cycle between all of the different modes until you just reach the default mode.
 
-但当你会在这里得到这些token列表
+So again, shift tab, just tapping between all of these different modes until you see the kind of like question mark for shortcuts button.
 
-所有LM能看见的token就是他的上下文
+Now, what I'd like you to do is go to the page below where there should be a copy as markdown button.
 
-在这个很小的例子里
+And I'd like you to copy the entire article below into your clipboard so you can paste it into Claude Code.
 
-我们只有三个token
+Once you paste it in, you should see something like this.
 
-但典型的上下文窗口里
+Paste a text number one with 80 lines.
 
-这个上下文窗口最多大约到20万个token
+There might be more or less if I've edited the instructions since.
 
-现在如果我们再往这个上下文窗口里
+Next, you can go ahead and just press return here and then it will begin walking through the instructions in the article to set up this package for you.
 
-加一个token
+This will set this up inside your global Claude installation, not inside the project, but inside your global Claude directory where you have your personal user settings, not the ones for your project.
 
-你可能会想好吧
+I'm going to accept this first command where it's making a directory and then I'm going to allow it to read from dot Claude during this session.
 
-我们只需要在内存里多存一个数字就行了对吧
+Dot Claude is where my user settings for Claude are stored, so I'm going to allow it to do that.
 
-但是这并不完全正确
+It's now asking to make an edit from inside VS Code up here to add a status line part to the settings dot JSON up here.
 
-我们不仅在内存里存储实际的token
+This looks good to me, so I'm going to press save here and that should allow the diff.
 
-还在存储它与每个其他token的所有关系
+It then went through and wrote a CC status line settings dot JSON to.
 
-所以对于四个token就意味着有六种关系
+And actually, even before I've restarted Claude Code, I can see there is now a context window usage down here just below my prompt.
 
-才八个token
+But just because the instructions tell me to, I'm going to cancel out of that, press control C twice to exit.
 
-我们就立刻扩展到了28种关系
+Now I'll open up a new session here just by typing Claude, and I should see that my context window starts at 0.0 percent.
 
-而如果我画到100个
+Since I recorded this video on status lines, Anthropic announced a one million context window for Opus 4.6 and Sonnet 4.6, which means our previous reliance on percentages just isn't quite right anymore.
 
-这里的每个token大概相当于这里有5000条箭头
+So instead of showing the percentage, I've now changed the instructions below so that they show this.
 
-换句话说
+They show the raw token count here, followed by the percentage in dimmed little brackets there.
 
-每当我们添加一个token l m
+This is annoying because, like for the rest of the course, you're going to see me using percentages in the videos, but instead you will have this little display down there.
 
-需要跟踪和记住的事项数量是二次方增长的
+For your SmartZone dumbZone calculations, you should start getting worried when this number reaches about 80,000 to 100,000 tokens.
 
-并不是像向文档追加一个字符
+And if you want to do some mental maths to figure out exactly what I'm on in the video, then remember that I recorded it with a 200k token limit.
 
-这就像网足球联赛里加一支球队
+So for me, 40 percent is around 80k tokens.
 
-当你增加球队数量时
+So this context window number will update as we go through sessions and will allow you to keep a really, really close eye on what is happening inside your context window at any time.
 
-比赛场次会急剧上升
+If you had any issues with the setup, then please go to the Discord to figure out how to solve them.
 
-这在实践中意味着
+Nice work, and I'll see you in the next one.
 
-当你在使用你的编码代理时
 
-当你在上下文窗口里不断加入更多消息时
+### 023-AI Coding for Real Engineers p23 023 Why Plan Mode Sucks Day 1 Fundamentals
 
-你确实在给LOLM施加巨大的压力
+Okay, now that we've understood how our agent behaves under normal conditions,
 
-这意味着当你把上下文填满时
+let's start imposing some practices on it.
 
-当超出这个窗口时
+And I want to talk about one specific mode that you can enter
 
-模型就会开始吃力
+that I used to recommend but I no longer recommend.
 
-而你最终会落入我所说的聪明区里的愚钝区
+Most agents now ship with something called Plan Mode,
 
-在上下文窗口靠前的位置
+which we can access by shift-tabbing to Plan Mode here.
 
-LOLM还有大量记忆余量
+This is in Claude Code, this is in Codex,
 
-他的注意力关系并不怎么吃力
+this is you can build your own version in Pi.
 
-而且他能非常清晰的推理
+This is everywhere in agents.
 
-能够关注到所有信息
+And the point of Plan Mode is that you create a plan before you go into implementation.
 
-在他的上下文窗口内
+We even saw this in the previous video where it automatically went into Plan Mode
 
-一般来说他会做出聪明的决策
+because it was detecting that I'd made a plan.
 
-但到了后面
+Now if we think about what the default mode is,
 
-当他开始再往上一点就更吃力了
+what I'm going to call Implement Mode,
 
-它会进入愚钝区
+you have essentially four buckets of things that the agent can do.
 
-这里就是出现幻觉的地方
+It can write files, it can read files,
 
-开始渗入时
+it can run bash scripts, and it can call MCP servers.
 
-推理能力会明显下降
+If you don't know what MCP servers are, don't worry, we'll touch on those later.
 
-有时他还会难以回忆起信息
+But Plan Mode essentially drops the ability to write files
 
-他就那样呆在他的上下文窗口里
+and discourages the agent from doing any kind of active changes to the code base.
 
-现在这个愚钝区究竟从哪里开始
+So you end up with just the ability to read files,
 
-是一个
+run some bash scripts, and listen to MCP servers but not really make any changes.
 
-这多少有点争议
+Now the concept of planning is a very, very good one.
 
-而且很可能会随着时间变化
+First of all, talking out the thing that you're building with an agent
 
-但我开始变得疑神疑鬼了
+will really, really help in understanding what you're building
 
-大概在40的位置
+and also help align you with the agent.
 
-换句话说
+Not only that, but having a deliberate step to plan before you go into implementation
 
-在一个200000token的上下文窗口里
+will help with exploration because it's a specific moment
 
-我就开始担心了
+that the agent needs to go and explore the repo,
 
-大约在8万个token的位置
+gather all the needed context so that it can then implement properly.
 
-有人可能会说这太激进了
+So once you and the agent have figured out what you want to build,
 
-而且你知道
+and once it's gone and explored the repo, it then builds an implementation plan.
 
-也许到60或70的位置
+This plan is saved as a markdown document, usually inside the repo,
 
-就开始进入愚钝区了
+and it can then use that plan to go and implement.
 
-但大家都同意
+It will often even ask you, do you want to clear the context
 
-它确实存在
+before going ahead and implementing the plan?
 
-而且每当如果你在使用LM就必须牢记这一点
+So much does it trust the plan that it's created.
 
-现在聪明区和愚钝区是主要问题
+So we can think of their inside plan mode as ideally being three phases.
 
-这其实是我们在整个课程里
+You initially prompt the LLM with what you might want to build.
 
-都要与之对抗的一个约束
+The agent goes and explores the repo.
 
-但我想再提几点
+It then interviews you about what you want to build and then creates this plan.
 
-因为他们确实会影响你如何使用LLM
+However, in my experience, this interview phase is often extremely truncated.
 
-尤其是其中一个主要的失败模式
+In many of my plan mode sessions, the agent will explore,
 
-我看到的情况是
+kind of maybe ask one question, let's say, or a couple of questions,
 
-人们试图把LOLM当做数据库来完美检索信息
+and then go straight into creating a plan.
 
-来自他的预训练知识
+You then need to review this entire wall of text
 
-这很诱人对吧
+in order to figure out if you and the agent are aligned.
 
-如果我说要还是不去
+And this can be extremely frustrating, and it's very easy to just skip over things
 
-这是个问题
+in the plan and not realise that you and the agent are totally misaligned
 
-究竟是否不够出色
+and aiming in different directions.
 
-去忍受那些投石锁的攻击以及命运
+And so you will inevitably hit this very common failure mode
 
-那无情的剑士
+where the agent didn't do what you wanted.
 
-LLM有时确实表现的像个数据库
+Maybe the implementation it created was totally different from how you imagined.
 
-只是不停的往外吐
+Maybe the feature doesn't behave how you imagined.
 
-他们会从训练数据中提取信息
+Maybe it got some tiny details wrong,
 
-然而我们在思考这一点时
+but those tiny details have a massive knock-on effect over the whole thing.
 
-必须格外谨慎
+In Frederick P. Brooks, the design of design, he talks about this misalignment
 
-把LLM当做数据库来用
+and he describes it as lacking a shared design concept.
 
-或者试图那样去用它
+A design concept is not an asset, it's not a plan.
 
-如果我们训练的是一个相对较小的模型
+It's the ephemeral thing being shared between all participants of the design.
 
-我们可能会拿比如说10tb的训练数据
+And when you're working with AI, you and the AI are collaborators
 
-像是全部的人类知识
+and there's a communication gap there.
 
-实际上对于超大规模模型来说
+And so you need to establish a shared design concept
 
-这个数据会大得多
+before you go to implementation.
 
-尤其是我们正在使用的那些
+And so the failure mode that I so often see with plan mode
 
-配合编码智能体使用时
+and why I don't recommend it anymore is because it skips the entire stage
 
-然后我们把它全部压缩成一组参数
+where you establish a design concept.
 
-这还算是一种不错的做法
+It simply explores, creates a plan which the user is forced to review
 
-足够小
+and you don't know whether you're aligned or not.
 
-能够装进一块GPU
+The process that I now recommend looks something like this
 
-换句话说
+where you explore the repo, you interview,
 
-把LM当做数据库的正确心智模型
+and that interview can often take a while,
 
-是他们看似见识过全部人类知识
+and then you go ahead and implement.
 
-但掌握的形式却像一张模糊的JPG
+The focus is on this interview because it's in the interview I've found
 
-他们已经把他压缩到
+that it's the best place to get the shared design concept really solid.
 
-几乎连自己都看不见的程度了
+What this looks like in practice is I have designed a skill
 
-所以当年当你向一个LM提问时
+called GrillMe.
 
-他并不是直接引用训练数据
+And GrillMe relentlessly interviews you until you reach a shared understanding
 
-而是在引用他拥有的这张模糊的JPG
+and until you're ready to implement.
 
-意味着他的回答在设计上是不可靠的
+GrillMe is fantastic because it's still planning.
 
-这不是真的
+It's just not so eager to directly create an asset.
 
-不过他对其上下文窗口里的内容
+It really sits with you and forces you to think about the thing
 
-是有访问权限的
+that you're building to not only make sure that you're aligned with the agent
 
-对他来说
+but also that you've thought about all the unknown unknowns
 
-整个上下文窗口里的东西都是可见的原始信息
+that you can during the planning process.
 
-所以如果你问他
+And the thing that GrillMe does is it fills up the context window
 
-关于其上下文窗口里已有的东西的问题
+with that conversation.
 
-他会给出相当可靠的答案
+Really valuable intent from the user that you can either turn into a spec,
 
-不过当然你往上下文里塞的越多
+let's say, as we'll touch on later,
 
-窗口里放的越多
+or you can directly go to implement.
 
-它就越容易滑进愚钝区
+Pretty much every single one of my coding sessions
 
-那些回答也就越不可靠
+and also a lot of my non-coding sessions start with a GrillMe.
 
-出于我们之前讨论的原因
+And in the next exercise, we're going to look at how to use it.
 
-另一个关键约束来自于O的方式
+Nice work and I will see you in the next one.
 
-LM的训练都有知识截止日期
 
-我们刚才谈到的就是这个预训练过程
+### 024-AI Coding for Real Engineers p24 024 The Grill Execute Clear Loop Day 1 Fundamentals
 
-成本高的离谱
+So at this point you are probably itching to try GrillMe, so I won't stand in your way.
 
-而且测试一个模型的流程往往非常复杂
+Let's get started.
 
-而且成本也很高
+We're going to use GrillMe to build a lesson comments feature where students can comment
 
-因此模型并不会持续更新到最新信息
+on the lessons.
 
-当它们背部署后
+I've deliberately left this pretty vague so that you will have to spend some time
 
-如果你在医院部署了一个模型
+with the agent to figure out what this looks like.
 
-他不会知道之后发生的任何事情
+Are instructors able to comment?
 
-自1月以来的世界
+Are they able to moderate?
 
-对于AI编程来说
+Are they able to delete or hide comments?
 
-这意味着他不会掌握最新的相关信息
+Can students see other people's comments?
 
-如果他们发布了那个版本的话
+Are comments visible to anyone looking at the course or are they only visible to other
 
-就是react的版本
+students?
 
-于是这整片人类的知识他全都是人类的知识
+You get the idea.
 
-只到某个日期为止
+But what you're going to do is kick off a new Claude code session.
 
-不过因为LOLM本质上就是压缩器
+You're not going to use plan mode.
 
-而这就像一种
+You're going to toggle probably to not accept edits on yet.
 
-就像把所有信息都压成一张模糊的JPG
+Certainly not auto mode.
 
-我通常不会把太多精力放在知识截止日期上
+I think just the default mode will be fine.
 
-其他教育者
+And then you'll be able to invoke the GrillMe skill here, which I have added to
 
-因为我对把LLM当做数据库这件事
+the repo under .ClaudeSkills, GrillMeSkill.md up here.
 
-极度不信任
+We can give it a read just for now.
 
-所以我根本不会指望他
+This is all the skill is.
 
-我基本上没有任何背景知识
+It's incredibly, incredibly simple.
 
-这就是我代入的心理模型
+Interview me relentlessly about every aspect of this plan until we reach a shared understanding.
 
-最后最奇怪的约束是LLM完全是无状态的
+Walk down each branch of the design tree, resolving dependencies between decisions one
 
-这意味着LOLM的行为
+by one.
 
-有点像记忆碎片里的那个人
+For each question, provide your recommended answer.
 
-每次醒来都会彻底忘记自己的整个生命周期
+Ask the questions one at a time.
 
-在实践中
+And if a question can be answered by exploring the code base, explore the code
 
-这意味着当你在使用LLM时
+base instead.
 
-不断往里面添加东西
+This means it's not going to ask you any erroneous questions that it could go
 
-并且把东西加到这里面之后
+and check itself.
 
-一旦你清空上下文
+We're using the explore verb, so it should go out and actually do some exploration.
 
-就会彻底重置回什么都没有
+It's going to give us recommended answers as well, which is so convenient.
 
-然后你又得把它重新建起来对吧
+Oh, I just can't wait for you to try it.
 
-所以当你清空上下文并重新开始时
+I want you to treat this lesson like a sandbox you were just messing about with
 
-重新开始的话
+GrillMe.
 
-你会丢掉LLM在你的代码库里
+It will take a little while for you to reach a shared understanding.
 
-积累下来的那些隐性知识
+And at some point, you'll be able to say, OK, we're ready to implement.
 
-这意味着文档和基于代码的质量与组织
+Let's freaking go.
 
-变得绝对关键
+Write down any observations that you have, write down any notes, write down any ways
 
-不过我们会在引导部分更深入的探讨这一点
+that you think you might improve this skill.
 
-以上就是主要的限制
+And I will see you in the solution.
 
-关于LOLM的一个事实是
+Good luck.
 
-他们有一个聪明区和一个愚钝区
 
-另一个事实是
+### 025-AI Coding for Real Engineers p25 025 The Grill Execute Clear Loop solution
 
-他们已经见过世界上所有的这些信息
+Okay, I'm gonna start by providing a prompt to Grillme.
 
-就像是随手写在餐巾纸背面一样潦草
+I'm gonna say, I want to add a lesson comments feature.
 
-而且他们只能半记住这些信息
+I'm not entirely sure of the scope,
 
-并且他们是在某个时间点进行预训练的
+but I want to make sure we reach a V1 pretty quickly.
 
-这意味着他们的知识直到某个日期为止
+And so I want to see something working.
 
-而且他们完全是他们是无状态的
+The minimum is, I definitely want students
 
-这意味着每当你清空上下文时
+to be able to comment on lessons
 
-你基本上就是在抹掉他们的记忆
+and have instructors also comment on those lessons.
 
-他们所有的感受
+That seems fine to me.
 
-所有精力都一下子消失了
+Let's see what Grillme does with this information.
 
-作为开发者或者管理者
+Okay, it's done a teeny exploration here.
 
-这是我们不得不绕开的最奇怪的一组约束条件
+It's found a quick layer of the land.
 
-当你拥有一种新的刚加入你团队的新人
+It's a React Router course app with students,
 
-至少你知道
+instructors, admins, per lesson routes, et cetera.
 
-他们可能会上午十点才晃悠着来上班之类的
+So for V1, the most foundational branch
 
-但至少他们有记忆
+I want to resolve first is who can see and write comments.
 
-至少他们可以随着时间学习
+So here we go.
 
-至少他们他们不会在工作时
+We've got Q1, who can post
 
-只有如此狭窄的窗口
+and who can read comments on a lesson.
 
-否则很快就会把一切都忘掉记忆
+So already we're being forced to interrogate our design
 
-在这门课程期间
+and think about it.
 
-以及在整个这一期学习中
+It's given a recommendation, only enrolled students
 
-我们将一起使用cloud code
+and the course instructor can post and read.
 
-以便在这些约束下发挥最大效用
+Comment to scope to one lesson
 
-因为当你在其范围内工作时
+and only visible to people with access to that lesson.
 
-你会意识到啊
+That looks good to me.
 
-其实有很多技巧
+I'm gonna say correct.
 
-可以让我把他的能力发挥到极致
+This is my favorite response to Grillme
 
-在不撞上他们那些怪毛病的前提下
+because it's just accepting its recommendation.
 
-用好这些工具
+Okay, it's now asking about the threading model.
 
-大家好
+This is something we had not considered going into this.
 
-我是EDDIFMATT
+Should we have like pure, like fully nested threads,
 
-自从这门课程录制以来
+kind of like Twitter style?
 
-或者更准确的说是
+Should we have just a flat list
 
-这门课程的某些部分被录制之后
+with optional one level reply
 
-主流的上下文窗口已经从200000token
+or should we just go to pure flat?
 
-扩大到1000000token
+This is interesting because when I'm thinking
 
-而现在对大多数人来说
+about this, I'm thinking,
 
-cloud code的默认上下文窗口大小是100万个token
+what's like an irreversible decision here?
 
-课程的部分内容我就是用它录制的
+Like one way we could get this wrong
 
-但课程的另一些部分则是
+is we could make too complex an implementation
 
-这是用200000token的版本录制的
+that we end up not needing.
 
-所以你大概马上就会有个问题
+As it says, sort of fully nested
 
-这对聪明区和愚钝区的计算有什么影响
+is probably overkill for version one.
 
-40还是正确的指标吗
+So I'm interrogating myself here
 
-在我看来
+and I think I'm gonna ask a follow-up question.
 
-大上下文窗口带来的唯一变化就是
+What do you think is a version of this
 
-他们把更多愚钝区也一并交付给你了
+that would be hard to row back from?
 
-所以现在你可以在愚钝区里做更多工作
+Like fully nested might be overkill,
 
-如果你喜欢这么说也行
+but maybe we can always go from pure flat
 
-但聪明区的实际大小并没有发生太大变化
+to one level replies later, right?
 
-自从我第一次录制这个视频以来
+So let's submit that.
 
-现在我觉得我们大概处在100k token的水平
+I'm doing this because what I see
 
-就是聪明区
+a lot of people doing with the grill me skill
 
-所以在接下来你看到的所有百分比计算里
+is just literally answering the questions like A, B, C
 
-当然要记住
+and not trying to drive the conversation themselves.
 
-那是基于200000token的上下文窗口完成的
+This is an interview, sure,
 
-而不是1000000token的窗口
+but you're also able to drive the conversation
 
-所以现在我们要以原始token数量来思考
+from your side.
 
-而不是百分比好了
+So it's giving us now a reversibility ranking.
 
-就这样
+Yeah, we can always go from a flat list
 
-EDIMT结束
+to one level list pretty early on.
 
-### 016-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p16 What Are Subagents - 什么是子代理.ai-zh
-既然我们已经了解了LM的一些限制
+We can always go to one level to fully nested,
 
-接下来就开始谈谈cloud code是如何应对这些问题的
+also easy, but fully nested to anything simple is hard.
 
-code试图缓解这些问题
+You'd have data whose meaning depends on depth
 
-具体来说
+and collapsing it loses information, right?
 
-cloud code采用了一种非常重要的策略
+So pure flat is the most reversible starting point.
 
-为了把他的上下文窗口榨出更多价值
+So it's changing its recommendation to just pure flat
 
-我做了一个小型的上下文可视化
+and I agree.
 
-这里的窗口
+Correct.
 
-我们可以把这些部分想象成cloud code的不同任务
+It's now asking about the content format,
 
-在那次会话里需要做的事情
+which is a really important detail here.
 
-我设想这段灰色部分是系统提示
+It's recommending plain text plus auto link.
 
-也就是那部分
+I agree.
 
-我们在上下文里看到那些一直存在的东西
+Correct.
 
-系统提示
+We don't want a rich text, whizzy wig for version one.
 
-系统工具那些一直传给LOLM
+We could do markdown, I suppose,
 
-用来告诉他该如何像cloud code一样形式的内容
+but plain text and auto link seems to make sense to me.
 
-那么智能体要做的第一件事可能是
+It's now asking about editing and deleting comments.
 
-比如说先探索这个仓库
+So yes.
 
-他进来时带着没有记忆对吧
+Okay, there's lots here, right?
 
-所以他需要先做一些探索
+So the author can delete their own comments.
 
-然后再进入绿色部分
+Instructors can delete any on their courses,
 
-在这个例子里就是实现部分
+lessons, no editing on V1.
 
-然后在这个示例里
+Hard delete versus soft delete.
 
-这些深灰色的是那些只是上下文窗口里
+I think we go for a reversible choice.
 
-还没被填满的空余空间而已
+So soft delete is so threads don't lose context.
 
-现在理想中的情况是
+Deleted comments render as deleted placeholder.
 
-任何类型的工具链
+That makes sense.
 
-任何类似cloud code的应用
+So if in future we need to thread off those,
 
-都会尽量把这些块切的更小对吧
+although we're not doing threads, right?
 
-因为我们在探索上消耗的tokens越少
+We're just doing a flat list.
 
-可用的tokens就越多
+I think for version one here,
 
-处在实现的理想区间里
+we should go with delete only, soft delete, no edit.
 
-但当然如果我们在探索阶段投入更少精力
+So yeah, follow its recommendation.
 
-在这种模式下
+I'm gonna say correct.
 
-我们很可能会得到更差的探索效果
+One thing you might've noticed
 
-这意味着LOLM很可能他对仓库的了解会更少
+about the grill me session here
 
-上下文更少
+is how little we have to focus on at a time.
 
-这很可能意味着实现效果更差
+Having just one question to deal with
 
-所以很难看出你如何弥合这道鸿沟
+means that our focus just shifts from question to question
 
-因此cloud code以及类似的智能体工具采用了
+and we resolve it in line.
 
-在你所对话的那个智能体里
+If we had to just like do this in one big chunk,
 
-有一个非常聪明的解决方案
+in let's say a plan asset,
 
-也就是那个编排器代理
+we would probably get pretty lazy
 
-然后他会派生一个子代理
+or we would deprioritize some of those.
 
-换句话说
+But taking the time to think through each decision
 
-他创建一个新的上下文窗口
+is absolutely crucial
 
-并进行提示
+and means we're gonna get a really good alignment
 
-让这个子代理来完成这里的任务
+in the output, I hope.
 
-于是这个子代理就可以花很多
+It's now asking where do comments live on the lesson page
 
-tokens去做这件事
+and it's recommending a discussion section
 
-所有任务都在他的智能范围内完成
+appended below the lesson content quiz.
 
-然后他把结果的摘要汇报回去
+Absolutely, yep, hey, makes sense.
 
-编排器代理
+It's asking sort order for comments.
 
-换句话说
+Yes, it should read like a thread.
 
-这是一种委托机制
+Absolutely, we don't want newest first or oldest first.
 
-它有点像编排器
+Yes, absolutely.
 
-是首席开发
+It's asking a little bit of front end stuff now.
 
-他会把任务甩给一个初级开发
+So visual distinction for instructor comments.
 
-说帮我探索这个仓库
+Should we have an instructor badge
 
-然后把你的发现汇报回来
+next to the instructor's name?
 
-编排器可以派生出
+Absolutely, yes, sounds good.
 
-也可以有多个子代理
+Again, these questions are often super easy to answer,
 
-也就是说你可以让多个子代理并行工作
+but like, you know, we're just seeing it come to life
 
-当他们全部完成后
+really in our minds before we see it on the page.
 
-会向负极编排器汇报这些子代理
+It's asking about pagination.
 
-他们也可以使用不同的系统提示
+So how many we want to see on the page at once?
 
-和不同的模型来启动
+I think load all is fine for V1.
 
-所以我们甚至可以使用更便宜的
+Yeah, notifications when someone replies or comments.
 
-用于子弹里的模型
+This is something we will need to do eventually,
 
-如果任务是相对简单的探索类工作
+but it's definitely out of scope for now.
 
-这种做法就非常常见
+So no notifications recommended.
 
-比如可以看到cloud code启动IQ来进行探索
+Yeah, seems fine to me.
 
-它非常快
+Again, really great detail here.
 
-而且真的高质量
+It's asking about character limit per comment.
 
-这就是子弹里的本质
+I'm fine with 2000 characters, that seems fine.
 
-它们是一种用于节省上下文的机制编排器代理
+And it's now asking about moderation.
 
-而cloud code会非常激进的使用它们
+So this is something that we thought about
 
-所以你将会当你使用cloud code时
+initially when we were designing the prompt.
 
-到处都能看到他们干得好
+And it's asking reporting admin deletes
 
-我们下期见
+or rate limiting.
 
-### 017-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p17 Codebase Exploration - 代码库探索.ai-zh
-在我们上一个练习里探讨过的所有约束当中
+I think it's, what's it recommending?
 
-最棘手也最奇怪的一个是
+It's recommending to defer all of it for V1,
 
-你首先要考虑的一点是
+but I think I do want the ability for admins to delete.
 
-LOLM是无状态的
+So I think I'm gonna go for B here.
 
-这种无状态性
+I'm gonna disagree with the recommendation
 
-这意味着每次LLM都会被丢进你的代码库里
+because admin's deleting stuff.
 
-而且对之前的探索毫无记忆
+That just makes sense to me.
 
-这意味着每当LOLM需要快速熟悉这个代码库的时候
+It just makes sense.
 
-然后深入探索它
+Why wouldn't you do that?
 
-理解它的模式
+You know, it's just an extra little check
 
-理解他的组织方式以及理解
+and admin's not being able to do something
 
-甚至包括这个代码库到底在做什么
+feels super awkward.
 
-这意味着探索是一项你需要具备的基础能力
+All right, pals, we have done it.
 
-为了真正用好编码智能体而需要理解的东西
+Beautiful.
 
-幸运的是
+Resolve the consequential branches.
 
-我们手头有一个很大的旧仓库
+Here is the V1 spec.
 
-这里留给你去探索
+It's just kind of giving us a really, really light plan
 
-希望你已经有机会在应用里随便点一点
+here based on everything that we've covered.
 
-并且至少从基本层面了解他在做什么
+I generally don't review these
 
-但在这个练习中
+because I know that we've reached
 
-我们我将用cloud来帮我们探索这个仓库
+a shared design concept now.
 
-我先打开vs code
+I can see the thing in my mind,
 
-像之前一样启动cloud
+probably if you're following along, you can do the same.
 
-我会这样提示它
+And I have a feeling that what we're gonna get out of this
 
-告诉我这个仓库的技术站是什么
+is gonna be good.
 
-以及它的预期用途是什么
+So yeah, it's recommending that I say ship it.
 
-现在在这一点上
+I'm gonna put it in accept edits on mode
 
-我先暂停一下
+by pressing shift tab, and I'm gonna say implement.
 
-看看在我的机器上
+I feel pretty confident doing this
 
-这个解决方案会发生什么
+because we've only hit 40K tokens here.
 
-不过我会我想让你在项目里运行完全相同的内容
+So we're still comfortably in the smart zone.
 
-同时留意一些不同的东西
+And this means that I'm pretty sure
 
-首先我希望你能知道什么时候
+we're gonna get a good implementation here.
 
-你认为正在使用的代理
+It's worth saying again, at this point,
 
-你也许能够从用户界面就能看出这一点
+you probably received different questions from me.
 
-看看你能不能自己弄明白
+It probably took you in a whole different loop.
 
-其次当LM给出回复时
+It may have, or you may have chosen different things
 
-先让他给出回应
+from me, that's absolutely fine.
 
-再向他提问
+But what you should have seen is had some kind
 
-继续追问
+of grilling session with the agent.
 
-然后看看会发生什么
+And hopefully before you got to implementation,
 
-通过这种方式
+you had a decent understanding
 
-在这个练习结束时
+of what you were building in your head.
 
-我确实希望你能够对这个仓库有非常深入的理解
+Okay, we can see it's added lesson comments
 
-所以我我在下方给你准备了一堆可以问的问题
+into the DB schema.
 
-完成后前往解决方案
+It's asked me to run db-generate,
 
-我会把正在发生的事情逐一拆解清楚
+and it's asking me to run db-migrate as well,
 
-祝你好运
+which is nice.
 
-我们在解决方案里见
+So it's migrating the database for me.
 
-### 018-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p18 Codebase Exploration - Demo - 代码库探索-演示.ai-zh
-好了我们开始吧
+It's adding the comments table and the drizzle migration.
 
-看看会发生什么
+It looks like it hit an error for some reason.
 
-首先我们可以看到它正在搜索针对两种模式并读取六个文件
+Maybe it hasn't.
 
-你可以在这里按control o展开
+Okay, so the drizzle migration is complete.
 
-如果我按下control o展开后
+We're looking good.
 
-我会进入一种冗长模式
+It's now implementing the comment service.
 
-可以看到他执行过的所有命令
+So we've hit around 60K tokens here.
 
-他会调用bash命令读取某些文件
+It's now writing some tests to cover all that stuff.
 
-然后给我一个简要的说明
+It's looking at an existing one, very nice.
 
-总结一下这个代码仓库
+Okay, this is a decent chunk of work
 
-包括这里的技术站
+that it's doing now.
 
-我要把这个界面取消勾选
+We're onto the UI and we've got about 78K tokens
 
-所以我们最终得到的是那种默认结果
+in the bank.
 
-而我在这里看到的是
+We're heading up to the sort of dumb zone section,
 
-它并没有启动
+but I still think we're smart zoning,
 
-有没有子弹里
+so I think we're okay.
 
-就我这边来说
+And it's now running the type checks,
 
-用这个模型这个版本的代码仓库
+and hopefully it's going to be running the tests now
 
-在这个特定的提示词并没有触发任何explore代理
+to make sure everything is good.
 
-这意味着我们实际上没有读取有那么多文件
+Okay, all the tests are passing.
 
-我们整个过程只读了六个文件
+It's completed all of its tasks.
 
-这没法给我完整的拆解
+The type check is clean.
 
-了解这个代码仓库里发生了什么
+We are in a great spot,
 
-那我们滚动到底部
+and it's given us the summary.
 
-稍微提示一下它更深入一些
+So now we can go ahead and QA.
 
-我对购买力平价的实现特别好奇
+So I'm gonna click this dev UI in the bottom corner.
 
-而当我这样做时
+I'm gonna log in as Emma Wilson.
 
-这次我要用一个特别的词
+Then I'm going to Emma Wilson's dashboard.
 
-我会用explore这个词
+She's got two courses.
 
-我会说explore这个代码仓库里的PPP是如何工作的
+Let's go to the Node.js course.
 
-如果我启动它
+Let's go to, I don't know, setting up Express.
 
-我们会看到一些非常有意思的东西
+And we have a little discussion area here.
 
-现在我们可以看到它已经启动了一个explore代理
+So we can say, hey, like this, post the comment.
 
-你看这里写着explore
+And then we have Emma Wilson saying, hey.
 
-这里方括号里带了个类似标题的东西
+If we take a look at this course, who's the instructor?
 
-而这个explore正在运行一堆不同的
+It is Marcus Johnson.
 
-它在进行工具调用
+Let's go into dev UI.
 
-并且非常积极的搜索文件
+Let's log in as Marcus Johnson.
 
-如果我按下CTRLO在这里展开
+Let's go back to where Emma Wilson's comment was,
 
-我们可以看到哇
+and let's leave another comment.
 
-他在这里读取了更多文件
+We can see that when we're logged in as the instructor,
 
-搜索了许多不同的东西
+we have the ability to delete comments,
 
-我会取消勾选这个选项
+or we can say, wow, like this, post another comment.
 
-让它自己跑起来
+It appears below it.
 
-那么底层到底发生了什么呢
+So we can delete comments with the instructor tag.
 
-我们正在对话的那个编排代理派生出了一个带有自定义配置的explore
+One second ago, we can delete our own comments.
 
-代理系统
+We can delete Emma Wilson's comments.
 
-提示让子代理为我们探索这个代码仓库
+Let's see what happens when we switch to James Park.
 
-我们可以看到
+James Park doesn't have access to this course,
 
-在子代理的上下文中
+so he does not see the comments.
 
-他用了大约60秒完成任务
+Does Olivia?
 
-消耗了约6万4000个token
+Yeah, Olivia does.
 
-占用了他上下文窗口的32
+And Olivia should not have the ability to delete.
 
-这相当夸张
+Fantastic, brilliant.
 
-你知道那可是烧掉了不少token
+Let's just check that deletion works.
 
-这里调用了25个工具
+I'll go and go in as Marcus Johnson, like this.
 
-这些工具可以是bash命令
+Yeah, there we go.
 
-也可以是文件的读取和写入操作
+It shows as deleted.
 
-然后它然后带着一份总结回到我们的副级编排代理那里
+Then we can delete Emma Wilson's comment.
 
-而编排代理则吐出了
+Beautiful.
 
-这看起来像是关于PPP工作原理的一次非常深入的探索
+So rather wonderfully,
 
-说实话几乎几乎就像我们亲手写出来的一样好
+we have a perfectly aligned implementation
 
-于是我们注意到那个子代里有多强大
+to what we planned.
 
-在这里我们的措辞有多重要呢
+We didn't have to do any steering during implementation
 
-我们用了explore这个动词
+because it was all nicely aligned
 
-它某种程度上起到了连接的作用
+to the grilling session that we had.
 
-Cloud code
+We didn't even create an asset.
 
-像是触发了他前空间里的某个机制
+We didn't even create a plan.
 
-于是说好吧
+We just had a conversation
 
-我需要使用explore子代里
+and then produced an implementation.
 
-而在之前的提示里
+Amazing.
 
-我们只是说告诉我这个的技术站
+So that is the Grill Me workflow,
 
-这就是代码仓库
+and we're gonna be deepening this
 
-所以当你想要一次真正深入的探索时
+and developing this throughout this course.
 
-一个很好的提示就是实际去使用这个词explore
+If you really fancy taking this lesson to the next level,
 
-所以现在你应该抓住机会
+you could go back,
 
-继续做更多的探索
+redo this entire lesson with plan mode,
 
-这些是你想在代码仓库上执行的命令
+and see if you have any different experience.
 
-用来真正加深你的理解
+But overall, nice work,
 
-因为我们很快就要接下来就要开始构建新功能了
+and I'll see you in the next one.
 
-干得好
 
-我们下期见
+### 026-AI Coding for Real Engineers p26 026 Compaction Day 1 Fundamentals
 
-### 019-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p19 Build A Feature - 构建功能.ai-zh
-好了我们已经探索过这个代码库了
+Throughout this course so far, I've been leaving something unexplained and it's time to open the lid and see what's actually in the box.
 
-你已经大致理解了正在发生的事情
+I want to talk about what happens when your context window goes all the way into the dumb zone and actually goes all the way up to the context limit.
 
-现在我们来实现第一个功能
+In other words, you start your session in the smart zone, you do a good job in the smart zone, but let's just say you carry on, carry on, carry on through the dumb zone.
 
-我们要构建一个课程评价系统
+What actually happens when you reach the end of the context window?
 
-让学生可以对课程留下评价
+In other words, you have spent 200,000 tokens in a single session. What is going to happen then?
 
-我选择这个特性是因为它相当有分量
+Well, we can examine this by running Claude and inside our project, of course, and we can do a context command here.
 
-你需要触达代码库的各个部分
+Now, this context command shows the context usage that we have here. Currently sitting at 7%.
 
-但是就用户界面而言
+Very nice. But right at the end of the context, we can see an auto compact buffer here.
 
-它并不算复杂
+So this is 33k tokens. So 16.5% of the context is reserved as an auto compact buffer.
 
-为了让你有个概念
+Now, this is not being used by the context window, so it's not affecting the LLM.
 
-我们需要进入开发版界面
+There's no tokens actually being put here. It's basically a stopgap.
 
-以学生身份登录
+In other words, when we cross into the auto compact region here, it's going to automatically run something called compact.
 
-我们现在是EMMAWILSON
+What is compact, you may ask? Well, let me show you what it does.
 
-然后转到比如说node js
+So I've gone back to a previous session here where we had used 49% of the context window.
 
-我们的想法是让用户能够在这个页面上留下评论
+In this session, we implemented the lesson comments table here.
 
-我们不想留下文字评论之类的东西
+We added the comment service. We added a lesson page, add and delete comment actions, and we had comment section, comment card components.
 
-我们其实只需要一个星级评分
+Now, let's imagine for a second that I wanted to carry on this session and give it some feedback on its implementation.
 
-首先你需要做的是让cloud再次在vs code里运行起来
+49% feels a little bit freaky deaky here, so I might be tempted to clear the context.
 
-或者如果你已经配置好了cloud code
+But clearing the context would mean I would need to explore the entire repo again.
 
-那就运行clear来清空对话历史
+I would lose all of this nice context of what was actually implemented.
 
-接下来我们要把初始提示整理出来
+My context window kind of looks like this at the moment where I have this nice watch of good context.
 
-这只是一个关于我们要构建什么的简短说明
+I just want to fit it into a smaller space so that I can do some work in the smart zone.
 
-我选了这个简单的提示
+This is what compacting in theory does.
 
-我想创建一个课程评价系统
+It takes a large watch of context here with a bunch of repeated tool calls, with maybe some stuff that doesn't really need to be there.
 
-让学生可以对课程进行评价
+And it just gives you a summary of what the most useful stuff is.
 
-通过留下星级评分
+And crucially, it uses an LLM to do this.
 
-我们不想添加文字评论
+So this process of reducing the large context into a small context does cost you tokens.
 
-只要星级评分
+But of course, exploring the repo again would also cost you tokens.
 
-这些评论随后会在所有展示课程的地方可见
+So I'm going to try this out by going into the Claw Code session and running compact here.
 
-我们希望在列表页上显示课程的平均评分
+I now get the option to pass in custom summarization instructions.
 
-以及在课程页面本身
+This allows me to pass some information and maybe some guidance to the LLM that's doing the summarization.
 
-你的提示可能和我不一样
+And I tend to use this to tell the LLM why I'm compacting.
 
-你可以继续深入添加更多细节
+In other words, what I'm about to do after I compact.
 
-或者干脆收一收
+So for this one, I'm going to say I've just implemented a feature and I want to do some QA on it.
 
-让它更简单
+That really is it. That's all the LLM needs in order to do a better job, I've found.
 
-现在我们先在这里暂停一下
+So let's actually run this and see what happens.
 
-不过一旦你发出那条消息之后
+We can see a compacting conversation thing comes up.
 
-然后我希望你开始引导cloud
+This does usually take a fair chunk of time, maybe a minute, maybe two minutes, depending on the size of the conversation.
 
-我希望你密切关注他
+OK, and we can see it is now compacted.
 
-看看他是否会生成一个探索用的子agent
+There's a little bug here where it still shows the original context in the status line there.
 
-比如说并在他逐步执行的过程中
+So this is deceiving.
 
-试着理解他的每一步操作
+But we can see it also gives us a little printed summary here.
 
-他可能会开始想要修改文件或者向你申请权限
+It keeps some of the main files in context.
 
-对此你应该有所准备
+So it keeps apps roots in context, keeps this lesson dot lesson ID in context.
 
-你还应该确保你使用的是正斜杠作为上下文分隔符
+It keeps references to some files as well.
 
-在你操作的过程中
+So this file is not in context, but it's still referenced.
 
-留意你的上下文用量
+And it's also got the plan file referenced as well.
 
-如果你以前用过LLM来开发功能
+So it knows that the plan file is there.
 
-那就会感觉很熟悉
+We can also press control zero to see the full summary here.
 
-但我希望你从中领悟的是
+So here we go. This is the full summary of everything that was in the conversation,
 
-要对上下文的使用保持高度警惕
+along with the files and the references above.
 
-我在使用LLM时的那种感受
+This is all the LLM has in its context.
 
-记住主编排agent的使用量大约在40
+And we can see it's simply a markdown file here.
 
-这时候我们就应该开始有点紧张了
+So you see how little remains here.
 
-所以让cloud的做法来引导你
+I mean, like there really isn't that much.
 
-让自己进入一种更偏向观察的模式
+It's just a set of bullet points and some code samples saying what was in the conversation.
 
-给他一点方向性的引导
+We can see it preserves all the user messages here.
 
-但我们主要还是想观察cloud code的默认行为
+So anything that we might have said, I suppose.
 
-祝你好运
+And we can also see that there's a pending task to QA the feature.
 
-我们解决方案里见
+The user's additional instruction says I've just implemented a feature and I want to do QA on it.
 
-### 020-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p20 Build A Feature - Demo - 构建功能-演示.ai-zh
-好了
+So there's our intention being preserved in the compacted conversation.
 
-咱们开干吧
+This is nice too. It also preserves the full transcript in a file.
 
-看看会发生什么
+So if it needs to reference anything that was said in the previous transcript,
 
-我们可以看到他进入了所谓的prime mode
+it has a reference to it.
 
-这基本上不言自明
+We can then exit out of here by pressing control O again.
 
-不过我们会更深入的探讨这一点
+And I'm just going to show you what's in the context by running forward slash context.
 
-在本节的后面部分
+We zoom up to the top here.
 
-我们可以看到它已经启动了
+We can see we are now at 12% tokens.
 
-还有这里的探索的代理真不错
+So we've compacted all that big conversation into just 23k tokens.
 
-等探索代理完成后
+So this is what compacting does.
 
-我们再检查一下好了
+And this is what would happen if you were to hit the auto-compact buffer.
 
-现在探索阶段已经完成了
+So a natural question becomes, why do we bother clearing the context at all?
 
-他进行了一次相当深入的探索
+Why not just allow the context to grow until we hit the auto-compact buffer,
 
-这很不错
+then we zoom down again, zoom up again, zoom down again,
 
-他现在正在读取一些关键文件
+and just keep on going like this?
 
-在编排代理里
+Well, the reason is that every time you hit the auto-compact buffer
 
-现在他带着几个问题回来了
+and you go back and you compact,
 
-这些显然是原本不存在的东西
+it leaves what I like to think of as a little sediment inside the context.
 
-在我的初始提示里没说清楚
+When you then go up again and you hit the auto-compact buffer again,
 
-或者从我的初始提示看不出来
+you leave another little piece of sediment.
 
-我可以用tab或方向键来导航
+And these layer up and up and up,
 
-用于上下导航
+and they affect the output in unpredictable ways.
 
-他问我的第一个问题是
+Whenever you start a session with an agent
 
-是否只有以注册的学生才能给一门课程打新平
+that has some of this sort of sediment in its context,
 
-这对我来说得通
+it means that it's in a different state from the way you usually work with it.
 
-因为只有那些那些真正为这门课程付过费的人
+Whereas if you optimize your workflow to work with an agent
 
-应该能够给他打分
+that always has nothing in its context,
 
-这意味着这些评价会更可靠
+then you find you end up with more predictable outputs each time.
 
-那我就按下回车来选择这个我们该用几星制的评分
+Not only that, but you spend fewer tokens, of course,
 
-15星的评分感觉最合适
+because you're not spending tokens on compacting.
 
-于是我按下回车
+You're spending more time in the smart zone
 
-仪表盘页面是否也应该显示在课程卡片上
+because you've got more smart zone to work with
 
-显示平均评分
+and less time in the dumb zone.
 
-其实我不太确定仪表盘页面现在显示的是什么
+So your code quality outputs tend to be higher.
 
-所以我打算在这里问问这个LLM
+I have to caveat this with this is my mental model
 
-那我就按四
+and this is what I have found best results with.
 
-然后聊聊这个
+In other words, this is my opinion.
 
-这应该能让我退出提问流程
+It also happens to be the view of lots of people in the community as well.
 
-但看起来我好像又进去了
+So this is kind of an agreed upon idea.
 
-所以我按下escape退出
+However, there are prominent people that say you should just, you know,
 
-我就直接问他吧
+continue working and just hit the auto-compact buffer
 
-仪表板上目前显示的是什么
+and not have to worry about context ever.
 
-把那里显示的所有东西都列给我看看
+So the question then becomes when should you compact?
 
-这样我就能弄清楚是否要加入星级评分
+I find myself compacting relatively rarely.
 
-会让界面显得杂乱
+It tends to be in cases like we discussed,
 
-你看我可以再开启一次探索
+where I have just finished a large session
 
-或者他可能已经把这些信息放在他的上下文里了
+and I just want to add some extra feedback on top.
 
-我在这按下回车看看他会做什么
+I've also found this really useful when debugging
 
-他在这里给了我一段关于仪表板代码的描述
+or trying to solve a complex error.
 
-以及那里实际显示的内容
+For instance, you fill up your context window
 
-我觉得基于目前的情况来看
+with things that you've tried
 
-这似乎对我来说就像一个私人仪表盘
+and you don't want to lose them by clearing the context
 
-我会对他说
+and just going back to nothing.
 
-我们就别折腾仪表盘页面了
+So you compact, you say to the LLM,
 
-我们只把它放在这些地方
+okay, we tried these things, let's now try some more.
 
-我们打算在那里销售这门课程
+But you should notice that the times that I'm using compact
 
-现在我就按下回车
+are times where I'm working with the LLM directly.
 
-既然他已经掌握了所有信息
+Our end goal with this course is to get to a place
 
-从他问我的所有问题来看
+where you should not need to touch the LLM,
 
-他应该能够提出一个不错的方案
+it should be working relatively autonomously.
 
-然后他就会付诸行动
+And so relying on compact for your workflows
 
-我们可以看到他现在已经启动了一个规划的代理
+means that you're also relying on you being there
 
-这是另一种保存上下文的机制
+to tell the LLM when to compact,
 
-他会再次深入查看这些文件
+which of course is useful,
 
-为了把所有内容都通读一遍
+but not quite where we're going in this course.
 
-设计一个完美的实施方案
+So that's what compacting is.
 
-然后他会按照这个来执行
+It's a Claude code mechanism for essentially making sure
 
-那就等等看
+you can have an infinite conversation with Claude
 
-让规划代理完成
+if you want to.
 
-看看他会产出什么好的plan
+Compacting multiple times over a conversation
 
-子代理现在已经完成了
+is considered an anti-pattern by me
 
-现在他实际上正在创建最终方案
+and lots of people in the community,
 
-所以这个计划相当扎实
+because you build up these horrible little gunky layers
 
-而且这是一个多步骤的计划
+of sediment in your context
 
-它包含了我们可能要添加的代码到这里的CHEMA
+from maybe unrelated conversations.
 
-然后是评分服务
+And what you should be optimizing for is a clean context,
 
-遵循现有的服务约定
+not one that has a bunch of memories already in it.
 
-当我阅读这些计划时
+When I do compact, it's usually only once per conversation
 
-我通常只看这里的顶层项目
+and it's usually only in cases where I'm working
 
-了解所有将要完成的步骤
+on a difficult, long running task.
 
-然后他会去更新课程列表页面
+I want to stay in the smart zone
 
-更新课程详情页
+and just give it a bit of extra feedback.
 
-他会在这里改动一些文件
+In general, I organize my setup and my harness
 
-然后运行一些验证步骤
+and all the things I use with Claude code
 
-同时也要检查文件的顶部
+to make sure I never have to compact.
 
-只是想确认一下这里的高层上下文
+And when I do compact,
 
-学生需要一个给课程打新评分的功能
+I usually feel bad about it afterwards.
 
-支持15星的评分
+However, this is just my opinion
 
-只有以注册的学生才能进行评分
+and you may find different results
 
-平均分应该显示在课程列表页上
+and they may even improve compacting in the future
 
-在课程详情页上一刀版被排除在外
+to the point where I actually like it and use it again.
 
-这在我看来没问题
+Nice work and I'll see you in the next one.
 
-我们现在可以一直滚动到底部
 
-我们可以在这里看看有哪些选项
+### 027-AI Coding for Real Engineers p27 027 Handing Off Day 1 Fundamentals
 
-我们有四个主要选项
+In the previous lesson we talked about compacting and specifically the dangers of auto-compacting
 
-我们得说可以继续吧
+where you pull in a bunch of context just to shrink it down again to create another
 
-自动接受所有编辑
+little layer of sediment that keeps growing and growing and growing.
 
-换句话说我相信这个方案看起来很不错
+Now the way to avoid this of course is just to clear the context every time so you
 
-那就开始吧
+start with a fresh session.
 
-我不需要在这里批准任何文件权限
+But what happens in situations where you're halfway through a session, let's say, and
 
-尽管去写你想写的任何代码吧
+you think of an idea that you want to do.
 
-或者我们也可以说可以继续吧
+Let's say you discover a file which needs a little bit of updating or a test that
 
-而且我还需要手动批准你写的任何东西
+needs fixing. You could do this in your current session of course but you don't
 
-或者我们先把上下文清空吧
+quite know how long it'll take and it might take so long that you don't have
 
-只是为了把计划放进上下文中
+any budget left to do the thing that you wanted to do in the first place.
 
-然后自动接受所有修改
+It doesn't really make sense to clear the context in this situation because
 
-或者当然如果我不喜欢这个方案的话
+you still need to complete the blue task here. It's just this little yellow
 
-然后我就可以在第四项里输入
+task also needs to be done at some point. And in fact this little yellow
 
-告诉我fold out需要修改什么
+task really just needs its own context window to complete. It doesn't
 
-他会更新那个计划
+even need all of the context with the blue. It's just we happen to
 
-所以我正在一和二之间做选择
+discover it during this little blue session here. So what would be great is
 
-有人会清空上下文
+if we could just take this blue session here and compact it into another
 
-但两个的话就会一直沿用当前上下文
+context window. Because then the blue could feel free to grow in its own
 
-然后就一路猛冲下去
+context window and this little yellow task over here, the bug fix or the
 
-为了做出这个决定
+test fix, could just complete in its own context window. So I've been
 
-我需要确认一下我们当前的上下文是什么
+messing about with this idea for a while and initially I thought this
 
-因为我有点疑神疑鬼
+needs to be called Compact to File but then I came up with a slightly
 
-关于上下文
+snappier name, Handoff. Handoff allows you to create a temporary
 
-我不太记得怎么从这里退出了
+markdown file that you can use for handing off between agents. And it's
 
-不过要么是escape
+really really handy in a few different situations which we're going to talk
 
-escape可以
+about. First let's take a little look at the skill itself. What the skill
 
-我本来打算试试控制一下
+says is write a Handoff document summarizing the current conversation so
 
-看看那样行不行
+a fresh agent can continue the work. We're saving it to a path produced
 
-这让我们可以退出到这里的cloud
+by make temp t Handoff xxxxx. In other words it's creating a file in
 
-我们可以运行context
+your temporary directory. Crucially it then says suggest the skills to be
 
-看看我们当前的上下文是什么
+used if any by the next session. So if you're doing a grill me then it
 
-好了
+will suggest to continue doing a grill me. Don't duplicate content already
 
-我们的上下文已经用到36了
+captured in other artifacts. This means that it will just add links to
 
-我们的上下文里有一大堆消息
+other artifacts if there's important stuff inside them. And then if the
 
-我们只是在往上推
+user passed any instructions treat them as a description of what the
 
-差不多到了舆论区的最底层
+next session will focus on and tailor the doc accordingly. This is
 
-我们也许可以蒙混过关
+really important because the Handoff document will be tailored to what the
 
-但我对上下文的偏执又开始冒头了
+next session will be used for. For instance if we found a broken test
 
-那我先回到我们刚才的位置
+during our implementation of something else during the implementation session
 
-通过深入查看提示
+we could say Handoff let's do a separate session to fix that test. That
 
-并且说让我有机会再次审阅这个计划
+would then generate a file like this which we could just then pass into a
 
-这应该只是打开界面好了
+new Claude session. This can also be super useful in planning. Let's say
 
-我们开始了
+you're doing a grill me session that gets a little bit long here and you
 
-他给了我这个选项
+think oh there's like a really specific part of this that I need to
 
-要不要清空上下文
+grill. So you could hand off to a new session that just grills about
 
-因为我们现在的上下文已经相当多了
+that specific thing maybe even builds a prototype burns a ton of context
 
-我就选是清空上下文
+even does some research. And then once you've done that big session you can
 
-然后自动接受编辑
+then hand off back to the original session just by condensing everything
 
-那么既然我已经把他回退了
+you learned into a little handoff doc. Overall handoff just allows these
 
-只针对计划中包含的上下文
+obscenely powerful flows where you're expanding and then contracting
 
-他再次读取了一些关键文件
+making these documents that you pass back and forth. And I wanted to give
 
-检查现有的模式
+it to you as an example of what you should do if a grilling session
 
-并且实际上又启动了一个探索代理
+goes out into the dumb zone and we'll be revisiting handoff patterns
 
-这就是清空上下文的弊端对吧
+as we work throughout the course. Take a moment now to just review the
 
-然后你得再次运行探索代理
+skill and if you feel yourself throughout the course running out of
 
-赶上你之前的进步
+context window then consider it as a nice option to just hand off to a new
 
-但这通常值得
+context window to fix a bug or just to continue working on the same thing.
 
-因为可以避免进入舆论区好了
+Nice work and I will see you in the next one.
 
-我们终于进入实验阶段了
 
-他现在开始为自己创建任务清单了
+### 028-AI Coding for Real Engineers p28 028 What Is An Agents MD File Day 2 Steering
 
-现在他已经开始实际实现了
+In one of the early lessons of this course, I talked about how LLMs just forget everything as soon as you clear the context.
 
-现在他正在引用计划中的各个步骤
+And immediately you probably ended up thinking, okay, that sounds terrible.
 
-一切进展顺利
+That sounds awful constraint because I have preferences that I want to be able to teach my LLM or I have certain ways of working or certain patterns that the LLM maybe is not very good at by default.
 
-所以他已经把课程评分表添加到steam里了
+It's going to be absolutely brutal to tell the agent every single time about what my preferences are before it goes and does its work.
 
-他已经创建了评分服务
+It would be great if there was some kind of memory mechanism for Claude code, some way that Claude code could learn my preferences or at least my repose preferences over time and then use that to better improve its output.
 
-现在他真的开始运转起来了
+Fortunately, there are multiple ways to solve this problem, both supported by Claude code and some supported by the community.
 
-所以我就让他继续跑吧
+And in this section, we're going to walk through how to use these to the best of your ability and which ones to pick.
 
-直到他达到一个停止点好了
+The first one we're going to look at is agents dot MD, which is a simple open format for guiding coding agents.
 
-我们现在已经处于完成状态
+You can think of agents dot MD as a readme for agents, a dedicated, predictable place to provide the context and instructions to help coding agents work on your project.
 
-五个任务完成了四个
+The appeal of agents dot MD is how many places it is supported by or rather how many tools use it.
 
-有一个目前正在进行中
+Gemini, CLI, Devin, Codex, cursor.
 
-以及他正在尝试运行的那个
+The very notable exception here is actually Claude code.
 
-这是数据库迁移
+Claude code doesn't use agents dot MD and doesn't recognize it.
 
-这是他第一次问我用于权限相关的事情
+Instead, it writes it as Claude dot MD.
 
-现在数据库迁一事
+My desperate hope is that Claude code will start supporting agents dot MD because it's just so stupid that it doesn't.
 
-我总是希望亲自掌控
+And so because I'm very hopeful and maybe a bit naive, I'm just going to refer to it as agents dot MD, whereas in fact we will be writing Claude dot MD.
 
-那我就说可以
+What we're going to do first is go into our project and run touch Claude dot MD here just to see how it works.
 
-但我不会把许可证给他
+And we end up with an empty Claude dot MD file in the root of our repository.
 
-让他始终自动运行
+I'm going to say to it, always reply to me in pirate language.
 
-他对数据库迁移命令也做了同样的处理
+And then we're going to save this file and then open up Claude inside my terminal here.
 
-将数据库迁移应用到我的本地数据库
+I'll then say to it, hello, how are you doing today?
 
-我就说可以放手去做吧
+And when we run this, we can see that it is now replying in pirate language. Wonderful.
 
-现在我在本地环境里遇到了一个小问题
+So we have successfully steered our coding agent.
 
-它需要像手动运行sq like3命令那样来执行
+There's a really important thing to note here, though.
 
-未找到sq like3
+I didn't at any point opt into this Claude dot MD.
 
-所以我正在逐步讲解一些步骤
+It just was pulled in to the conversation.
 
-配合这里的LLM实际上只是想先修复我的本地环境
+In other words, things inside Claude dot MD are global for the entire repository.
 
-我们可以看到他在这里尝试运行一个任意脚本
+This means that no matter what I do in this repo, Claude dot MD will now be responding to me in pirate language.
 
-为了解决这个问题
+And so this is the biggest downside with agents dot MD or Claude dot MD.
 
-而且有趣的事
+It is global.
 
-我会尽量把这段视频做的相对简短
+So this means that our Claude dot MD will be included in every conversation that we have with Claude.
 
-我就跳过这个修复了
+I'm going to copy and paste this about a thousand times here until I end up with an enormous file just to show you the impact on the context window.
 
-直到我真正把它搞定为止好了
+OK, we now have a 2000 line file where it just says always reply to me in pirate language.
 
-现在修好了
+I'm now going to kick off a new Claude code instance to make sure it picks up the changes in my Claude dot MD.
 
-他现在正问我
+And we can see an error here saying a large Claude dot MD will affect performance.
 
-我是否要运行数据库种子数据填充命令
+If I go into my context here by visualizing the current context usage,
 
-那就给这个全新的数据库填充一些种子数据吧
+we can see that I have burned about 10 percent of my entire context here on this memory file, on the Claude dot MD file.
 
-好的
+So everything you put in Claude dot MD costs you tokens.
 
-在经过几次全线检查后
+And I have no joke out there in the wild seen Claude dot MDs that are not this stupid,
 
-现在已经完成了
+but certainly have around 500 lines or 1000 lines of stuff in them.
 
-如果你在设置过程中遇到任何问题或者和LM一起
+So my default attitude with Claude dot MD files is paranoia and not wanting to put too much stuff in there,
 
-那就请去discord里发个消息吧
+not only because it's global, but also because it costs you tokens on every single request.
 
-但希望你所用的模型是他足够聪明
+You notice I have quite a lot of paranoia when I come to working with agents.
 
-能够绕过这些问题
+I think that's relatively healthy.
 
-那现在让我们再检查一次我们的上下文
+I especially have paranoia about a specific command that Claude bundles with, which is the init command.
 
-先看看我们目前进展到哪一步不错
+If I run this here, you'll see what it does.
 
-我们最终把使用率降到了32不错
+It initializes a new Claude dot MD file by looking at your repository, exploring it and putting some of the code based conventions inside of Claude dot MD file at the root.
 
-这样挺好
+We can see it's kicked off and explore sub agent here.
 
-也挺舒服
+So we'll wait for this to complete.
 
-在智能区内
+You can try this too, if you like.
 
-所以清理掉那些早期的上下文是值得的
+I sort of don't recommend you do it for reasons we'll explain in a minute.
 
-这样我们的实现就保持在智能区内
+OK, we can now see the edit that it has proposed to make.
 
-不错
+And the edit is a pretty large Claude dot MD file.
 
-我在这里打开一个单独的终端
+If we open up Claude again, if we cancel out of it and then run a new Claude session,
 
-在vs code里
+we can see by running context just how much this is filling up our context window.
 
-然后我要在里面运行pm pm def
+And we should see that the memory file, it's nearly a thousand tokens here that it's created.
 
-当我去那里的时候
+Now, that might not sound very much.
 
-我可以看到
+That's just sort of 0.4 percent of the context window.
 
-如果我以em wilson的身份在这里登录
+But if you imagine that's on every single request, that is just going to push you closer to the dumb zone and cost you tokens on every request.
 
-然后我查看一些课程
+And a lot of this stuff is just stuff that it could discover very simply by itself and stuff that will probably go out of date quite quickly, too.
 
-我在这里报名的那些课程
+For instance, the stuff inside the package dot JSON here is incredibly easy for it to discover.
 
-然后就在你的进度下方
+Just check the package dot JSON file.
 
-这里我可以给这门课打分了
+And if you ever change any of these scripts, you'll need to remember to go into Claude dot MD and update this, too.
 
-不错
+So for that reason, I really don't recommend you run Claude in it, even though the UI will tell you to a bunch of different times.
 
-现在我的评分已经保存好了
+It's also worth saying that Claude often actually ignores the stuff inside Claude dot MD.
 
-我们可以在上面这门课里看到他
+Claude code injects the following system reminder with your Claude dot MD file in the user message to the agent, which is this context may or may not be relevant to your tasks.
 
-比如我把它改成三星
+You should not respond to it unless it's highly relevant.
 
-然后他就会改变
+In other words, Claude will just ignore anything inside your Claude dot MD file if it thinks that it's not relevant to its current task.
 
-马上进入全局课程
+This, by the way, is from an excellent article from HumanLayer on optimizing your Claude dot MD file, which I'll link below.
 
-这挺不错的
+So even if you put stuff in there, Claude has the option to just ignore it if it wants to, which means that steering it is not always reliable.
 
-如果我现在切换到OLIVIAMARTINE
+So now you understand a bit more of what Claude dot MD is or what agents dot MD is.
 
-谁也能访问这门课程
+When should you actually use it?
 
-我给他打了五星
+Well, we're going to be getting into this and talking about it a lot more during this section because it's not an easy question to answer.
 
-我们可以在上面看到平均值变成了4.5
+But anyway, let's summarize.
 
-对我来说
+Essentially, agents dot MD and Claude dot MD are the same thing, except that Claude code never listens to agents dot MD and will only listen to Claude dot MD files.
 
-这作为第一版已经看起来相当不错了
+Claude dot MD is often ignored, and that's kind of by design because Claude code actually tells the agent or tells the LLM, do not always use this.
 
-现在我希望你做的事回到cloud
+And finally, Claude dot MD is global, so it's included on every single request you make to the agent.
 
-然后在这里输入commit
+So you better make sure that the stuff you put in there is relevant to every single request you're going to make of the agent.
 
-这就要用到cloud code
+So nice work, folks. I will see you in the next one.
 
-将相关文件添加到暂存区
 
-然后把你的代码提交
+### 029-AI Coding for Real Engineers p29 029 Steering An Agent With The Agents MD File Day 2 Steering
 
-我们可以在这里看到他请求允许编写提交信息
+Alright, so we've learned what an agents.md file is, but let's now use it to steer Claude code to build some features.
 
-我觉得嗯看起来不错好了
+To save you a bit of time, I've put together a plan that you are going to implement.
 
-我们已经完成了第一个功能
+In other words, I've gone into plan mode and I've put together a bookmarks feature.
 
-使用cloud code
+Bookmarks are private to each student, they persist until manually removed, and are inline only, so there's no dedicated bookmarks page.
 
-我现在想让你做的事就是打开一个笔记应用
+I'll make this available to you below so that you can copy and paste this directly into Claude, as I'll be doing in a second.
 
-并把任何你注意到的东西都记下来
+Now we mentioned last time that Claude.md can be used to steer the agent, but what particular patterns do we want to steer it towards or against?
 
-关于你使用cloud code的那次绘画
+Well, I've added something to my Claude.md that is something that I really hate to see from AI agents.
 
-把未解决的问题记下来
+It says here, when you have a function with more than one parameter with the same type, use an object parameter instead of positional parameters.
 
-你所拥有的那些
+In other words, this first one up here is the bad version, where we have an add user to post, where we have user ID as a string and then post ID as a string.
 
-比如说什么是plan mode
+It is very, very easy to call this function with user ID and post ID switched.
 
-我该如何成功的借助智能体进行调试
+And so, in my opinion, it's much better to have an object as the parameter.
 
-我应该花多少时间去审查这些代码
+So you need to pass an object instead of positional parameters, because then you specifically need to name which one is the user ID and which one is the post ID.
 
-我们会回来的
+When I was building this dummy repo, I put in lots and lots of these positional parameters in here.
 
-在整个课程中不断回答这些问题
+So now in this exercise, there's going to be a funny conflict because the code base is going to be doing mostly this.
 
-希望我们能给你一些不错的答案
+But we're telling the agent to do mostly the new good one.
 
-对他们来说是这样
+This means that during its explore phase, it's probably going to see a lot of this, but its Claude.md file will be telling it to do something different.
 
-不过干的漂亮
+So let's see which one wins.
 
-这是一个比较长的解决方案
+So to set this up, I'm going to open up a new Claude session here.
 
-视频一个漫长的练习
+I'm going to grab my plan here and I'm going to copy and paste it and then just go and paste it directly into Claude code here.
 
-希望接下来的这些会更好
+And it's now kicking off, as it will be for you.
 
-应该会容易一些
+I would like you to sit back and observe what you see from Claude code here.
 
-现在我们已经打下了基础
+Is it obeying the Claude.md file or is it obeying the stuff that's in the code base?
 
-干得漂亮
+And while this goes on, see if you notice any patterns in the code that it creates that you would like to steer against in the Claude.md.
 
-我们下期见
+We're really developing an instinct for how to steer the LLM, even if, as we discussed, the Claude.md file is maybe not a perfect place to do the steering.
 
-### 021-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p21 Non Determinism - 非确定性.ai-zh
-我想先稍微岔开一下话题
+So best of luck. Follow the steps below if you get stuck and I will see you in the solution.
 
-谈谈你对智能体输出的期望
 
-你在本课程中使用的智能体
+### 030-AI Coding for Real Engineers p30 030 Steering An Agent With The Agents MD File Solution
 
-我第一次开这门课的时候
+Alright, let's walk through what it's done so far. It started by exploring the code base.
 
-我们刚刚做的这个练习
+In fact, it didn't end up kicking off an explore agent, I suppose, because we'd already done some upfront work
 
-其实是最常被讨论的练习
+and because this plan was pretty detailed. It then added a bunch of tasks down here
 
-很多人都在问
+and it's about to start kicking off the plan. So I'm going to press Shift Tab and just allow it to create all edits.
 
-为什么我的智能体没做到你那个样子
+Now I can already see some promising signs here. Ooh, yes, lovely.
 
-明明给了相同的输入
+Inside Bookmark Service here is if we open it up by going Bookmark Service,
 
-同样的代码库
+we can see that it's using this opts pattern that it's read inside its Claw.md.
 
-我也完全按照你的步骤重复了一遍
+It has a user ID of number and a lesson ID of number here.
 
-按理说他应该表现的完全一样
+And we can really tell it's doing the same thing as in the Claw.md because it's used the same parameter name.
 
-我想把这个观念牢牢刻进你的脑子里
+So we had opts inside here, which is just my preferred way of doing it.
 
-智能体的行为是非确定性的
+And this one has opts as well. We can see too it's actually done this for all of the different functions here.
 
-智能体本质上就是next token机器
+So isLessonBookmarked and getBookmarkedLessonIDs all have this same pattern.
 
-或者更准确的说
+So I've now been sat here for a while and I've let Clawed code complete all of its work.
 
-LM是选择next token的机器
+It added the schema, the migration, the Bookmark Service and the lesson viewer.
 
-他们的做法是根据一组概率来选择下一个token
+But one extremely important thing it didn't do is it did not add any tests to the Bookmark Service.
 
-并不是每次都一样
+This is pretty bizarre to me because there were like there's tests for a bunch of other services inside here,
 
-这意味着你可以把同一个问题问两次
+which is visible only from the file system.
 
-LM他会给你两个不同的答案
+But I suppose because we didn't specify in the plan, then it didn't end up writing any.
 
-换句话说
+This would be a pretty high value instruction to add into a Claw.md file.
 
-你在任何时候从智能体得到的回复
+So let's actually go through search for Claw.md and add it inside here.
 
-他们会落在某个概率分布曲线上的某处
+So here's what I'm going to add here.
 
-你得到的有些答案会非常出色
+Anything marked as a service by the name of the file, for instance, AuthTokenService.ts,
 
-其中大部分会集中在中间
+should have tests written for them in an accompanying.test.ts file.
 
-也就是最合理的那条路线
+This is a really high leverage instruction because it's just a small little hint to the agent that this is a convention that we use.
 
-但有时你会得到一些奇怪的回复
+This is unlikely to rot away or go out of date because it's not actually specifying or naming any named files.
 
-出现一些奇怪的小异常
+It's just really a piece of jargon in our application that is unlikely to change.
 
-我第一次教授这门课时
+If you've ever worked on a complicated enterprise project, you know how sticky jargon can be.
 
-教了大约2500名学生
+And I feel confident that the word service will in general mean in this application a tested unit and a tested unit that provides a specific piece of functionality.
 
-其中有几个人在某些练习上
+OK, now that I've updated this Claw.md file and saved it, I'm going to go back into my Claw.code and I'm going to say review your work with the updated Claw.md in mind.
 
-遇到了很奇怪的情况
+The reason I'm specifically mentioning this is because if you make updates to Claw.md while Claw.code is running, it won't pick them up until you go into a new session.
 
-他当时做的事情和我演示的内容完全不一样
+I don't want to go into a new session because I want all of the context that we've had before.
 
-我想说的是
+I'm just about able to stay within the smart zone for this.
 
-这是使用智能体时的正常现象
+And I just want it to pull in the most up to date version of the file so it understands kind of what has changed and what I'm saying.
 
-非确定性是内奸的
+There we go. It's picked it up. The updated Claw.md adds a rule. Services must have accompanying dot test dot ts files.
 
-所以你要做的就是顺势而为
+It's looking for existing test patterns and then it's going to write some tests.
 
-你当然可以让智能体的表现更稳定
+All right, now it's writing the bookmark service tests. Nice.
 
-尤其是当我们进入AFK阶段
+OK, all 10 tests passed. The missing test file from bookmark service dot ts has been added and all services must have accompanying dot test dot ts files.
 
-开始讨论反馈循环的时候
+We've stayed just inside the smart zone and we've successfully done a bit of steering.
 
-但你总会遇到一点这种行为
+Now the LLM will remember both of these rules about the positional parameters and it will remember anything marked as a service must be tested.
 
-他有时就是会做出一些奇怪的事情
+I've also just done a bit of QA on the feature and I can see that it is now working too.
 
-希望这能让你对接下来的课程内容
+So I add a bookmark here, adds a bookmark to the section header and nice. It seems to work too.
 
-有一个合理的预期
+So we've successfully built a feature and we've improved the LLM's output potentially for next time.
 
-以及总体上与智能体协作做的不错
+Nice work and I will see you in the next one.
 
-我们下期见
 
-### 022-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p22 Showing Context In The Status Line - 在状态行中显示上下文.ai-zh
-关于cloud code的默认界面
+### 031-AI Coding for Real Engineers p31 031 Progressive Disclosure Day 2 Steering
 
-有一点让我抓狂
+All right, I've taken the Claw.md file that we had in the last lesson and I have opened it out a little bit more and added a bunch of sediment inside here.
 
-就是很难去监控上下文的使用情况
+Basically as if a bunch of developers had gone in and added their own ideas into this file.
 
-当你在使用cloud cook时
+If you've been using Clawed with a bunch of teammates, then you probably have one that looks a little bit like this.
 
-如果你看看这个领域里的其他工具
+Now, this is not exactly ideal for reasons that we've kind of already touched on.
 
-比如cursor或者像open code
+We have put a bunch of instructions into the global scope here and not all of these are going to be relevant for every single request that we make of the LLM.
 
-他们真的非常非常直观
+All of these instructions are going to be competing with the instructions that we give it in the prompt, for instance, in the plan.
 
-随时了解你的上下文使用率是多少
+And if we're only touching front-end code that maybe doesn't have any positional parameters, that doesn't touch any services, maybe we don't even need to do any importing,
 
-这样就能很轻松的保持在智能区
+maybe we don't need to add a new ID to the database, maybe we don't need to add a new timestamp to the database.
 
-因为你能看到自己什么时候超过40
+You know, all of these instructions are actually pretty narrow in the kinds of sessions that are going to need them.
 
-在上一个练习里
+I want you to imagine that each one of these instructions is one of these grey blobs in the context window.
 
-我们不得不退出计划模式
+Now, it might be that only these little blobs here are actually relevant to front-end code.
 
-为了运行context
+It might be that only these instructions are relevant for database code.
 
-我们不得不打断自己的工作流
+And maybe these instructions are the ones that are relevant for React Router.
 
-为了能看到他简直糟透了
+Now, looking at all of these blobs, isn't it funny that we've got them grouped all into one file?
 
-但幸运的是
+Wouldn't it make more sense if they were grouped together?
 
-cloud code为我们提供了这种能力
+Since a session that needs one piece of React framework advice will probably need more React Router framework advice.
 
-通过状态栏来自定义
+So what if we group them like this instead, where each one was in a separate file all located together and all of the unique ones were in their own file?
 
-我们在界面上看到的内容
+And then inside the Claude.md file, you would have just a set of links which linked you to the correct grouping when needed.
 
-接下来我会向你展示如何使用一个社区包
+So these would simply be separate Markdown files and Claude.md would use Markdown links to link you to the right place.
 
-为了获取上下文窗口的使用情况
+Now, what we're organically discovering here is a really important concept that's going to recur throughout the rest of this course.
 
-始终在你的视野范围内
+And that idea is progressive disclosure.
 
-就像我一样
+Progressive disclosure is actually an idea that comes from UI and UX design.
 
-你可能会对上下文窗口用量有点偏执
+The idea is that bad UI involves putting all available actions into one huge screen that the user can scroll through and choose from.
 
-我想让你做的第一件事是
+If you've ever seen a menu of a bad website where it literally just has a hundred options up at the top in one single flat list, you know what I mean.
 
-就是在这里用clear清空你的上下文窗口
+Instead, you should reduce the number of choices that the user has to make up front and then allow them to find kind of information based on that small number of choices.
 
-然后用shift加tab来循环切换
+So progressive disclosure of complexity is the name of the game.
 
-在所有不同的模式之间
+Instead of throwing all the complexity out at once, you just sort of give them a map and you allow them to navigate through it.
 
-直到你刚好回到默认模式再说一次
+This Claude.md file chucks all the complexity in at once.
 
-按住shift再按tab
+And as this grows bigger and bigger, I would be much more likely to progressively disclose parts of it.
 
-就在各个选项之间来回切换
+In other words, take it from the Claude.md, put it in separate files that aren't immediately visible to the LLM and then just link it from the information that it does have inside Claude.md.
 
-在不同的模式之间切换
+Now, this concept of progressive disclosure is going to come up again and again and again throughout this course.
 
-直到你看到类似的效果
+It goes into software architecture and code based design and all that stuff.
 
-快捷键按钮上有个问号
+But in the next couple of sessions, we're going to look at this in the context of steering.
 
-现在我希望你做的是打开下面的页面
+So nice work and I'll see you in the next one.
 
-那里应该有一个复制为markdown按钮
 
-我希望你把下面的整篇文章复制下来
+### 032-AI Coding for Real Engineers p32 032 What Are Agent Skills Day 2 Steering
 
-复制到剪贴板
+So we've been talking about agents.md and progressive disclosure,
 
-这样你就可以把它粘贴进cloud code
+and we've been kind of like not very kind to agents.md.
 
-粘贴进去后
+It is not great that agents.md just puts everything into the global scope.
 
-你应该会看到类似这样的效果
+That is no fun at all.
 
-粘贴文本一共80行
+So wouldn't it be great if there was a built-in solution accepted by the
 
-可能会多一些
+community as the right way to do progressive disclosure when you're
 
-也可能会少一些
+steering agents. And that solution is agent skills.
 
-如果我之后修改过这条指令
+This is an open format accepted across coding agents, including Claude code,
 
-接下来你可以在这里直接按下回车
+Anthropic were the ones that invented it, but they then gave it away.
 
-然后他会开始逐步执行这些指令
+It is a simple open format for giving agents new capabilities and expertise.
 
-在这篇文章里为你配置这个软件包
+Agent skills are folders of instructions, scripts, and resources that agents can discover.
 
-这会在你的全局cloud安装中进行配置
+The key word there is discover because they are not forced to take this
 
-不在项目内部
+information in, they're not forced to see it, but it is in a place that
 
-但在你的全局cloud目录里
+they can easily discover it.
 
-也就是你存放个人用户设置的地方
+Let's take our example from before to illustrate what we mean.
 
-不是针对你的项目的那些
+Before all of these React router style instructions were just forced on
 
-我先接受这个第一条命令
+the agent like immediately they were present in its context window.
 
-他正在创建一个目录
+Same for all of these front end ones and same for all of these database ones.
 
-然后我会允许它读取来自本次会话中的cloud cloud
+All of the instructions were right there.
 
-是我存放cloud用户设置的地方
+But what if instead we refactored these into their own file and we gave a
 
-那我就让他这么做
+little bit of metadata to the agent to say, use this skill when you need
 
-他现在要求我在上面的vs code里进行编辑
+help with the React router framework.
 
-要在上面的settings jsn里添加一个状态栏组件
+Use this one when you need help writing front end code.
 
-我觉得这看起来不错
+Use this one when you need help writing database or drizzle code.
 
-那我就在这里点保存
+And so all the agent would see by default would be the name of the skill
 
-这样就能生成差异了
+and then the description of the skill.
 
-接着他就开始编写一个cc的状态栏
+And then if it chose to inside the session, it could basically call the
 
-配置SETTGSM
+React router skill and bam, all of the instructions would become available to it.
 
-而且实际上在我重启cloud code之前就已经是这样了
+This is the idea behind skills.
 
-我可以看到现在有了上下文窗口
+They allow you to progressively disclose instructions and they allow you to
 
-用量就在我的提示下方这里
+kind of build a user interface for your agent of all the information it
 
-但仅仅因为说明让我这么做
+might need to know.
 
-我先退出这个连按两次CTRL加C退出
+So inside the repo, I've added a couple of example skills.
 
-现在我在这里输入cloud
+These are skills that I genuinely found were very useful while I was
 
-打开一个新的绘画
+building out this application.
 
-我应该能看到我的上下文窗口
+If we open up the explorer, we can see them inside .clawed then skills
 
-从0.0开始
+here, and there are two skills here.
 
-自从我录制了这个关于状态栏的视频以来
+One for a better SQLite 3 rebuild.
 
-而ENTROPIC宣布把上下文窗口提升到100万
+And the first one we're going to look at is PNPM not found.
 
-对于open4.6和sonnet4.6
+Notice how these skills, just like the Claw.md are inside the project folder.
 
-这意味着
+Just like Claw.md, you can have them inside the project like this, or you
 
-我们之前依赖百分比的做法就是不太对了
+can have them scoped globally to your user.
 
-因此不再只显示百分比
+In my setup, I've got some user scoped skills and some local skills.
 
-我现在已经更改了下方的说明
+Of course, the ones that are scoped to the project are much easier to
 
-这样他们就会显示这个
+share with your teammates as well.
 
-他们在这里显示了原始的token数量
+So that's worth thinking about too.
 
-后面跟着一个已较按小括号显示的百分比
+If we click into skill.md here, we can see that it follows a certain pattern.
 
-这很烦人
+It has a piece of front matter at the top here, which has the
 
-因为就像课程的其他部分一样
+name and the description.
 
-你会在这些视频中看到我使用百分比
+Just like we mapped out earlier by default, only these things are
 
-但取而代之的是
+available to the agent, so it cannot see the rest of this file inside here.
 
-你会在下面看到这个小小的显示
+The description says fix PNPM command not found errors by enabling
 
-用于你的智能区和笨区的计算
+corepack, use this when PNPM cannot be found, corepack errors appear,
 
-你该开始担心了
+or the package manager is missing.
 
-当这个数字达到大约8万到10万个token时
+It turns out that LLMs really don't know about corepack and maybe you
 
-如果你想心算一下的话
+don't know about corepack either.
 
-为了弄清楚我在视频里到底用的是哪个版本
+But if you encounter errors like PNPM command not found, you can just
 
-然后请记住我是在200000token的上线下录制的
+literally run corepack enable and then everything will wire itself together.
 
-对我来说
+So this is a perfect thing to put in a skill because I don't want this
 
-40大约是8万个token
+in a global claw.md file because the error really only happens very rarely.
 
-所以这个上下文窗口的数字会更新
+But when it does happen, it's really high leverage for the
 
-在我们进行绘画的过程中
+LLM to know how to fix it.
 
-他会让我们能够要非常非常密切的盯着
+The other skill that I've got here is this better SQLite 3 rebuild.
 
-随时了解你的上下文窗口里正在发生什么
+Use when seeing errors about better SQLite native module, node module
 
-如果你在配置过程中遇到任何问题
+mismatch was compiled against a different node.js version.
 
-那就请去discord来想办法解决
+So it's a very clear description of when I want it to invoke this skill.
 
-他们干得好
+It's again, very similar to the other PNPM skill that we had there.
 
-我们下期见
+It's just trying to fix a relatively rare issue where if it's a node
 
-### 023-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p23 Why Plan Mode Sucks - 为什么计划模式很糟糕.ai-zh
-好的
+of module version mismatch, then it should run NPM or PNPM rebuild.
 
-既然我们已经了解了我们的代理在正常情况下的行为方式
+These are perfect use cases for skills because we're just steering
 
-我们开始给他施加一些规范做法吧
+the LLM in the right direction to avoid a rare issue.
 
-我想专门谈谈其中一项
+Now you may be thinking, if you look at this diagram, how possible is it
 
-有一种你可以进入的模式
+to go even further in the progressive disclosure?
 
-我以前会推荐
+Is it possible within the React router skill to have other documents inside
 
-但现在我不再推荐了
+there that might speak to specific weirdnesses with React router?
 
-现在大多数代理都内置了有一种叫做计划模式的东西
+Could you potentially take the entire React router documentation
 
-我们可以在这里按住shift加tab切换到计划模式
+and put it inside a skill?
 
-这是在cloud code里
+Well, you absolutely could.
 
-这是在codex里
+For instance, if you wanted to just create an extra little file
 
-你也可以在pad上构建你自己的版本
+inside better SQLite rebuild, perhaps just take this and just
 
-这是在各种代理里都很常见
+imagine this is like a more complex script than you think, put it
 
-而计划模式的要点是
+inside script.sh and then you can just have the script in there
 
-在进入之前先制定一个计划
+and reference it from this file.
 
-在实施时也是如此
+The way you reference it is simply by using a markdown link here
 
-我们甚至在上一段视频里就看到它自动进入了计划模式
+that's very, very easy for the LLM to follow.
 
-因为他检测到我制定了一个计划
+And so this is a great way of hiding complexity within your skill.
 
-现在如果我们想想默认模式是什么
+Your skill might want to bundle scripts.
 
-我称之为实施模式时
+It might even bundle images.
 
-你基本上可以把事情分成四类
+You could bundle anything you can put on the file system inside a skill,
 
-他能做的事情
+but you don't have to put it inside the proper skill.md file.
 
-包括他可以写入文件
+So this is why skills are really so exciting because the progressive
 
-可以读取文件
+disclosure inside them means you can fit really high leverage,
 
-还可以运行bash脚本
+high power things in them and then bundle those up really simply
 
-而且它还能调用mc p service
+and share them with any coding agent and your team.
 
-如果你不知道什么是mc p service
+And so skills as a steering mechanism are really, really attractive.
 
-别担心
+I want to note something interesting finally, which is I think of there
 
-我们稍后会谈到这些
+as being two types of skills, skills that you want the LLM to invoke,
 
-但计划模式基本上会去掉写入文件的能力
+such as the ones that we've been looking at here, or skills
 
-并且会阻止代理主动对代码仓库做任何改动
+that you personally want to invoke.
 
-于是你最终仅凭读取文件运行一些bash脚本以及监听mc p service的能力
+You can invoke a skill in the same way that you invoke any command inside Claude.
 
-但无法真正做出任何改动之前
+We can actually use the skills command to list all the available skills.
 
-首先先做计划
+You can see we've got some project skills here and I've got a bunch
 
-这个概念非常好
+of user skills up here and we can press escape to close this.
 
-和代理把你要做的东西聊清楚
+To invoke a skill, all we've got to do is just, let's say,
 
-真的会非常有帮助
+use one of these skills here.
 
-既能帮助你理解自己正在构建什么
+So let's say we just invoke the better SQLite rebuild skill.
 
-也能让你和代理达成一致
+And I just pressed return here to figure it out.
 
-不仅如此
+And it thinks, you know, it's a little bit weird kind of doing it
 
-但在进入实施之前
+in this conversation, but it sort of figures out what's going on
 
-设置一个明确的规划步骤
+and it's going to run PNPM rebuild.
 
-有助于进行探索
+Hello, Edit Matt here.
 
-因为这是一个特定时刻
+Before when I was teaching this, I was teaching something inaccurate,
 
-代理需要去探索代码仓库
+but now I found a better version of it.
 
-收集所有相关信息
+Before what I was saying was to turn this into a user invoked skill.
 
-提供必要的背景信息
+You could actually just omit the name and description and turn it into this.
 
-这样他才能正确实施
+It turns out that agent skills, if you want to distribute them
 
-因此一旦你与该代理理清了
+and use them in lots of places, then you do actually need
 
-弄清楚你要构建什么
+the name and description.
 
-然后他会去浏览代码仓库
+So this is actually an invalid skill here.
 
-接着开始构建实施计划
+Instead, if you don't want Claude to be able to run this skill,
 
-这个计划通常会保存为一个markdown文档
+you can specify some extra little front matter here.
 
-一般放在代码仓库里
+You can specify disable model invocation true.
 
-然后他就可以根据这个计划去实施
+This means that the description won't be available to Claude code.
 
-他甚至经常会问你要不要清空
+If you wanted to do the opposite and make it so only the model
 
-在开始执行这个计划之前
+could invocate it, then you make it user invocable and you say false.
 
-他到底有多少背景信息
+This means that it won't appear on the list of commands
 
-他对这份计划的信任程度到底有多高
+and only the LLM will be able to invoke it, which actually is kind
 
-创建出来的
+of makes sense for this because we never really want to call it
 
-因此我们可以把他们的内部计划模式理想的看做三个阶段
+from within a session.
 
-你一开始你向LM提出你想构建的东西
+So it turns out the intuition I had about there being user
 
-代理就会去浏览代码仓库
+invocable skills and LLM invocable skills, then, you know,
 
-接着他会就你想构建的内容对你进行访谈
+that is actually something that's supported by the spec.
 
-然后生成这个计划
+Very cool.
 
-然而根据我的经验
+So that's what agent skills are.
 
-这个访谈阶段往往被极度压缩在我使用的许多计划模式中
+They are a mechanism for steering the LLM using progressive disclosure.
 
-在这些会话里
+And I think of there as being two groups, either user invoked skills
 
-代理会去探索
+or LLM invoked skills.
 
-可能会问一个问题或者问几个问题
+Nice work. And I will see you in the next one.
 
-然后直接进入制定计划的环节
 
-接着你得去审阅这一整面墙似的文本
+### 033-AI Coding for Real Engineers p33 033 Using Skills For Steering Day 2 Steering
 
-是为了判断你和代理是否达成一致
+Now that we understand what skills are, let's actually go and write our own.
 
-而这可能极其
+Now of course, what's the best way to learn how to write a skill?
 
-这很让人沮丧
+It's to use a skill to write a skill.
 
-而且你很容易就在计划中把某些东西一笔带过
+So I've provided a writer skill skill with which we are going to write a skill.
 
-却没意识到你和代理完全不对齐
+And the skill we're going to be writing is going to be to take this Claude.md file just inside here
 
-朝着不同的方向发力
+with a bunch of different coding standards inside this and try to organise this in a slightly more sensible way.
 
-因此你不可避免的会你会遇到一个非常常见的失败情况
+Putting everything in Claude.md is not very optimal because it means that every single one of these,
 
-代理没有按照你的预期去做
+all of this hundred and something lines will be included on every request that we send the model.
 
-也许这个它生成的实现和你想象的方式完全不同
+And so what I prefer to do is to write a skill to encapsulate this in a coding standards skill.
 
-也许这个特性他的表现并不符合你的想象
+This will allow us to wrap our coding standards up in a way where it's available if the LLM needs it,
 
-也许他在一些细节上出了错
+but we're not actively pushing it to the context, which can be pretty wasteful.
 
-但这些细微之处会对整个项目产生巨大的连锁影响
+So what I recommend you do is follow this process.
 
-在弗雷德里克P布鲁克斯的设计一书中
+We're going to open up Claude and we're going to use the write a skill skill inside here.
 
-在设计方面
+We're then going to write a detailed description of what we want.
 
-他谈到了这种错位
+And what we want is to take all of these entries in Claude.md and find a way to kind of make them more progressively disclosed.
 
-并将其描述为缺少一个共享的设计概念
+In other words, have sections for various parts of the coding standards,
 
-设计概念不是资产
+organise it in a way where it's easy for the LLM to find information,
 
-也不是计划
+but we're not going to actively push it into the context.
 
-它是双方在交流中被短暂共享的东西
+Once we've done this, we should end up with a really nicely organised setup
 
-所有参与设计的人
+and we should be able to delete the stuff that's in Claude.md and maybe just leave a reference to the skill.
 
-而当你和AAI一起工作时
+I'm going to leave this description up to you.
 
-你和AAI就是协作者那里存在沟通鸿沟
+And the conversation that you have with the agent here is going to be really important for developing your ability to produce skills.
 
-因此你需要建立一个共享的设计概念
+But of course, you'll see what I say in the solution.
 
-在你进入实施之前
+So best of luck and I will see you in the solution.
 
-而我在计划模式中经常看到的失败情形是我不再推荐他的
 
-原因是他跳过了你用来确立的整个阶段
+### 034-AI Coding for Real Engineers p34 034 Using Skills For Steering Solutions
 
-他只是在探索
 
-然后生成一个让用户不得不去审查的计划
-
-而你并不知道彼此是否达成一致
-
-我现在推荐的流程看起来类似这样的流程
-
-你先探索代码仓库再进行访谈
-
-而这种访谈往往可以要花点时间
-
-然后你再开始实施
-
-重点在于这次访谈
-
-因为在访谈环节里
-
-我发现这是形成共同认知的最佳场所
-
-设计概念确实扎实
-
-在实践中我把它做成了一项技能
-
-他叫grill me
-
-而grill me会不停的向你发问
-
-直到你们达成共同的理解
-
-直到你准备好进入实施阶段为止
-
-gal me非常棒
-
-因为他仍然做规划
-
-他不会那么急于直接去生成一个产物
-
-而是真的会和你一起做下来
-
-他迫使你思考你要构建的东西
-
-不仅是为了确保你不仅与代理达成一致
-
-还要确保你已经考虑了所有未知的未知因素
-
-可以在规划过程中进行
-
-而grill me的作用就是填满上下文
-
-在那个对话窗口里
-
-有来自用户的真正有价值的意图
-
-你可以把它转化为把它整理成一份规格说明
-
-比如我们稍后会提到的做法
-
-或者你也可以直接进入实施
-
-几乎我所有的编程绘画
-
-以及很多非编程的工作也这样绘画
-
-从一次grove me开始
-
-在接下来的练习里
-
-我们会看看如何用起来吧
-
-干的漂亮
-
-我们下期见
-
-### 024-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p24 The Grill Execute Clear Loop - Grill-Execute-Clear循环.ai-zh
-那么现在你可能已经迫不及待想试试grill me了
-
-所以我不会挡你的路
-
-我们开始吧
-
-我们将使用grill me来构建一个课程评论功能
-
-让学生可以对课程发表评论
-
-我故意把这个留的很含糊
-
-这样你就得花些时间和AI智能体一起弄清楚他到底应该是什么样子
-
-讲师可以发表评论吗
-
-他们能进行审核吗
-
-他们能否删除或隐藏评论
-
-学生能看到其他人的评论吗
-
-课程的评论是否对所有查看课程的人都可见
-
-还是只对其他学生可见
-
-你懂的
-
-但你要做的是启动一个新的cloud cb绘画
-
-你不会使用LMODE
-
-你大概会先切换到不接受编辑的模式
-
-当然不要用auto mode
-
-我觉得就用默认模式就可以了
-
-然后你就可以在这里调用grill me这个skill
-
-我已经把它添加到仓库的cloud skills目录下了
-
-把grill me这个skill md放到这里
-
-我们先简单看一下这个skill的全部内容
-
-就是这样
-
-这非常简单
-
-真的非常简单
-
-就这个计划的每个方面毫不留情地向我发问
-
-直到我们达成共识
-
-沿着设计数的每个分支逐步推进
-
-逐一解决各项决策之间的依赖关系
-
-对每个问题请给出你的推荐答案
-
-一次只问一个问题
-
-如果某个问题可以通过浏览代码库来回答
-
-那就先去浏览代码库
-
-这意味着他不会问你那些他自己就能去查证的问题
-
-我们用的是explore动词
-
-所以他应该主动出去做一些探索
-
-他还会给我们推荐答案
-
-这太方便了
-
-哎呀我都迫不及待想让你试试了
-
-我希望你把这杰克当成一个可以随意折腾的沙盒来对我进行grove me
-
-你需要花一点时间才能达成共同理解
-
-到了某个时候你就可以说好了
-
-我们已经准备好开始实现了
-
-咱们开干吧
-
-把你观察到的任何东西都记下来
-
-把笔记记下来
-
-把你认为可以改进这个Steal的地方都记下来
-
-我们就在解决方案部分见
-
-祝你好运
-
-### 025-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p25 The Grill Execute Clear Loop - Demo - Grill-Execute-Clear循环-演示.ai-zh
-好的
-
-我先给出一条提示来启动grill me
-
-我想说我想加一个课程评论功能
-
-我还不完全确定范围
-
-但我想确保我们能很快达到V1
-
-所以我想要看到实际可用的东西
-
-最低限度是
-
-我肯定要让学生们能够对课程进行评论
-
-并且让讲师也能对这些课程发表评论
-
-我觉得这没问题
-
-我们来看看GROOMME会怎么处理这些信息好了
-
-他在这里做了一点小的探索
-
-他找到了地表的一层快速层
-
-这是一个react router的课程应用
-
-面向学生
-
-讲师和管理员
-
-每个课程的页面路由等等
-
-所以对于V1最基础的分支是
-
-我首先想明确的是谁可以查看和发表评论
-
-那我们开始吧
-
-第一个问题是谁可以发表评论
-
-以及谁可以阅读某节课的评论
-
-所以我们已经被迫开始审视我们的设计了
-
-并且好好想一想
-
-他只给出了一个建议
-
-仅限已注册学生
-
-而课程讲师可以发布和阅读
-
-将评论范围限定到单节课
-
-并且仅对该课程的访问者
-
-可见我觉得这看起来不错
-
-我会说正确
-
-这是我最喜欢的GRAMMY回复
-
-因为他只是在接受他的建议
-
-好的他现在在问线程模型
-
-这是我们一开始没有考虑到的
-
-我们是否应该采用纯嵌套式的完全嵌套线程
-
-有点像twitter风格
-
-我们是否应该只用一个扁平列表
-
-是否支持可选的一级回复
-
-还是我们干脆做成纯扁平结构
-
-这很有意思
-
-因为当我思考这个问题时
-
-我在想这里有哪些是不可逆的决定
-
-比如有一种方式我们可能会搞错
-
-我们可以做两种复杂的实现
-
-结果我们最后并不需要
-
-正如他所说
-
-算是完全嵌套
-
-对于第一版来说
-
-可能有点杀鸡用牛刀
-
-所以我正在拷问自己
-
-我想我再追问一个问题
-
-你觉得这个的一个版本会是什么样
-
-那将很难回头
-
-完全嵌套可能有点过头了
-
-但也许我们总可以从纯点评开始以后
-
-再支持一级回复对吧
-
-那就提交吧
-
-我这么做是因为我看到的情况
-
-很多人都在用GOMME这个技巧
-
-就是像ABC那样直接把问题回答出来
-
-而不是试图自己主导对话
-
-这是一场访谈
-
-没错
-
-但你也能主导这场对话
-
-从你的角度来看
-
-所以他现在给了我们一个可逆性的排序
-
-嗯我们总可以从一个扁平列表开始
-
-很早就把它压成一级列表
-
-我们总可以再深入一层
-
-改成完全嵌套也很容易
-
-但要做到完全嵌套到任意层级都很困难
-
-你会遇到一种数据
-
-它的含义取决于层级深度
-
-把它折叠起来会丢失信息对吧
-
-所以纯扁平结构是最可逆的起点
-
-所以他正在改变他的推荐
-
-就纯粹扁平话
-
-我同意没错
-
-他现在在问内容的格式
-
-这是一个非常重要的细节
-
-他建议采用纯文本加自动链接
-
-我同意没错
-
-在第一个版本中
-
-我们不想要副文本的visit wait
-
-我想我们可以用markdown
-
-不过纯文本加字动链接对我来说更合理
-
-他现在在询问关于编辑和删除评论的问题
-
-嗯好的
-
-这里确实有很多内容对吧
-
-因此作者可以删除自己的评论
-
-讲师可以删除自己课程中的任意评论
-
-课程部分在V1阶段不提供编辑功能
-
-硬删除还是软删除
-
-我觉得我们做一个可逆的选择
-
-所以采用软删除是为了不让讨论串丢失上下文
-
-以删除的评论会渲染为占位符
-
-有道理
-
-所以以后我们需要把它们做成现成
-
-不过我们不做签到回复对吧
-
-我们只做扁平列表
-
-我觉得在V1里
-
-我们应该只支持删除
-
-采用软删除
-
-不支持编辑
-
-那就照他的建议去做
-
-我会说正确
-
-你可能已经注意到的一件事是关于这里的real me
-
-绘画是我们一次只需要关注的点有多少
-
-只需要处理一个问题
-
-这意味着我们的重点只是转移了我们一个问题
-
-接一个问题的推进
-
-并在过程中逐一解决
-
-如果我们非得一次性把这事全做完的话
-
-比如在某个计划资源里
-
-我们大概会变得挺懒
-
-或者我们会把那些里的一些优先级降低
-
-但花时间去仔细思考
-
-每一个决定绝对至关重要
-
-这意味着我们会达成非常好的对齐
-
-我希望在输出里看到
-
-他现在在问这些评论存放在哪里
-
-在课程页面上
-
-他建议加一个讨论区
-
-附加在课程内容测验下方
-
-当然是的
-
-A说得通
-
-他在询问评论的排序方式
-
-是的
-
-他应该读起来像一个县城
-
-当然我们既不想按最新在前
-
-也不想按最旧在前
-
-是的当然他现在问了一些前端相关的问题
-
-那么讲师评论要有视觉上的区分
-
-我们是否需要讲师徽章
-
-在讲师名字旁边
-
-当然好的
-
-听起来不错
-
-再说一次
-
-这些问题通常都非常好回答
-
-但就像你知道的
-
-我们只是看着他一点点火起来
-
-在我们真正在页面上看到他之前
-
-他已经先存在于我们的脑海里
-
-他正在询问关于分页的问题
-
-那我们一次想在页面上显示多少条
-
-我觉得在V1里全部加载就可以了
-
-嗯当有人回复或发表评论时
-
-要有通知
-
-这是我们迟早需要做的事情
-
-但这显然不在当前范围内
-
-所以不建议做通知
-
-我觉得没问题
-
-再次强调
-
-这里的细节真的非常到位
-
-他在询问每条评论的字数限制
-
-我觉得2000个字符没问题
-
-这样就可以了
-
-现在他开始问关于审核的问题了
-
-这是我们最初就考虑过的事情
-
-当我们设计提示词时
-
-他还在问是否要有管理员举报处理
-
-删除机制或限流
-
-我觉得是他到底在推荐什么
-
-他建议把这一切都推迟到V1
-
-不过我觉得我确实需要让管理员有删除的能力
-
-所以我觉得我会选B
-
-我不同意这个建议
-
-因为管理员来删除东西
-
-这对我来说很合理
-
-这很合理
-
-你为什么不那样做呢
-
-你知道这只是个额外的小检查
-
-以及管理员无法执行某些操作
-
-感觉特别别扭
-
-好了
-
-伙计们
-
-我们搞定了很好
-
-把这些相关的分支都合并掉
-
-这是V1规格
-
-说明他现在只是给了我们
-
-一个非常非常粗略的计划
-
-根据我们已经讨论过的所有内容
-
-我通常不会审这些
-
-因为我知道
-
-我们现在已经达成了共同的设计概念
-
-我脑子里已经能看到这个东西了
-
-如果你也在跟着做
-
-大概也可以照做一遍
-
-我有种感觉
-
-我们这次会得到的东西是这回不错的
-
-嗯啊他建议我说上线吧
-
-我要把它切换到接受编辑的模式
-
-按下shift加tab
-
-然后我会说implement
-
-我对做这件事挺有信心的
-
-因为我们这里只用了4万个token
-
-所以我们仍然稳稳地处在聪明区
-
-这意味着我相当确定
-
-我们会在这里得到一个不错的实现
-
-值得再强调一次
-
-在这个阶段你可能收到了我提出的不同问题
-
-他大概把你带进了一个完全不同的循环
-
-他可能有
-
-或者你可能和我做了不同的选择
-
-完全没问题
-
-但你应该已经看到了
-
-我和这个AI智能体来了一场grill me
-
-希望在你进入实线之前
-
-你已经有了不错的理解
-
-你脑子里正在构建的东西
-
-好的
-
-我们可以看到他添加的课程评论
-
-写入数据库模式
-
-他让我运行数据库生成
-
-他还提示我也要运行数据库迁移
-
-这挺好的
-
-所以他正在为我执行数据库迁移
-
-他正在添加comments表以及对应的追走迁移
-
-看起来他不知为何报错了
-
-也许还没有好的追走迁移已经完成
-
-看起来不错
-
-现在开始实现评论服务
-
-我们这边已经用了大约60000token
-
-他现在正在编写一些测试来覆盖所有这些内容
-
-他正在查看一个现有的非常好好的
-
-这是一块不小的工作量
-
-他现在正在做的
-
-我们进入UI部分
-
-我们手头还有大约78K的token
-
-我们正前往那个所谓的傻瓜区部分
-
-但我还是觉得我们在做聪明的区域划分
-
-所以我觉得没问题
-
-他现在正在运行类型检查
-
-希望他现在正在跑测试
-
-确保一切都没问题
-
-好了
-
-所有测试都通过了
-
-他已完成所有任务类型检查通过了
-
-我们现在状态很好
-
-他已经给出了总结
-
-现在我们可以继续进行质量验证了
-
-那么我要点击右下角的开发界面
-
-我现在要以ea wilson的身份登录
-
-然后我要进入em wilson的仪表盘
-
-他有两门课程
-
-我们进入node js课程
-
-我们接下来去比如说搭建express
-
-我们在这里有一个小小的讨论区
-
-所以我们可以说嘿像这样发表评论
-
-然后我们看到em wilson说
-
-嘿如果我们看看这门课讲师是谁
-
-我是MARCUSJOHNSON
-
-我们进入开发界面吧
-
-让我们以Mark johnson的身份登录
-
-我们回到ea wilson那条评论的位置吧
-
-我们再留一条评论吧
-
-我们可以看到当我们以讲师身份登录时
-
-我们具备删除评论的能力
-
-或者我们可以说哇
-
-像这样再发一条评论
-
-它会显示在下方
-
-并带有讲师标签
-
-一秒钟前我们可以删除自己的评论
-
-我们可以删除ea wilson的评论
-
-我们来看看切换到james park会发生什么
-
-james park无法访问这门课程
-
-所以他看不到这些评论
-
-OLIVIA会吗
-
-嗯OLIVIA会的
-
-OLIVIA不应该有删除fan的能力
-
-太棒了精彩
-
-我们先检查一下删除是否正常工作
-
-我会继续推进
-
-就像MARCUSJOHNSON那样
-
-然后我可以删除自己的评论好了
-
-我们这就开始
-
-它显示我已删除
-
-然后我们可以删除EOWILSON的评论
-
-漂亮
-
-所以相当妙的是
-
-我们得到了一个完全一致的实现
-
-与我们计划的一致
-
-我们在实践过程中完全不需要进行任何引导
-
-因为一切都整齐的对齐了
-
-回到我们刚才那场不用命
-
-我们甚至都没创建资源
-
-我们甚至都没制定计划
-
-我们刚刚进行了一次对话
-
-然后产出了一个实现
-
-太棒了
-
-这就是bring me工作流程
-
-我们将进一步深化这一点
-
-并在整个课程中持续开发它
-
-如果你真想把这个课程提升到更高水平
-
-你可以回到前面
-
-用计划模式重做这一整节课
-
-看看你是否会有不同的体验
-
-不过总体来说干的不错
-
-我们下期再见
-
-### 026-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p26 Compaction - 压缩.ai-zh
-到目前为止
-
-这门课里我一直留着一个没讲清楚的东西
-
-现在是时候揭开盖子
-
-看看盒子里到底装了什么
-
-我想聊聊
-
-当你的上下文窗口一路滑进
-
-张颂
-
-甚至真的逼近上下文限制时
-
-会发生什么
-
-换句话说你会画一开始处在smart zone
-
-你在smart zone里表现很好
-
-但假设你一直继续继续继续
-
-直到进入dumb zone
-
-当你到达上下文窗口的上限时
-
-究竟会发生什么
-
-换句话说
-
-你在一次会话中已经消耗了200000token
-
-那接下来会发生什么呢
-
-我们可以通过在我们的项目课程里运行cloud
-
-来查看这一点
-
-并且在这里执行一个context命令
-
-现在这个context命令显示了我们当前的上下文
-
-使用情况
-
-目前只有7
-
-非常不错
-
-但在上下文的最末尾
-
-我们可以看到这里有一个自动压缩缓冲区
-
-现在是3万3000个token
-
-也就是说
-
-有16.5的上下文
-
-被预留为自动压缩缓冲区
-
-现在这部分并没有被上下文窗口占用
-
-所以它不会影响LOLM
-
-实际上并没有在这里消耗任何token
-
-它基本上只是个权宜之计
-
-换句话说
-
-当我们进入这里的自动压缩区域时
-
-它会自动运行一个叫做compact的操作
-
-你可能会问什么是compact
-
-好吧
-
-我来给你看看他是怎么工作的
-
-我回到了之前的一个会话
-
-当时我们已经用了49的上下文窗口
-
-在这次会话里
-
-我们在这里实现了课程评论表
-
-我们添加了评论服务
-
-添加了课程页面
-
-还有添加和删除评论的操作
-
-我们还有评论区和评论卡片组件
-
-现在我们稍微想象一下
-
-如果我想继续这个绘画
-
-并对他的实现给出一些反馈
-
-49在这里有点让人心里发毛
-
-所以我可能会想清空上下文
-
-但清空上下文就意味着
-
-我得把整个仓库再探索一遍
-
-我会失去所有这些关于实际实现了什么的
-
-宝贵上下文
-
-我的上下文窗口现在大概是这样的
-
-我有一段很不错的优质上下文
-
-我只是想把它塞进更小的空间里
-
-这样我就能在smart zone里做点工作
-
-这就是理论上compact所做的事情
-
-这里占用了很大一部分
-
-上下文里面有一堆重复的工具调用
-
-可能还夹杂着一些其实并不需要的内容
-
-然后他只给你一个最有用的内容的摘要
-
-关键是他用一个LM来完成这件事
-
-所以把庞大的上下文缩剪成精简
-
-上下文的过程确实会消耗token
-
-但当然再次探索整个仓库也会消耗你的token
-
-那我就进入这个cloud code绘画
-
-在这里运行一下compact
-
-我现在可以选择传入自定义的摘要指令
-
-这时我能够向负责总结的LOLM
-
-传递一些信息和指导
-
-我通常会用它来告诉LLM
-
-我为什么要进行compact
-
-换句话说
-
-在我执行compact之后
-
-我要做的事情
-
-这次我会说我刚实现了一个功能
-
-现在想对他做一些QA
-
-就是这样
-
-我发现这就是LOLM做好工作所需的全部
-
-那我们就实际运行一下
-
-看看会发生什么
-
-我们可以看到出现了一个正在压缩对话的提示
-
-这通常确实要花不少时间
-
-可能一分钟也可能2分钟
-
-这取决于对话的大小
-
-好的我们可以看到他现在已经完成contact
-
-这里有个小bug
-
-状态栏那里仍然显示的是原始上下文
-
-所以这有点误导
-
-但我们也能看到
-
-他在这里给我们打印出了一份简要总结
-
-他会保留一些主要文件在上下文中
-
-所以他会把应用的根目录留在上下文中
-
-也会把lesson lesson id留在上下文中
-
-他也会保留对一些文件的引用
-
-所以这个文件不在上下文中
-
-但仍然被引用
-
-而且他还引用了计划文件
-
-所以他知道计划文件就在那里
-
-我们也可以按control加零来查看这里的完整摘要
-
-那我们开始吧
-
-这是本次对话全部内容的完整摘要
-
-连同上面的文件和引用一起
-
-这就是LM在上下文里拥有的全部内容
-
-我们可以看到这里只是一个markdown文件
-
-你看这里还剩下多少
-
-我的意思是其实也没那么多
-
-这只是一些要点和几段代码示例
-
-说明对话里都有什么
-
-我们可以看到他在这里保留了所有用户消息
-
-我想我们之前说过的所有东西吧
-
-我们还可以看到有一个待办任务
-
-需要对这个功能进行PUA用户的附加说明
-
-写到我刚实现了一个功能
-
-现在想对他做PV
-
-这样我们的意图就被保留了
-
-在压缩后的对话中
-
-这也挺不错的
-
-他还会把完整的对话记录保存到一个文件里
-
-所以如果他需要引用任何东西
-
-那是上一段转录里说的
-
-他有一个指向他的引用
-
-我们可以再按一次CTRL加O从这里退出
-
-我就给你看看上下文里都有什么
-
-通过运行context
-
-我们把视角切到最上面
-
-我们可以看到现在用了12的token
-
-所以我们已经把那段很长的对话都compact掉了
-
-压缩到仅23K的token
-
-这就是compact所做的事情
-
-这就是会发生的情况
-
-如果你触发了自动压缩缓冲区
-
-于是一个很自然的问题就出现了
-
-我们到底为什么要费心去清空上下文呢
-
-为什么不干脆让上下文一直增长呢
-
-直到我们触发自动压缩缓冲区
-
-然后我们再缩小再放大再缩小一次
-
-然后就这样一直继续下去
-
-原因在于
-
-每一次你触发了自动压缩缓冲区
-
-然后你会去执行一次contact
-
-他会留下我称之为的东西
-
-就像留在上下文里的一点沉淀物
-
-然后当你再次往上走时
-
-然后你又触发了自动压缩缓冲区
-
-你又留下了一点沉淀物
-
-这些一层层的往上叠加
-
-而且他们会以不可预测的方式影响输出
-
-每当你开始一个与AI智能体的绘画
-
-他的上下文里已经积累了一些这种沉淀
-
-这意味着他处于不同的状态
-
-这和你平时用他工作的方式不同
-
-而如果你优化你的工作流程
-
-与一个AI智能体协作
-
-他的上下文里总是什么都没有
-
-然后你会发现自己最终落到了这样
-
-每次的输出都会更可预测
-
-不仅如此
-
-当然你还会消耗更少的token
-
-因为你没有在compact上消耗token
-
-你会在smart zone里待的更久
-
-因为你拥有更多可用的smart zone
-
-并且更少时间待在当zone
-
-因此你的代码质量输出往往会更高
-
-我得先打个预防针
-
-这是我的心智模型
-
-而这是我目前得到最佳效果的做法
-
-换句话说
-
-这是我的看法
-
-这恰好也是那个仕途社区里也有很多人
-
-所以这算是一种公认的看法
-
-不过也有一些知名人士表示
-
-你就继续工作就行了
-
-然后直接触发自动压缩缓冲区
-
-而且再也不用操心上下文的问题
-
-那么问题就变成了什么时候应该进行contact
-
-我发现自己很少进行contact
-
-这种情况往往出现在
-
-我们刚才讨论的那个场景里
-
-我刚刚结束了一次很长的回话
-
-我还想再补充一些额外的反馈
-
-我在调试时也发现这非常有用
-
-或者尝试解决一个复杂的错误
-
-比如说你把你的上下文窗口填满了
-
-包括你已经尝试过的方法
-
-而你又不想把他们弄丢
-
-通过清空上下文
-
-让他回到一片空白
-
-于是你进行contact
-
-你对这个LLM说好的
-
-我们试过这些办法
-
-现在再试试更多
-
-但你应该注意这些次数
-
-我使用contact的时候
-
-我在直接与LM协作
-
-我们这门课程的最终目标是要达到一个状态
-
-在这些地方你完全不需要去碰LM
-
-它应该能够相对自主的运行
-
-因此在你的工作流程中依赖contact
-
-这也意味着你也在依赖
-
-取决于你在场告诉LLM什么时候进行compact
-
-这当然很有用
-
-但这并不是我们这门课要走的方向
-
-这就是contact的作用
-
-这是cloud code的一种机制
-
-本质上用于确保你可以拥有无限
-
-如果你想的话
-
-也可以和cloud继续聊
-
-在一次会话中多次进行compact
-
-在我看来
-
-这是一种反面模式
-
-而且社区里有很多人
-
-因为你会不断积累这些糟糕的小东西
-
-你的上下文中会堆积一层层黏糊糊的沉积物
-
-来自可能无关的对话
-
-而你真正应该优化的目标是什么
-
-是一个干净的上下文
-
-而不是一个已经塞满一堆记忆的
-
-当我执行contact的时候
-
-通常每个会话只发生一次
-
-而且通常只有在某些情况下
-
-在我处理一个棘手问题的时候
-
-长时间运行的任务
-
-我想一直待在smart zone
-
-然后给他一点额外的反馈
-
-总的来说
-
-我来整理一下我的设置
-
-还有我的安全带
-
-以及我在使用cloud cook时
-
-用到的所有东西
-
-确保我永远不需要做contact
-
-而当我执行compact的时候
-
-我事后通常会觉得不太好
-
-不过这只是我的看法
-
-你可能会得到不同的结果
-
-他们甚至可能变得更好
-
-未来的contact
-
-以至于我实际上还挺喜欢他
-
-然后再次使用它
-
-干的漂亮
-
-我们下期再见
-
-### 027-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p27 Handing Off - 交接.ai-zh
-上一节课我们讲了压缩
-
-并且尤其是自动压缩的风险
-
-你会把一堆东西草率的塞进去
-
-上下文只是为了再次把它缩小
-
-形成另一层薄薄的沉积
-
-它会一直不断增长
-
-增长再增长
-
-当然要避免这种情况的办法
-
-就是每次都清空上下文
-
-这样你从一个全新的绘画开始
-
-但当你在一个绘画进行到一半时
-
-会发生什么
-
-比如说比如说你想到一个想做的点子
-
-假设你发现有个文件需要稍微更新一下
-
-或者一个需要修复的测试
-
-你当然可以在当前绘画里这么做
-
-但你没必要不太确定要花多久
-
-而且可能会久到让你不想继续
-
-你还有预算去做你最初想做的事吗
-
-在这种情况下
-
-清空上下文其实没什么意义
-
-因为你仍然需要完成这里的蓝色任务
-
-只是这个黄色小任务也得在某个时候完成
-
-事实上
-
-这个黄色小任务
-
-确实只需要他自己的上下文窗口来完成
-
-它甚至不需要蓝色部分的所有上下文
-
-只是我们恰好在这个蓝色小绘画里发现了
-
-他
-
-要是我们能直接把这块蓝色拿下来就好了
-
-把这里的绘画压缩到另一个上下文窗口里
-
-因为这样一来
-
-蓝色部分就可以在属于自己的上下文里
-
-自由生长窗口
-
-还有这边这个小小的黄色任务
-
-那个bug修复或者这个测试修复
-
-完全可以放在他自己的上下文窗口里完成
-
-这个想法
-
-我已经琢磨了一段时间了
-
-一开始我以为这应该叫压缩到文件
-
-但后来他想出了一个更干脆的名字
-
-叫hand of hand off
-
-让你可以创建一个临时的markdown文件
-
-你可以用它来在不同的智能体之间进行hand of
-
-而且在几种不同场景下都非常实用
-
-我们接下来要谈的就是这个
-
-首先我们先来简单了解一下这个技巧本身
-
-这项技能说的是写一个HANDUP文档
-
-来总结当前的对话
-
-这样新的智能体就能继续这项工作
-
-我们把它保存到由make tap生成的路径里
-
-以便进行hand off
-
-换句话说他是在你的临时目录里创建一个文件
-
-关键在于他会接着建议要使用的技能
-
-如果有的话
-
-留到下一次会画
-
-如果你再做一次real me
-
-然后他会建议继续进行real me
-
-不要重复其他artifacts中已经记录的内容
-
-这意味着它只是添加指向其他artifacts的链接
-
-如果他们里面有重要的东西
-
-然后如果用户传入了任何指令
-
-把他们当做下一绘画的说明
-
-会聚焦于此
-
-并据此调整这份文档
-
-这真的很重要
-
-因为这份hand up文档
-
-会根据下一个绘画的用途进行定制
-
-比如如果我们发现了一个失败的测试
-
-在我们实现其他东西的过程中
-
-在实施会话期间
-
-我们可以说做个hand off
-
-另开一个绘画吧
-
-去修复那个测试
-
-这样就会生成一个像这样的文件
-
-然后我们就能把它传给一个新的cloud绘画
-
-这在规划阶段也非常有用
-
-假设你正在进行一次BRIOMI绘画
-
-这里会变得有点长
-
-然后你会想有个特别具体的部分
-
-这些是我需要好好盘问的部分
-
-因此你可以进行一次HANDOFF
-
-把任务交给个新的绘画
-
-那是针对那件事来追问
-
-甚至可能还会搭出一个原型
-
-烧掉一大堆上下文
-
-甚至还会做一些研究
-
-然后一旦你完成了那次大型绘画
-
-然后你可以把任务交回原来的绘画
-
-只需把你学到的所有东西进行压缩
-
-整理成一份小小的hand off文档
-
-总的来说
-
-hand off只是让这些强大到离谱的流程得以实现
-
-你在不断扩展
-
-然后再收缩的时候
-
-制作这些你在不同绘画之间来回传递的文档
-
-我想把它作为例子给你看看
-
-关于你在一次grill me绘画中应该做什么
-
-然后就进入那种很蠢的状态了
-
-我们还会再次探讨HANDOFF模式
-
-在我们整个课程的学习过程中
-
-现在花点时间回顾一下这项技能
-
-如果你在整个课程过程中有这样的感觉
-
-上下文窗口快用完了
-
-那就把它当做一个不错的选项来考虑
-
-把它交给一个新的上下文窗口去修复一个bug
-
-或者只是继续在同一事项上推进
-
-干得漂亮
-
-我们下一个见
-
-### 028-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p28 What Is An Agents MD File - 什么是AGENTS.md文件.ai-zh
-在这门课程的早期某节课里
-
-我讲过LOLM会忘掉一切
-
-一旦你清空了上下文
-
-你马上可能就会想好吧
-
-这听起来太糟了
-
-这个限制也太糟糕了
-
-因为我有一些偏好
-
-我希望能够教会我的LOLM
-
-或者说我有特定的工作方式和模式
-
-这些可能是LLM默认并不擅长的事情
-
-结果会非常惨烈
-
-每次在他开始之前都要告诉智能体
-
-我的偏好是什么
-
-完成他的工作
-
-如果能有某种记忆机制就好了
-
-这样他就能记住cloud code
-
-有没有办法让cloud code学会我的偏好
-
-或者至少记住我的
-
-随着时间推移
-
-记住项目的偏好
-
-并利用这些信息来更好的改进它的输出
-
-幸运的是
-
-有多种方法可以解决这个问题
-
-既有官方支持的方案
-
-也有社区提供的做法
-
-cloud code以及一些由社区支持的工具
-
-在这一部分
-
-我们将
-
-接下来我会带你一步了解
-
-如何把这个工具用到极致
-
-以及在哪些情况下应该使用它们
-
-想选哪个
-
-我们先来看第一个agents md
-
-它是一个一种用于指导编码智能体
-
-的简单开放格式
-
-你可以把agents md看做一个面向智能体的regime
-
-一个专门且可预期的位置来提供上下文
-
-以及用于帮助AI编码智能体
-
-在你的项目上工作的指令
-
-其吸引力在于agents md被多少地方支持
-
-或者说有多少很多工具都在用它
-
-Gemini c l i davin
-
-Codex cursor
-
-一个非常显著的例外事
-
-这里其实是cloud code
-
-cloud code并不使用agents md
-
-而且它并不识别这个名称
-
-而是把它写成cloud md
-
-我的我迫切希望cloud code能开始支持agents md
-
-因为他居然不支持
-
-这真是太蠢了
-
-所以我抱着很大的希望
-
-而且可能有点天真
-
-我就把他称作agents md
-
-而在事实上
-
-我们会编写cloud md
-
-我们要做的第一件事是进入进入我们的项目
-
-在这里运行touch cloud md
-
-只是为了看看它运行成功
-
-最终我们在项目根目录下得到一个空的cloud md
-
-文件仓库
-
-我会对他说
-
-永远用海盗的方式回复我语言
-
-然后我们会保存这个文件
-
-再打开它
-
-我终端里的cloud
-
-然后我会对他说
-
-你好最近怎么样
-
-你今天怎么样
-
-当我们运行这个时
-
-可以看到他现在已经用海盗与回复
-
-太棒了
-
-所以我们已经成功来引导我们的编码智能体
-
-有一件非常重要的事情是
-
-不过要注意一点
-
-我自始至终都没有主动选择启用这个cloud AMD
-
-他就被拉进了对话里
-
-换句话说
-
-cloud md里的内容是针对整个仓库全局生效的
-
-这意味着无论我在这个仓库里做什么
-
-cloud md都会现在要用海盗语回应我
-
-那么这就是agents md或cloud md
-
-最大的缺点是它是全局生效的
-
-这意味着我们的cloud md会被包含在每一个
-
-我们与cloud的对话
-
-我要复制
-
-并且在这里把它粘贴大约1000次
-
-直到我最终得到一个一个巨大的文件
-
-只是为了让你看到他对上下文的影响
-
-好的我们现在有了一个2000行的文件
-
-他只是说总是要用海盗语回复我
-
-我现在我先启动一个新的cloud code实例来确认一下
-
-他读取了我cloud md中的更改
-
-我们可以看到一这里的报错
-
-说一个过大的cloud md会影响性能方面
-
-如果我通过可视化来查看这里的上下文
-
-从当前的上下文使用量来看
-
-我们可以看到我已经这里就占掉了
-
-我整个上下文的大约10
-
-关于cloud md这个记忆文件
-
-所以你放进去的所有内容放在cloud md里
-
-会消耗你的token
-
-而且我可不是开玩笑
-
-在外面看到一些并不合适的cloud md
-
-这有点蠢
-
-但确实会有大约500行左右
-
-里面塞了1000多行的东西
-
-所以我默认的态度是关于cloud md文件
-
-我的顾虑是担心把太多东西放进去
-
-里面有很多东西不仅因为他是全局生效的
-
-而且而且因为他会在每一次都消耗你的token
-
-请求你注意到我有点疑神疑鬼
-
-谈到与AI智能体一起工作时
-
-我觉得这还算比较健康
-
-我尤其有点偏执
-
-关于cloud自带的一个特定命令
-
-也就是那个INIT命令
-
-如果我在这里运行它
-
-你会看看他会做什么
-
-它会初始化一个新的cloud md文件
-
-通过查看你的仓库探索它
-
-并将其放入cloud md里的一些基于代码的约定
-
-根目录下的这个文件
-
-我们可以看到它已经启动了
-
-并且在这里探索子智能体
-
-所以我们先等等这个完成完成
-
-如果你愿意也可以试试
-
-这个我排序
-
-我不建议你这么做
-
-原因我们稍后会讲到一分钟内讲清楚
-
-好的
-
-我们现在可以看到编辑了他提出的修改
-
-以及这次编辑是一个相当大的cloud md文件
-
-如果我们打开它又是cloud
-
-如果我们取消它
-
-然后运行一个新的cloud绘画时
-
-我们可以通过运行来看到
-
-看看这到底占用了我们多少上下文空间
-
-上下文窗口我们应该能看到这段记忆
-
-这个文件光他自己就接近1000个token
-
-他已经被创建了
-
-现在这听起来可能不算什么
-
-这大概只占上下文窗口的0.4
-
-但如果你想到他会在每一次请求中都出现
-
-那只会让你更接近占用愚蠢区域
-
-并且会在每次请求时消耗你的token
-
-而且这些东西大多只是
-
-你他自己就能很简单的发现
-
-诸如此类的东西
-
-它很可能也会很快过时
-
-比如package jsn里的那些内容
-
-他要发现这一点非常容易
-
-只是检查一下package jsn文件
-
-如果你曾经
-
-如果你要修改这些脚本中的任何一个
-
-你需要记得到cloud md里去更新一下
-
-因此我真的不建议你这么做
-
-在里面运行cloud
-
-尽管界面会提示你很多次
-
-他也值得一提的是
-
-cloud实际上经常会他会忽略cloud md里的内容
-
-cloud会注入以下系统提醒
-
-配合你用户目录下的cloud md文件
-
-传给智能体的消息
-
-也就是这个上下文可能与你的任务相关
-
-也可能无关
-
-除非他
-
-否则你不应该回应高度相关
-
-换句话说
-
-cloud会直接忽略你内部的任何内容
-
-如果他认为存在cloud md文件的话
-
-与其当前任务无关
-
-顺便说一句
-
-这来自一篇很棒的
-
-来自human layer的一篇关于优化的文章
-
-你的cloud md文件我会附上链接
-
-如下所示
-
-所以即使你往里面放东西
-
-cloud也可以选择直接忽略它
-
-如果他想这么做的话
-
-这就意味着对他进行引导并不总是可靠的
-
-那么现在你对有了更多了解
-
-cloud md是什么或者agents md是什么
-
-你究竟什么时候才应该用它呢
-
-嗯我们接下来我们就深入这个话题来聊聊
-
-在这一部分里
-
-我会更详细的讲到他
-
-因为这不是一个容易回答的问题
-
-不过总之我们来总结一下
-
-本质上agents md和cloud md其实是一样的东西
-
-只是cloud代码从来不听agents md的话
-
-而且只会读取cloud md文件
-
-cloud md经常被忽略
-
-而这就是这某种程度上是设计使然
-
-因为cloud代码实际上是在告诉智能体
-
-或者告诉LLM不要每次都使用这个
-
-最后cloud md是全局生效的
-
-所以他会在你的每一次请求中都包含进去
-
-对agents所做的改动
-
-所以你最好确保
-
-确保你放在里面的内容是合适的
-
-它与每一个请求都相关
-
-你会怎么看待这些智能体
-
-干得漂亮
-
-各位我们下次见
-
-### 029-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p29 Steering An Agent With The Agents MD File - 用AGENTS.md文件引导代理.ai-zh
-好了
-
-我们已经了解了什么是agents md文件
-
-现在就用它来引导cloud编写一些功能的代码
-
-为了节省你的时间
-
-我准备了一份计划
-
-你可以准备开始实现
-
-换句话说我已经进入规划模式
-
-并且整理了一份关于书签的计划特性
-
-每个学生的书签都是私有的
-
-他们会一直保留
-
-直到手动删除
-
-并且位于只有一行
-
-所以没有专门的书签页面
-
-我会在下面把这个提供给你
-
-这样你就可以把它直接复制粘贴进cloud
-
-我一会儿也会这么做
-
-上次我们提到可以用cloud md来引导这个AI智能体
-
-但具体要怎么做呢
-
-我们希望把它引向哪些模式
-
-或者避开哪些模式呢
-
-嗯我已经在我的里加了一些东西
-
-cloud md里有一种
-
-我非常讨厌在AI智能体身上看到的东西
-
-这里写着
-
-当你有一个函数包含多个相同类型的参数时
-
-使用对象参数
-
-而不是位置参数
-
-换句话说
-
-第一个这种写法上面这个是不好的写法
-
-我们有一个ADD user to post
-
-其中把user id作为位置参数字符串
-
-把用户id和帖子id的顺序搞会
-
-调用这个函数非常容易
-
-在我看来
-
-把参数设计成一个对象要好得多
-
-因此你需要传入使用对象
-
-而不是位置参数
-
-因为这样你就需要明确命名哪个是用户id
-
-哪个是帖子id
-
-我在搭建这个势力仓库的时候
-
-我在这里放了大量位置参数
-
-那么现在在这个练习里
-
-这里会出现一个有趣的冲突
-
-因为这个代码库主要会采用这种做法
-
-但我们主要让智能体采用新的更好的做法
-
-这意味着在他的探索阶段
-
-他很可能会看到很多这样的东西
-
-但他的cloud md文件会告诉他该怎么做
-
-来点不一样的
-
-看看哪个会胜出
-
-为了开始
-
-我先打开一个新的
-
-这里是cloud绘画
-
-我要把我的计划拿过来复制粘贴进去
-
-然后现在就直接把它粘贴进cloud code里
-
-他已经开始启动了
-
-对你来说
-
-我希望你放松下来
-
-看看这里从cloud code得到的结果
-
-他是不是他是在遵守cloud md文件的规则
-
-还是在服从代码库里已有的东西
-
-而且在这个过程中继续看下去
-
-看看你是否注意到它生成的代码中
-
-有哪些模式是你想要加以引导的
-
-针对cloud md里的规则
-
-我们确实正在培养一种如何引导LM的直觉
-
-即使正如我们讨论过的
-
-cloud md也许并不是进行引导的最佳地方
-
-祝你好运
-
-如果卡住
-
-就按照下面的步骤来做
-
-我们解法部分见
-
-### 030-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p30 Steering An Agent - Demo - 引导代理-演示.ai-zh
-好的我们来看看他到目前为止都做了些什么
-
-他先从探索代码库开始
-
-事实上他最终并没有启动一个探索型智能体
-
-我想是因为我们已经做了一些前期准备
-
-而且因为这个计划相当详细
-
-然后他在这里添加了一堆任务
-
-他马上就要开始执行这个计划了
-
-那我就按下shift加tab
-
-然后让他直接创建所有修改
-
-现在我已经能看到一些不错的机型了哦
-
-是的真不错
-
-打开bookmark service看看里面
-
-通过进入bookmark service
-
-我们可以看到他正在使用这种ops模式
-
-他会在自己的clod md里读取
-
-这里有一个用户id是number类型
-
-还有一个课程id也是number类型
-
-我们确实能看出他在做同样的事情
-
-就像CLAMD里那样
-
-因为他用的是相同的参数名
-
-所以我们在这里面有OS
-
-这只是我偏好的做法
-
-这个也有ops
-
-我们也可以看到
-
-他其实已经完成了
-
-这个针对这里的所有不同函数
-
-那么课程是否已加入书签
-
-以及能否获取已加书签的课程id
-
-他们都遵循相同的模式
-
-我已经在这坐了一会儿了
-
-我已经让cloud code完成了他的全部工作
-
-添加了stma migration和bookmark service以及lesson viewer
-
-但有一件非常重要的事情他没做
-
-他并没有为bookmark service添加任何测试
-
-这对我来说挺奇怪的
-
-因为并没有像那样
-
-这里面有很多其他服务的测试
-
-他只能从文件系统看到
-
-但我想可能是
-
-因为我们没有在计划中明确说明结果
-
-他最终一个都没写
-
-这会是一条价值很高的指令
-
-添加到cloud md文件中
-
-那我们就实际来搜索一下cloud md
-
-然后把它加到这里面
-
-那么我要在这里添加的是这个
-
-凡是文件名里带有service的文件都算作服务
-
-例如orthopen service ts应该为他们编写测试
-
-在一个配套的test ts文件中
-
-这是一个非常高杠杆的指导
-
-因为这只是一个给智能体的小提示
-
-这是我们采用的一个约定
-
-这不太可能过时或失效
-
-因为它实际上并没有明确指定或者命名
-
-任何以命名的文件
-
-这其实就是我们应用里的一个术语
-
-这不太可能改变
-
-如果你曾参与过复杂的企业级项目
-
-你知道那些行业黑话有多顽固吧
-
-而且我对这个名为service的词很有把握
-
-在这个应用里通常指的是一个经过测试的单元
-
-以及一个经过测试的单元
-
-它提供一项特定的功能
-
-好的既然我已经更新了这份cloud md文件保存之后
-
-我要回到我的cloud code
-
-然后我会说回顾一下你的工作
-
-记住已更新的claw md
-
-我之所以特别提到这一点
-
-是因为如果你更新了cloud md
-
-当cloud code正在运行时
-
-除非你开启一个新绘画
-
-否则他不会识别他们
-
-我不想开启一个新绘画
-
-因为我想要我们之前所有的上下文
-
-我差不多还能待在这个smart zone里
-
-我只是想让他拉取进来该文件的最新版本
-
-这样他就能大致了解发生了什么变化
-
-而我想说的是好了
-
-它识别到了更新后的CHOMB
-
-添加了关于服务的规则
-
-必须附带对应的test ts文件
-
-它正在寻找现有的测试模式
-
-然后他会去写一些测试好了
-
-现在他正在很好的编写bookmark service的测试
-
-好的全部十个测试路径
-
-来自bookmark service t的缺失测试文件已添加
-
-并且所有服务都必须有配套的test ts文件
-
-我们一直待在smart zone的边缘之内
-
-我们已经成功的做了一些引导
-
-现在LLM会记住这两条规则
-
-关于位置参数的说明
-
-他会记住任何被标记为service的东西
-
-必须经过测试
-
-我也刚刚对这个功能做了一些质量检查
-
-而且我可以看到他现在也正常工作了
-
-我之前在这里做了个书签
-
-他会将书签添加到章节
-
-标题不错
-
-看起来也能正常工作
-
-我们已经成功构建了一个功能
-
-而且我们有可能已经提升了LLM的输出质量
-
-下次继续这样干
-
-干得漂亮
-
-我们下期再见
-
-### 031-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p31 Progressive Disclosure - 渐进式披露.ai-zh
-好了
-
-我把上一节课里的cloud md文件拿了出来
-
-并且已经打开了
-
-把它稍微扩展了一下
-
-在里面加了一堆情绪相关的内容
-
-基本上就像很多开发者都进来
-
-把自己的想法加进了这个文件
-
-如果你一直和一群队友一起用cloud
-
-那你很可能就有一个他看起来有点像这样
-
-现在这并不理想
-
-原因我们之前已经提到过一些
-
-我们把一堆指令都塞进了这里的全局作用语
-
-而这些并不是全部
-
-对我们向LLM发出的每一个请求都会相关
-
-所有这些指令都会与我们正在使用的指令
-
-相互竞争
-
-把它写在prompt里
-
-比如在计划部分
-
-而如果我们只接触前端代码
-
-他可能根本没有任何位置参数
-
-不涉及任何服务
-
-也许我们根本不需要要做导入的话
-
-也许我们不需要在数据库里新增一个id
-
-也许我们不需要往数据库里再加一个
-
-新的时间戳
-
-你知道吗
-
-这些指令其实适用的范围都挺窄的
-
-那些确实需要他们的绘画
-
-我希望你想象每一条这样的指令
-
-都像是这其中的一个上下文窗口里的灰色块
-
-现在可能只有这些小模块
-
-才真正与前端的代码相关
-
-可能只有这些指令才与数据库代码相关
-
-也许这些指令正是与react router相关的那些
-
-现在看看这些大段文本
-
-把它们都归到一起
-
-是不是有点可笑
-
-全都塞进一个文件里
-
-如果把它们分组在一起
-
-不是更合理吗
-
-既然一个绘画只需要一条关于react框架的建议
-
-那么他很可能需要更多关于react
-
-router框架的建议
-
-那么如果我们改成这样分组呢
-
-每个都放在单独的文件里
-
-所有文件都放在一起
-
-而每个独特的部分都放在各自的文件里
-
-然后在cloud md文件里
-
-你只需要放一组链接
-
-在需要时把你链接到正确的分组
-
-这些就应该是独立的markdown文件
-
-而POUDMD则会用markdown链接把你指向正确的地方
-
-我们现在自然而然地
-
-发现了一个非常重要的概念
-
-这一点会在接下来的整个课程中不断出现
-
-这个理念就是渐进式披露
-
-渐进式披露
-
-其实是一个来自UI和UX设计的概念
-
-这个理念是糟糕的
-
-Ui
-
-会把所有可用的操作都塞进一个巨大的界面里
-
-用户可以滚动浏览并进行选择的屏幕
-
-如果你见过那种糟糕网站的菜单
-
-它真的就是顶部有整整100个选项
-
-全都摊在一张扁平列表里
-
-你懂我意思吧
-
-相反你应该减少用户
-
-一开始需要做出的选择数量
-
-然后让他们基于这少数几个选项
-
-去找到所需的信息
-
-所以渐进式披露复杂性才是关键所在
-
-与其一下子把所有复杂性都抛出来
-
-不如先给他们一张地图
-
-并且你允许他们在其中进行导航
-
-这个cloud md文件把所有复杂性一股脑全塞进来了
-
-随着它越来越大
-
-我会更倾向于逐步披露其中的各个部分
-
-换句话说
-
-把内容从cloud md里拿出来
-
-放到彼此独立的文件中
-
-而不是让LOLM立即看到它
-
-然后只需从信息中链接过去
-
-他确实在cloud md里面
-
-现在渐进式披露这个概念会一次又一次的出现
-
-并且在本课程的后续部分也会反复出现
-
-它涉及软件架构和基于代码的设计
-
-以及所有相关内容
-
-不过在接下来的几节课里
-
-我们会从引导的角度来审视这一点
-
-做的很棒
-
-我们下期见
-
-### 032-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p32 What Are Agent Skills - 什么是代理技能.ai-zh
-我们一直在讨论agents md和渐进式披露
-
-而且我们之前对AGENMD的态度一直不太友好
-
-把一切都塞进全局作用域并不是个好主意
-
-这真的一点都不好玩
-
-那么如果有一个内置的解决方案
-
-岂不是很好
-
-已被社区认可为实现渐进式披露的恰当方式
-
-当你要引导智能体的时候
-
-而那个解决方案就是agent skills
-
-这是一个跨编码代理
-
-通用的开放格式
-
-包括cloud code
-
-是ANTHROPIC发明了他
-
-但他们随后把它公开了出来
-
-这是一种简单的开放格式
-
-用来向智能体提供能力
-
-新的能力与专长
-
-agent skills是由一系列说明组成的文件夹
-
-让智能体能够自行发现的脚本和资源
-
-关键在于发现
-
-因为他们不会被强迫接收这些信息
-
-他们不会被强迫去看到他
-
-但他放在一个他们可以轻松发现的地方
-
-我们用之前的例子来说明我们的意思
-
-在这些类似react router风格的指令出现之前
-
-他们只是立刻被强加给智能体
-
-他们都在他的上下文窗口里
-
-这些前端的也都一样
-
-这些数据库相关的也一样
-
-所有指令都在那里
-
-但如果我们把它们重播到各自的文件里呢
-
-我们还给了智能体一些原数据来告诉他
-
-当你需要关于react router框架的帮助时
-
-使用这个技能
-
-当你需要帮助编写前端代码时使用这个
-
-当你需要帮助编写数据库或追走代码时
-
-使用这个
-
-因此默认情况下智能体能看到的只有这些
-
-这将是技能的名称
-
-然后是技能的描述
-
-然后如果他愿意的话
-
-在绘画内部
-
-他基本上可以直接调用react router这个skill
-
-然后砰的一下就完成了
-
-所有指令都会对他可用
-
-这就是skills背后的理念
-
-他们让你可以逐步披露指令
-
-他们让你可以构建一种用户界面
-
-为你的智能体准备好
-
-他可能需要知道的所有信息
-
-所以在仓库里我添加了一些示例技能
-
-这些是我真正觉得非常有用的技能
-
-在我构建这个应用的过程中
-
-如果我们打开资源管理器
-
-我们可以在cloud skills目录里看到他们
-
-这里有两个技能
-
-一个更好的SQLIT3重建方案
-
-我们要看的第一个问题是找不到PMPM
-
-注意看这些技能就像cloud md一样
-
-都在项目文件夹里
-
-就像cloud md一样
-
-你可以把它们放在项目里
-
-像这样
-
-或者你也可以将它们限定在
-
-你的用户级别范围内
-
-在我的设置里
-
-我有一些面向用户的技能以及一些本地技能
-
-当然那些限定在项目范围内的
-
-也更容易与你的队友分享
-
-这也值得考虑
-
-如果我们点开这里的skill md
-
-我们可以看到它遵循某种模式
-
-它在这里顶部有一段front matter
-
-它包含名称和描述
-
-就像我们之前规划的那样
-
-默认情况下只有这些内容可供智能体访问
-
-所以他看不到这个文件里
-
-剩下的部分简介里写着
-
-通过启用CORE pack修复找不到PNPM命令的错误
-
-当找不到PNPM时
-
-使用这个
-
-如果出现CORE pack报错或者包管理器缺失
-
-结果发现LOM其实并不知道CORE pack
-
-也许你也不知道CORE pack
-
-但如果你遇到类似未找到PMPM命令的错误
-
-你其实可以直接运行corpack enable
-
-然后所有东西都会自动连接起来
-
-所以这正是一个适合放进skill的内容
-
-因为我不想把这些都塞到一个全局的
-
-cloud md文件里
-
-因为这个错误真的很少发生
-
-但当它真的发生时
-
-让LLM知道如何修复它
-
-确实能带来很高的杠杆效应
-
-我这里的另一个技能是这个更好吗
-
-SQI3重建
-
-在遇到关于BETTERFLIX3的错误时
-
-使用原生模块与node js模块不匹配
-
-是针对不同的node js版本编译的
-
-所以这描述的非常清楚
-
-在我想要调用这个技能的时候
-
-这和我们之前那个PMPM技能非常相似
-
-他只是在尝试修复一个相对罕见的问题
-
-比如出现node js模块版本不匹配的情况
-
-然后它应该运行NPM或偏pm的重建
-
-这些都是技能的绝佳应用场景
-
-因为我们只是在把LM往正确的方向引导
-
-为了避免一个罕见的问题
-
-现在你可能会想
-
-如果你看这个图表的话
-
-有没有可能更进一步呢
-
-在渐进式披露里
-
-在react router这个skill里能做到吗
-
-在里面再放一些其他文档
-
-这可能跟react router的一些特定怪体有关
-
-你能否把整个react router文档都拿过来
-
-然后把它放进一个skill里
-
-你当然可以
-
-比如说如果你只是想创建一个
-
-在better slide3重建目录里多了一个小文件
-
-也许就拿着这个
-
-然后想象一下
-
-这比你想象的要复杂一些
-
-把它放到script s h里面
-
-然后你就可以把脚本放在里面
-
-并从该文件中引用它
-
-引用他的方式很简单
-
-就是在这里用一个markdown链接
-
-这对LM来说非常容易遵循
-
-因此这是隐藏复杂性的绝佳方式
-
-在你的技能内部
-
-你的技能可能需要打包一些脚本
-
-他可能会把图片打包进去
-
-你可以把文件系统上能放的任何东西
-
-都打包进来
-
-在一个skill内部
-
-但你不必把它放在正式的skill md文件里
-
-这就是为什么这些技能如此令人兴奋
-
-因为他们内部的渐进式披露机制
-
-这意味着你可以容纳真正高杠杆的内容
-
-他们里面有一些高功率的东西
-
-然后把它们非常简单的进行打包
-
-并与任何编码代理和你的团队共享他们
-
-因此skills作为一种引导机制
-
-真的非常非常有吸引力
-
-最后我想提一件有趣的事
-
-我认为可以把技能分成两类
-
-你希望让LLM调用的技能
-
-比如我们刚才一直在看的这些
-
-或者那些你个人想要调用的技能
-
-你可以调用一个技能
-
-就像你在cloud里执行任何命令一样
-
-我们其实可以用这些技能来下达指令
-
-列出所有可用的技能
-
-你可以看到我们在这里有一些项目技能
-
-我这边有一堆用户可用的技能
-
-我们可以按escape键来关闭这个要调用一个技能
-
-我们只需要比如说在这里使用其中一个技能
-
-那么假设我们刚刚调用了更好的SQL重建技能
-
-我就直接在这里按下回车来弄清楚
-
-然后他会想嗯
-
-你知道的
-
-在这种对话里做这件事有点奇怪
-
-但他会自己弄清楚发生了什么
-
-它会运行p m p m we build
-
-大家好
-
-我是edit matt
-
-以前我教这个的时候
-
-我之前教的内容有不准确的地方
-
-但现在我找到了一个更好的版本
-
-我之前说的是
-
-把这个打开变成一个由用户调用的技能
-
-其实你可以直接省略名称和描述
-
-然后把它变成这样
-
-事实证明
-
-Agent skills
-
-如果你想把它们分发出去
-
-并在很多地方使用它们
-
-那么你确实需要提供名称和描述
-
-所以这实际上是一个无效的技能
-
-相反如果你不想让cloud要能够运行这个技能
-
-你可以在这里指定一些额外的front matter
-
-你可以设置disabled下划线
-
-model下划线implication true
-
-这意味着这个描述cloud code将无法访问它
-
-如果你想做相反的事
-
-并且让它仅能被模型调用
-
-然后你把它设为可由用户调用
-
-并把值设为false
-
-这意味着它不会出现在命令列表中
-
-并且只有LLM才能调用它
-
-这其实也挺合理的
-
-因为我们其实并不想真的去调用它
-
-再一次绘画内部
-
-结果证明我之前的直觉是对的
-
-关于存在可由用户调用的技能
-
-以及可由LM调用的技能
-
-那其实是规范所支持的
-
-非常棒
-
-这就是agent skills
-
-它们是一种用于引导LOLM的机制
-
-采用渐进式披露
-
-我把它们分成两类
-
-要么是用户调用的技能
-
-要么是LLM调用的技能
-
-干得漂亮
-
-我们下期见
-
-### 033-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p33 Using Skills For Steering - 使用技能引导.ai-zh
-既然我们已经了解了什么是skill
-
-那就动手来写一个属于我们自己的吧
-
-那么学习如何写一个skill的最佳方法是什么呢
-
-就是用一种skill来写另一种skill
-
-所以我提供了一个writer skill
-
-用来写一个skill
-
-我们要写的这个skill
-
-就是用来处理这个CMD文件
-
-就在这里面里面有一堆不同的编码规范
-
-然后试着用一种稍微更合理的方式来组织他
-
-把所有东西都塞进crow md并不够理想
-
-因为这意味着每一个这样的东西
-
-所有这些我们发送给模型的每个请求
-
-都会包含这100多行
-
-所以我更倾向于写一个skill
-
-把这些内容封装成一个编码标准的skill
-
-这将使我们能够把我们的编码规范打包起来
-
-使其可用
-
-如果LLM需要它
-
-但我们并没有主动把它塞进context
-
-这可能会相当浪费
-
-所以我建议你按照这个过程来做
-
-我们要打开cloud
-
-然后在里面使用那个写一个Steal的writer ste
-
-接下来我们会写出一份详细的需求
-
-说明
-
-我们想要做的是
-
-把cloud md里的所有这些条目拿出来
-
-并且想办法让他们能够逐步披露
-
-换句话说
-
-把编码标准的各个部分分成不同的章节
-
-把它组织的让LLM容易找到信息
-
-但我们不会主动把它塞进context
-
-完成这一步后
-
-我们应该会得到一个非常整洁有序的配置
-
-而且我们应该能够删除CMD里的那些内容
-
-也许就只留下被guy Steal的引用
-
-这段描述就交给你们和这次对话来决定吧
-
-你在这里和智能体的对话会非常重要
-
-用于提升你产出skill的能力
-
-不过当然你会在解决方案里看到我说的内容
-
-祝你好运
-
-我们在解决方案里见
-
-### 034-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p34 Using Skills For Steering - Demo - 使用技能引导-演示.ai-zh
-好的
-
-我先在这里把我的想法口述到cloud code
-
-我想把cloud md里的指令拿出来
-
-创建一个名为coding standards
-
-他把所有那些零散的内容整合起来说明
-
-并将他们归类到不同的分组
-
-比如我们有一些更适合后端的
-
-也有一些事
-
-这对前端更有用
-
-我想创建一些参考文档
-
-放在这个skill之外
-
-由该skill去引用它
-
-这个skill应该每当我们引用编码规范
-
-每当我们需要的时候使用进行评审
-
-并且每当我们做实验的时候
-
-所以这应该在前面以及LOLM新制的中心
-
-一旦我们把所有东西都拿出来了
-
-至于cloud md
-
-我们应该可以直接删掉它
-
-或者也许从cloud md留一个指向这个skill的上下文
-
-指针好
-
-我们把它跑起来看看会发生什么好的进展
-
-还挺顺利的
-
-eager在这里
-
-他说要把这些规则分成五组
-
-创建参考文件
-
-并写一个简洁的STEMD来指向他们
-
-咱们就放开手脚试试
-
-看看会发生什么
-
-好吧
-
-这里有点乱
-
-我们来看看所有的元素已经写好了
-
-我们可以在顶部的coding standards里看到他
-
-现在我们有database md
-
-我们可以看到哇
-
-好的
-
-那么所有的数据库相关的编码规范
-
-已经放进去了
-
-前端和UI这边也有一些
-
-这里分成小块
-
-根合形态非常棒
-
-看起来不错
-
-还有服务和测试
-
-好吧
-
-这确实多了不少
-
-这样更有条理了
-
-现在AI智能体可以按需拉取他需要的部分
-
-在他需要的时候
-
-如果我们看看这里的cloud md
-
-就会发现它只有这么一小段一个小指针
-
-聚焦到coding standards这个skill上面
-
-写着在编写代码审查变更之前
-
-先加载你的Steal
-
-或者回答关于约定的问题
-
-steel md做索引
-
-我觉得我们可以删掉这个吧
-
-嗯因为这算是隐含的
-
-仅仅因为我们已经创建了这个skill
-
-所以我觉得我们现在算是身兼两职
-
-我们再说好吧
-
-我们有了这个skill
-
-而且这个Steal有描述
-
-我们大概应该去看看他描述
-
-其实所以他在那里面在哪呢
-
-技能cody standard still md开始吧
-
-它相当大
-
-说明本项目针对这个react项目的编码规范
-
-router v7的代码库
-
-我们大概可以直接说代码库涵盖text script
-
-约定数据库模式规则测试一下
-
-我觉得那句话也不需要在本REPO中
-
-编写和审查代码时使用
-
-进行代码审查或者实现任何功能
-
-我觉得我们可以干掉那一行
-
-也是刚才内行的
-
-意思是读取相关的
-
-在生成代码之前先查看参考文件
-
-我不认为这是好的
-
-现在我们就通读这个skill来确认一下
-
-当然这完全符合我们的预期
-
-这个steel本身是简短明了
-
-这段描述会被加载到上下文窗口本身
-
-这会很有用
-
-还有这个skill
-
-它其实就是一组参考文件
-
-然后链接到coding standards
-
-我们正在搭建的配置
-
-这有点像是一个文件系统
-
-智能体可以在其中根据需要拉取更多信息
-
-这样智能体就能看到
-
-先给出skill的描述
-
-这个skill描述可以
-
-然后链接到那个STEMD
-
-再由他去链接到
-
-我把这些小链接称为上下文
-
-之所以叫指针
-
-是因为他们指向某个东西
-
-有趣的是
-
-这些可能是AI智能体在其上下文中需要的
-
-事实上
-
-这个示意图的更准确版本可能是
-
-假设你有一个智能体
-
-它具备这个Steal
-
-已经有一份说明可以链接到编码标准skill md
-
-通过在中添加一个额外的小指针
-
-Cloud md
-
-我们其实可以一举两得
-
-因为这份cloud md里的一件小事
-
-就是会链接到以及该技能的描述
-
-这会让那个skill更有可能被调用
-
-它会被识别出来
-
-因为它有两个上下文指向它的指针
-
-这样我们就可以相当确保
-
-我们的编码规范文档时
-
-会在需要时被智能体调用
-
-关键在于
-
-因为我们把所有这些内容都保存下来了
-
-如果这些参考文件不断增长
-
-它不会把负极的上下文称大
-
-因为它是只在需要的时候加载
-
-他真正需要的内容
-
-他我建议你在任何时候都使用这个steel
-
-不需要做任何人工审查
-
-所以你只需要说review这段代码
-
-请使用该skill中的编码规范
-
-总的来说
-
-这是一个很好的构建方式
-
-关于你希望你的代码库遵循什么的说明文档
-
-让它看起来不至于把你的cloud md文件淹没
-
-一个组织来确保每个人都沿用同样的编码规范
-
-以及所有那些大多数RAPPO看起来都差不多
-
-干的不错
-
-我我们下期见
-
-### 035-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p35 Automatic Memory - 自动记忆.ai-zh
-到目前为止我们一直在讨论技能
-
-也在讨论cursor md
-
-但我们还没聊过cursor的自动记忆功能
-
-在录制这段视频时
-
-这个功能是最近才上线的
-
-它的作用是真正让cursor能够随着时间推移进行自我引导
-
-我们可以通过在这里打开cursor
-
-并运行一个全新的实例来找到这个文件
-
-然后在这里使用memory命令
-
-当我们在这里按下回车时
-
-可以看到我们有用户记忆
-
-这就是你的用户cursor md
-
-我们有项目记忆
-
-它作为cloud md在本地提交到仓库
-
-然后我们还有一个打开的auto memory文件夹
-
-接下来我们要运行它
-
-现在我已经在vs code里打开它了
-
-我们可以看到这个目录里其实没有任何文件
-
-在这个特定项目上
-
-cursor并没有额外添加任何记忆文件
-
-不过我刚刚把它跑在了我工作中实际参与的一个项目上
-
-在这个项目上
-
-他确实生成了一个memory md文件
-
-我们可以看到在这个项目里
-
-他已经写下了自己的引导文档
-
-说实话这挺晦涩
-
-而且也很具体
-
-它里面提到了一些内容
-
-关于使用npm install force
-
-而不是m p m legacy peadex
-
-然后他确实有一些关于测试模式的内容
-
-看起来挺有用的
-
-effect的使用
-
-或者用v test测试ueffect effect方面
-
-dB test使用PDLIGHT6mark会被提升
-
-所以这会被放进上下文里
-
-和你的cursor md文件一起
-
-这个功能还比较新
-
-所以我老实说还不太确定该怎么看待它
-
-不过我觉得你最好隔一段时间就进去检查一下这个文件
-
-只是为了确认他没有在这里塞进一些奇怪的垃圾
-
-比如说我觉得我的LOLM并不需要知道v mod会被提升
-
-这个提示
-
-我觉得他不需要这段关于test使用PKI的内容
-
-我觉得他能自己弄明白
-
-而且其实PUTHCHEMA在我的仓库里已经被弃用了
-
-所以我想把它去掉
-
-而且其实我们很快也会从effect platform node迁移出去
-
-所以我建议你每隔一两周就检查一下这个memory md
-
-打开这个文件
-
-看看里面有没有可能互相重复的内容
-
-围绕你真正希望你的LLM去做的事情
-
-因为最糟糕的情况是
-
-这东西可能会慢慢过时
-
-与你仓库的实际状态保持一致
-
-顺便说一句
-
-这正是我一直担心的事情
-
-每当我看到这类记忆风格的系统时
-
-好了
-
-就这样
-
-这就是cursor的自动记忆功能
-
-如何找到它以及如何编辑它
-
-干得好
-
-我们下期见
-
-### 036-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p36 How To Tackle Massive Tasks - 如何处理大型任务.ai-zh
-到目前为止
-
-在这门课里
-
-你大概已经染上我对上下文窗口的偏执了
-
-我一直在思考上下文
-
-一直在思考智能区和迟钝区
-
-在当前这一代LOM的能力范围内
-
-我主张的做法是
-
-尽量保持在位于上下文窗口的前半部分
-
-对于一些能够轻松容纳的任务来说
-
-这样是可以的
-
-塞进上下文窗口里小的功能和修bug
-
-那么当你尝试去做
-
-会发生什么
-
-某个更大的多大道会闯进迟钝区的任务
-
-就像我们在上一节做的那个重构
-
-或者那种一看就明白的事情
-
-前面你就会意识到他根本塞不进上下文窗口
-
-更别说智能区了
-
-上下文窗口的一部分
-
-换句话说
-
-当你面对一个任务时时
-
-你该怎么办
-
-只是太大了
-
-其实做法就是开发者们几十年来
-
-一直在用的那一套
-
-也就是把大任务拆成小任务
-
-这样一来
-
-我们可以把这个大任务的所有工作
-
-都放在上下文的智能区内完成
-
-但问题是
-
-那么接下来要做的就是思考需要怎样的规划
-
-才能让这件事奏效
-
-因为到目前为止
-
-我们的计划只持续了一个上下文窗口的时间
-
-我们还没考虑过他会是什么样子
-
-最好有一份或多份文档
-
-能够跨越多个上下文窗口
-
-但幸运的是
-
-社区已经逐渐形成了一套通用的模式
-
-具体来说有两份特别重要的文档
-
-我们需要的第一份文档是某种对目的地的描述
-
-也就是我们要去的地方
-
-因为如果我们不知道要去哪里
-
-我们接下来要怎么做才能完成这个任务呢
-
-有人把这叫做规格说明
-
-这是我们正在构建的内容的规格说明
-
-有些人把它称为P2D
-
-也就是产品需求文档
-
-产品需求文档
-
-我在这里用的是P2D
-
-不过叫什么名字其实不重要
-
-现在写出真正优秀的PRD
-
-本身就是一项非常重要的技能
-
-而我们接下来要在这一部分
-
-我们会讲到
-
-把你要做的东西彻底敲定清楚
-
-非常关键
-
-这很重要
-
-而且它还能扩展到非常非常庞大的任务
-
-或者你也可以为相对较小的项目编写
-
-P2D小儿可控的任务
-
-当然这正是你作为人类可以施加你的
-
-先让语言模型尝个鲜
-
-把你要做的东西彻底敲定
-
-但这里有个问题
-
-如果你只在这里指定了目的地
-
-那么LM怎么知道
-
-或者你的系统要怎么知道
-
-知道怎么把它拆成小块吗
-
-换句话说
-
-如果没有一份关于的描述
-
-那么LM可能会试图在一个巨大的上下文窗口
-
-里一次性解决所有问题
-
-为什么
-
-你通常会在PRD旁边指定一个plan md文件
-
-换句话说
-
-你会同时使用一份
-
-在一个绘画里创建庞大的目标产物
-
-然后你可能会继续使用同一个绘画
-
-也可能会先清空上下文
-
-然后创建整个实现旅程
-
-你需要把产品拆解开
-
-把产品需求文档拆分成若干阶段
-
-你基本上会说好
-
-在这个阶段我们将先做第一阶段
-
-这个阶段会接着做
-
-第二阶段
-
-第三阶段
-
-第四阶段和第五阶段
-
-而这些其实就是你提示里的三个要素
-
-你只是说我们要进入某个阶段
-
-然后我们把PRD传进去
-
-再把整个计划也传进去
-
-把整个计划都放进去
-
-真的很有用
-
-因为这意味着各个阶段不会互相踩脚
-
-因为IM可以看到好的
-
-我们在第三阶段做那部分
-
-我不会在第二阶段做那部分
-
-所以学习如何撰写优秀的PRD
-
-学习如何制定出色的计划
-
-以及学习如何进行构建这个提示
-
-并理解如何最好地驾驭这些庞大的构建过程
-
-这就是今天这一节的主题
-
-而且绝对精彩
-
-祝你好运
-
-我们下一节见
-
-### 037-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p37 Write Great PRDs With This Skill - 用这个技能写PRD.ai-zh
-现在我们明白了为什么要使用P2D
-
-P2D是一份目标性文档
-
-它有助于管理跨多个会话
-
-保持上下文
-
-并给我们一个明确的目标方向
-
-而随之而来的问题是
-
-我首先想到的是我该怎样去写一个呢
-
-结果发现正好有一个对应的技能
-
-这是to p r d技能
-
-他会获取当前的对话上下文
-
-并生成一份P2D
-
-这里的用意是你在绘画开始时
-
-先用一次grill me来弄清楚方向
-
-你就继续推进
-
-然后如果它太大
-
-没法在同一个上下文窗口里真正实现
-
-然后你调用QPRD技能
-
-从中生成一份产品需求文档
-
-这是一个非常一个简单的两步流程
-
-你先探索代码仓库
-
-了解代码库的当前状态
-
-然后使用下面的模板来撰写一份P2D
-
-并且这份P2D会在本地生成
-
-现在这份P2D这个模板我们可以争论一番
-
-也可以在discord上讨论
-
-把细节敲定正确的心态
-
-我觉得这件事我们会争论上好几年
-
-但目前我做到的是这样
-
-我们基本上已经有了问题陈述
-
-也就是那个问题
-
-从用户的视角来看他们所面临的问题
-
-然后再从用户的角度给出这个问题的解决方案
-
-然后是视角部分
-
-接着是一长串代编号的用户故事列表
-
-我们来看看这个模板
-
-在解决方案部分再多说一点
-
-但你可以看到这里内容很扎实
-
-信息量足够
-
-这样任何接手的人都能获得一次
-
-非常棒的信息注入
-
-来完成实现
-
-不过现在我们需要测试一下
-
-所以我们实际上要
-
-我们这次要做的是创建一个全新的功能
-
-这个功能是一个讲师分析仪表板
-
-目前的讲师仪表板实在有点拉胯
-
-我们得给他们提供点东西
-
-这样这样你就能看到有多少用户
-
-在他们的课程里
-
-他们赚了多少钱
-
-那些东西他们可能想看到
-
-完成率或者测验的分率
-
-他们可能还想看到哪些课程导致了流失点
-
-诸如此类的情况
-
-总的来说
-
-一个分析页面又大又臃肿
-
-而且可能会演变成各种东西
-
-它的形态各异
-
-我觉得很适合来一场grill me
-
-接着生成一份PRD
-
-因为我们得把他真正塑造成一个合理的方案
-
-所以就就像之前的GLLING环节一样
-
-我们先从这里开始一个grill me
-
-我会一直追问
-
-直到我们达成共同的理解
-
-或者直到你觉得准备好了
-
-然后我们不直接进入实线
-
-而是去调用
-
-改为使用QP2D技能
-
-他应该会在本地位
-
-我们生成一份P2D
-
-完成后
-
-当你真正完成了这份PRD后
-
-把对他的想法随手记下来
-
-回顾整个过程
-
-提出你的观察并思考可以补充哪些内容
-
-如果你自己来设计一个PRD模板
-
-总体上你希望看到什么
-
-这份P2D是否真的捕捉到了
-
-我们共同的设计概念
-
-记住我们现在并不打算立刻动手实现
-
-但我们不会现在就实现这个P2D
-
-只是先把P2D创建出来
-
-并提交
-
-干的漂亮
-
-我们就在解决方案里见
-
-### 038-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p38 Write Great PRDs - Demo - 写PRD-演示.ai-zh
-好的
-
-我们开始这场拷问吧
-
-我想做一个讲师分析仪表板
-
-这样讲师就有东西可以看了
-
-在他们的仪表板上
-
-讲师需要查看各种类型的指标
-
-他们需要看到自己的课程卖的怎么样
-
-他们需要看到完成率
-
-他们需要看到更少的内容以及课时流失点
-
-你想到的其他点子也都欢迎
-
-我们就这么开始吧
-
-看看他会怎么说好吧
-
-那我们来盘一盘
-
-现在的范围到底是什么
-
-这个仪表板放在哪里
-
-数据分析可以落在三个层级
-
-并且回答不同的问题
-
-是按课程拆分的数据分析还是跨课程总览
-
-我设想的是一个跨课程总览
-
-当我想到这件事的时候
-
-那这道题我选B
-
-这里的思路是
-
-比如哪门课是我的最佳收入来源
-
-这绝对是你想要回答的问题
-
-我的整个课程目录表现如何
-
-我其实就是想看看一样东西
-
-看看我赚了多少钱
-
-来自我为CADENS制作的所有众多课程
-
-那么现在的问题是替换还是共存
-
-结合当前的讲师页面
-
-我在设想一个新的分析页面路由
-
-主要是因为它可能会逐渐超出这个范畴
-
-至少当前的讲实录由是这样
-
-所以我觉得我会选B
-
-尽管他建议把C当做一种混合方案
-
-因为我觉得我现在有点在想这件事
-
-我觉得管理员可能需要能够查看讲师分析页面
-
-而且某种程度上是因为如果出了问题的话
-
-关于讲师分析页面
-
-首先管理员需要能够观察到这一点并进行查看
-
-而管理员可能只是想进一步下钻查看进入讲师页面
-
-查看他们的表现
-
-那就让他只是讲师页面
-
-我觉得不太对劲
-
-好的
-
-现在来深入盘问这些指标集合
-
-所以你提到的三个是销售额完成率
-
-还有课时流失点
-
-是的
-
-然后是每门课程的平均评分
-
-我同意这非常有价值
-
-测验表现价值非常高
-
-销售的地理细分purchases country已经能够轻松展示
-
-我说当然好啊是啊
-
-这里也有个不错的推荐
-
-那么一级加四个评分维度
-
-再加六个地理维度
-
-好的
-
-我觉得我现在最想做的其实是先退一步
-
-我想我会说这主要是一个以收入为核心的仪表板
-
-也许再稍微加点评分数据
-
-我觉得地理细分可能会失控
-
-而且我们的IP数据收集并不太可靠
-
-所以我觉得应该聚焦在营收上
-
-加上评分可能是更好的方向
-
-像这样的分析仪表板
-
-最后总会变成一团乱麻
-
-就像你总是在现有基础上不断加功能
-
-那为什么不先从小处着手呢
-
-好了
-
-在我继续之前
-
-需要先澄清一下你的开场消息
-
-说讲师需要看到完成率和课时流失点
-
-我觉得我得收一收了
-
-只具交到收入和平分嗯
-
-我觉得这样没问题
-
-再次注意我是如何引导这次对话的
-
-我说了算不是AI智能体
-
-这非常重要
-
-这是个不错的小东西
-
-其实只是在检查一个模式细节
-
-在提出下一个问题之前
-
-那么这里也是拷问式提问技能的一部分
-
-就是如果你比如他能不能回答的话
-
-关于这个代码库的问题确实如此
-
-这就是刚才我们看到的那个例子
-
-好的
-
-他现在在问关于收入的时间维度
-
-所以我们只做终身总计吗
-
-不行
-
-固定最近的时间窗口
-
-并支持正负偏移
-
-这可能会很有意思
-
-我觉得需要一个带时间范围选择器的时间序列
-
-这差不多就是我在想的好的一张展示随时间变化的收入的柱状图
-
-包括七天
-
-30天和90天
-
-所有时间切换都会显示趋势和季节性
-
-是的
-
-这大概就是我在想的好的
-
-我们来介入一下
-
-看起来不错
-
-我想选C
-
-但我不想做delta对比的数字
-
-我觉得我想让他尽量保持干净
-
-我希望时间序列是七天
-
-30天
-
-一年以及全部时间作为这里的时间细节
-
-我想确保这个时间序列它作为参数保存在URL中
-
-比如最近七天
-
-30天
-
-12个月或者全部时间在这里
-
-不要害怕指定实现细节
-
-如果你已经想好它该怎么运作
-
-那就放手去做吧
-
-好的
-
-接下来他在询问关于图表聚合的问题
-
-而不是直接在图表上作案
-
-课程拆分
-
-我觉得可能用一条汇总的折线就够了
-
-只看他们的营收最有意义
-
-我觉得不应该有多行跟踪
-
-每一门单独的课程是有意义的
-
-然后我们在底部可以看到
-
-也许可以做一个包含所有课程的表格
-
-以及他们的表现如何
-
-我们选方案A吧
-
-然后继续底部还有一个不错的可排序表格
-
-我觉得这样没问题
-
-好的我们看看接下来写了什么
-
-还有一个额外的小细节是我经常喜欢同时进行两场拷问
-
-我时的问答
-
-有时候三个如果我兴致来了的话
-
-其实就是在左侧面板里放一个
-
-一个在右侧面板里
-
-而另一个人则去做别的事情
-
-然后我再跟另一队一起规划好吧
-
-他现在又说了什么
-
-那么就是表格列
-
-这有点棘手
-
-因为这其实是个UI层面的问题
-
-那我就把脑子里想到的先一股脑倒出来
-
-所以我觉得需要把课程的标价也加进去
-
-我们需要那个期间的收入数据
-
-我们需要销售额
-
-销售额不同于报名数
-
-所以我们可能还需要报名数
-
-因为可以通过团队进行购买
-
-最后我们还需要平均评分
-
-还有评价数量
-
-也就是评分的总数
-
-我觉得这里不需要状态徽章
-
-因为这不像是在做课程创作平台的一部分
-
-这其实就是到底赚了多少钱
-
-我的已发布课程赚了多少钱
-
-好的
-
-我们来看看这里写了什么
-
-再次强调这有多重要
-
-我对自己的业务领域有非常深入的理解
-
-比如我知道可以通过团队购买
-
-也就是说报名数和销售额不是一回事对吧
-
-看起来这里有两个最终烈我们还有两个最终的问题
-
-仅筛选已发布的课程
-
-是的
-
-并且把报名数列也纳入这个范围
-
-嗯显然很有道理好
-
-那就选A1只展示已发布的
-
-然后采用范围内的报名数
-
-这两点说的通
-
-但总觉得当他开始提问的时候
-
-更明显的快速提问
-
-那我们应该就处在一个相当不错的位置了
-
-我们开始达成共识
-
-好的
-
-他现在要求在图表上方加一个KPI指标条
-
-这里又是一个偏UI的问题
-
-我觉得可以在上面放一些小的卡片
-
-放在汇总卡片的上方
-
-这会非常有用
-
-这听起来不错
-
-我觉得应该是总收入
-
-然后是总报名数
-
-那么平均评分就有意义了
-
-针对顶部的汇总卡片
-
-我觉得没问题
-
-开干吧
-
-好的
-
-第九个问题
-
-也许我们还没到终点
-
-根据所选时间范围设置图表的分桶力度
-
-所以它显示的是七个分桶
-
-对于30天它显示30个分桶
-
-对于12个月则显示12个分桶
-
-看起来他最终落到了一个柱状图上
-
-但我觉得他可能应该去掉
-
-是的
-
-图表本身是柱状图
-
-我觉得折线图可能更合适
-
-你知道的
-
-你看到那条线往上走
-
-分桶的数量看起来没问题
-
-我觉得我们应该用折线图
-
-而不是柱状图
-
-然后如果某个分桶的金额为零美元
-
-然后他只是你知道的
-
-他仍然会被渲染出来
-
-所以我们还是应该显示林美原针对那个时间段
-
-这很有意思
-
-这次拷问式讨论更偏向落地实现
-
-其实可能是因为实现方式只是稍微复杂一点
-
-还有一些前端的工作要做好的
-
-现在他正在查看这个图表库
-
-他说没有SHEN的图表组件已完成脚手架搭建
-
-我们需要加一个
-
-我觉得其实直接用裸的VCHARLES更好
-
-我并不一定喜欢那种只是包装一下的组件封装库
-
-我觉得我们就直接用原声
-
-which charts没必要引入更大的依赖
-
-比我们需要的还要多来吧
-
-结束了吗
-
-结束了吗
-
-我能去吃午饭吗
-
-好的继续
-
-我们有一个导航入口
-
-我们新增了一个侧边栏
-
-象或者说一个标签页是在讲师页面加一个字导航
-
-还是在讲师页面放一个按钮
-
-我觉得新增一个侧边栏项最合适
-
-我就直接开始了
-
-根节点是讲师分析
-
-好的
-
-这里有两个问题
-
-我们有一个没有设定范围的默认范围
-
-所以他提供的选择是七天
-
-30天
-
-12个月或全部
-
-我就采纳他的建议
-
-选30天没问题
-
-然后他在讨论空状态
-
-我觉得我们可以把这里的内容简化一下
-
-把30天设为默认值是合理的
-
-至于空状态就简化处理
-
-如果没有数据或者没有任何课程
-
-就显示一个页面
-
-提示尚无营收数据
-
-发布一门课程即可开始查看分析数据
-
-大家觉得怎么样
-
-这是最后一个吗
-
-这是最后一个吗
-
-在这局里我会一直用不用
-
-这太离谱了
-
-我遇到过有人被up gram问了大概100个问题
-
-大概接近200个问题吧
-
-关于无数据的情况
-
-还有一个小补充
-
-我想确认一下我是否理解正确
-
-它似乎在做区分没有已发布课程的情况和有已发布课程的情况
-
-但是零次历史累计购买的条目却显示有历史累计购买
-
-但在当前选定的时间范围内为零
-
-嗯嗯显然只有在没有数据时
-
-我们才需要显示空状态
-
-已发布课程或零历时累计购买
-
-我完全同意
-
-这正是那种会变得非常模糊的事情
-
-如果你只是看一份计划对吧
-
-而实际上让这个东西来问你
-
-真的我会像苏格拉底那样带着对抗性的向你提出这些问题
-
-就是能让他真正跑起来好了
-
-你猜怎么着
-
-我们已经达成了共识
-
-他不再对我们穷追猛问了
-
-太棒了
-
-我们有一个非常简单的V1规格
-
-现在是时候来做那件神奇的事了
-
-我们目前用了52.2K的token
-
-这其实算很轻量的
-
-鉴于我们已经覆盖了这么多内容
-
-然后我们会生成一份P2D
-
-所以从理论上讲
-
-对于这份P2D
-
-我们不需要再指定其他东西了
-
-他应该直接读取上下文中已有的所有内容
-
-也许他自己可以先做点探索
-
-然后直接把一份PRD甩出来
-
-那我们开始吧
-
-就这样我们搞定了
-
-我们有了这份PRD
-
-可以稍微把视角拉远一点
-
-那么我们已经有了一个要解决的问题
-
-平台上的讲师完全没有可见性
-
-了解他们的课程在财务上的表现没错
-
-讲师目前没有办法查看总收入
-
-随时间的收入趋势
-
-管理员同样无法查看某位讲师的营收表现没错
-
-因此解决方案是一个专用的分析仪表板
-
-面向讲师提供以收入为核心的总览
-
-在一个页面上展示他们所有课程的概况
-
-接着我们有一个带编号的用户故事列表
-
-这真的很有用
-
-因为当我们把这些拆解成任务时
-
-我们可以参考这些用户故事
-
-这些基本上就是最终功能应该做到的事情
-
-作为一名讲师
-
-我希望看到自己的总收入
-
-针对所选时间段内的所有课程
-
-这样我就能了解自己的总体收入
-
-这是谁在执行
-
-他们在做什么
-
-然后是他们为什么想做这件事
-
-如果我们再往下深入到用户故事层面
-
-我们最终会落实到实践层面的决策
-
-这样就能把所有主要模块都归类好
-
-需要编辑或管理的内容
-
-我们这儿有一个分析服务
-
-这是新的东西
-
-一个封装起来的深层模块仪表盘的全部数据库查询逻辑
-
-我们正在创建一个讲师分析的路由
-
-还有一个管理员用的讲师分析路由
-
-一个共享的管理员分析组件非常好
-
-还有一些技术层面的决定
-
-那么就是一组时间段筛选器
-
-一个时间段驱动整个页面
-
-我们已经敲定了表格列的清单
-
-我们有表格排序
-
-这是一份挺长的文档
-
-我也做了一些测试方面的决定
-
-我们稍后会再仔细看看这些
-
-当我们讲到反馈循环时
-
-那我就先把这些收起来
-
-我们也有一个很长的清单
-
-列出了哪些是不在范围内的
-
-这样就能确保P2D的范围受到约束
-
-而且我们不会去做那些并不存在的东西
-
-所以这取决于你的拷问环节进行的如何
-
-你很可能已经来到了
-
-和我做的决定略有不同
-
-顺便说一下
-
-为了把这部分补全
-
-我还做了用于记录其他事项的补充说明部分
-
-那不适合放到其他部分里好了
-
-就这样
-
-我们已经成功明确了目标
-
-为了说明我们要走向哪里
-
-和我一样
-
-你可能也迫不及待想动手了
-
-把这份文档真正落地实现
-
-然后把它落实到在哪里
-
-干得漂亮
-
-我们下期再见
-
-### 039-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p39 Split Features Across Multiple Context Windows - 跨多上下文窗口拆分功能.ai-zh
-好了到目前为止
-
-我们已经创建了P2D
-
-也就是我们的目标
-
-但还没有制定具体的执行计划
-
-接下来我会在这部分里论证
-
-做plan md有好方法和坏方法之分
-
-或者不如说我们把它分成一种好方法
-
-和一种朴素方法
-
-那么我们先从朴素的做法开始
-
-我希望你在仓库里开启一个新的cloud code绘画
-
-然后你要指定p r d instructor analytics仪表板
-
-我们将使用at符号把它直接拉进上下文
-
-然后我会说把它变成一个多阶段的计划
-
-并保存为本地的markdown文件
-
-我们要做的就这些
-
-我不会再指定别的
-
-就是这样
-
-然后我们就运行它
-
-在它运行的同时
-
-我希望你记下你可以如何改进它
-
-把它生成的东西记下来
-
-因为我们很可能会得到差异很大的回复
-
-你也应该好好想想
-
-每个任务的力度要定到多大
-
-你希望每个阶段的规模有多大
-
-因为这里的任务力度很重要
-
-而你在那个context window里做什么真的很重要
-
-那就一步步走一遍
-
-看看它生成什么
-
-我们解决方案里见
-
-### 040-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p40 Split Features - Demo - 拆分功能-演示.ai-zh
-好难以置信的是
-
-他居然已经可以直接用了
-
-刚才我在录制的时候
-
-他已经完成了这些工作
-
-问题是他先在代码库里做了一番探索
-
-然后就直接把计划按结构写了下来
-
-Analytic dashboard md
-
-我首先注意到的是
-
-它去实际生成的速度有多快
-
-他一上来就急着产出成果
-
-甚至还没对我刨根问底
-
-用的是writer p r d技能
-
-我们真是被惯坏了
-
-因为我们和LLM进行了一次
-
-非常有收获的对话
-
-而他只是立刻就吐出点东西来
-
-不过我还是想看看他到底会做完
-
-来看看它有多好用
-
-首先可以看到他把文件放到了
-
-这里的plants目录下
-
-我现在就把这些阶段都折叠起来
-
-这样我们就能看清他在做什么
-
-好的
-
-我注意到他分了四个阶段
-
-这挺不错的
-
-但它采用的是一种相当横向的风格
-
-这四个阶段分别是他创建了
-
-先把分析服务单独做出来
-
-这意味着我们需要的每个东西都来自分析服务
-
-会在一个阶段内完成
-
-所有后端架构都会在那里完成
-
-接下来他会创建一个共享的仪表盘组件
-
-并安装RECHARLES
-
-不过接着它直到第三阶段
-
-他才会真正在路由中使用那个UI
-
-然后他只是去创建管理员
-
-分析路由和用户页面的链接
-
-作为第四阶段
-
-在每个阶段的内部
-
-好的他实际上已经把各个步骤都列出来了
-
-所以这几乎就像如果他给我们的
-
-是一份纯粹的实现指南
-
-那这里就像是一份针对所有这些内容的
-
-用户手册
-
-我注意到的是
-
-这些实现细节让我有点害怕
-
-实际上是在这些步骤内部
-
-我之所以对此感到担忧
-
-是因为我本身就是一名开发者
-
-我知道你不能完全
-
-你不可能在实际动手之前
-
-就先把所有设计都定的万无一失
-
-实现第一阶段你或许还能做到
-
-因为你只是在对代码库做一些修改
-
-就他目前的样子来看
-
-不过如果我们看第三阶段内部的话
-
-这可能会导致引用那些在最终实现里
-
-根本不存在的函数
-
-所以这让我有点我也挺紧张的
-
-我确实喜欢这些验收标准
-
-真的很不错
-
-我也不太喜欢
-
-他没有引用PRD里的那些用户故事
-
-因为那些用户故事是我们费尽心思打磨出来的
-
-好的
-
-所以我希望这些都能真正被引用到计划里
-
-这样我们就能把他们真正关联回背后的原因
-
-不过我们还是回到前面看看更多的内容
-
-我们放大看最后一个
-
-这里有没有什么特别离谱的东西
-
-再说一遍
-
-他仍然这种做法有点像引用之前创建的函数
-
-但我们甚至还不确定它们是否存在
-
-到那时他们就会被创建出来
-
-这一点在第一阶段的执行过程中尤其成立
-
-我们作为人类介入决定
-
-说不其实不想那样去实现它
-
-另一方面
-
-像这里这些具体函数的命名
-
-如果我们决定改动
-
-它们很快就会过时
-
-关于早期阶段的实现细节并没有涉及太多
-
-不过我认为它的规模划分是合适的
-
-这些任务的划分相当到位
-
-如果我回到顶部
-
-再把他们全部折叠起来
-
-我们可以看到就是我们在做的事情
-
-除了第一阶段可能偏大之外
-
-其他看起来都不算太大
-
-其中分析服务和测试可能比预期更难
-
-但我想既然我们只是查询数据库的话
-
-也许没那么棘手
-
-所以我们已经做了一个相对朴素的方案
-
-这个方案是按水平分层来推进所有工作的
-
-我稍后会解释为什么这样做并不好
-
-接下来的几期视频里会讲到
-
-这个计划在措辞上对实现的细节有点过于具体
-
-它实际上是在给一些函数命名
-
-而等我们进入后面的阶段时
-
-这些函数可能还不存在
-
-不过它的规模还算合适
-
-也许我们甚至可以把第三阶段和第四阶段
-
-合并起来
-
-因为那会是很多类似的工作
-
-希望你能得出一些相同的结论
-
-如果你发现了什么不同之处
-
-我很想在disport听到你的想法
-
-从你的成果到我的成果
-
-干得漂亮
-
-我们下期见
-
-### 041-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p41 What Are Tracer Bullets - 什么是追踪子弹.ai-zh
-我对这期特别兴奋
-
-因为这节课让我有机会聊聊
-
-在过去几个月里和AI一起工作时
-
-我最喜欢的发现之一
-
-也就是说只需两个精心挑选的词
-
-你就能彻底改变
-
-AI会优先考虑任务
-
-而且你可以改变他的规划方式
-
-这两个词来自这本书
-
-程序员修炼之道
-
-The pragmatic programmer
-
-作者是DAVIDTHOMAS和andrew hunt
-
-这是一本有20年历史的工程学著作
-
-里面有很多精彩的洞见
-
-所以我强烈推荐你也买一本
-
-我们要从这本书里借用的两个词是夜光弹
-
-首先夜光弹背后的第一个观点是
-
-系统具有层次结构
-
-这些层次可能是不同的
-
-可部署单元
-
-比如我们这里的数据库和一个API和一个前端
-
-或者更常见的是
-
-它们属于同一个系统内的不同服务
-
-像我们项目中那样的应用程序
-
-但不管怎样
-
-这些层次都是你需要整合起来的东西
-
-以便先做出一个能用的东西
-
-你可能会有一个只涉及前端的小功能
-
-但更可能的情况是
-
-你正在它将包含涉及前端API和数据库的功能
-
-如果他们要对用户真正有用的话
-
-现在我发现
-
-事实上我们在之前的练习中也注意到
-
-问题在于
-
-ala lands往往以水平分层的方式编写代码
-
-当他们制定计划时
-
-往往按层次来思考
-
-如果我们看看这个计划
-
-那么我们有分析服务和测试
-
-然后第二阶段是一个完整的组件
-
-第三阶段是一条完整的路由
-
-第四阶段完全是另一条路线
-
-这有点疯狂
-
-因为我们完全没有得到其中一部分的任何反馈
-
-整个系统一直运行良好
-
-直到我们进入后面的某个阶段
-
-当然我们在第一阶段已经为分析服务
-
-写好了一些测试
-
-但如果服务的设计还没定下来
-
-那些测试就有点没有意义了
-
-以匹配我们在第三或第四阶段的需求
-
-我们需要尽早获得反馈
-
-并且尽可能频繁的获得反馈
-
-所以这个想法就是尽早获得反馈
-
-并且尽可能频繁的获取反馈
-
-来自程序员修炼之道中的夜光弹
-
-为了说明这个比喻
-
-夜光弹是防空炮手使用的弹药
-
-二战时期曾把它们装进枪里
-
-他们大约每六发就会装填一发特殊的子弹
-
-也就是说
-
-他们发射的不是那种
-
-真正用来击落飞机之类的实弹
-
-它只会从尾部射出一道灵光光束
-
-于是你会看到一道道夜光弹划过天空
-
-他们能看到子弹飞到哪里
-
-并据此调整
-
-在代码里
-
-它看起来是这样的
-
-不再采用覆盖整个层的阶段性开发
-
-现在我们有了真正贯穿每一层的各个阶段
-
-另一个说法
-
-这个概念也叫垂直切片
-
-也就是不再只是横向的编写各层代码
-
-我们确保计划中的每个阶段都触及每一层
-
-这样一来
-
-我们作为人类就可以介入并查看一下
-
-并在需要时提供反馈
-
-但这同时也意味着
-
-我们的设计实际上涵盖了所有需要的层次
-
-这样我们在架构上就不太可能犯错
-
-因为我们正在构建的东西会触及所有的集成层
-
-把它用在AI上的妙处在于
-
-AI本来就知道什么是夜光弹
-
-这是软件工程中一个相当有名的概念
-
-所以我们只需要说use tracer
-
-bullets这几个字就行了
-
-也许再稍微解释一下
-
-然后AI就能明白
-
-我发现这能极大提升AI构建软件的方式
-
-我们将在本课程的其余部分一直使用它
-
-希望这能让你豁然开朗
-
-但如果你有任何问题
-
-那就去discord里问他们吧
-
-做的不错
-
-我们下期见
-
-### 042-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p42 Use Tracer Bullets In Our Multi Phase Plan - 在多阶段计划中使用追踪子弹.ai-zh
-好了
-
-现在我们已经了解了这种黄金级的tracer
-
-bullets方法
-
-我想让你打开一个全新的cloud绘画
-
-里面没有任何上下文
-
-我们要用一个我刚加到仓库里的新技能
-
-叫做p r d to plan
-
-这是我用我的技能写作技巧写的
-
-里面大量提到了tracer bullets
-
-接下来我想让你很简单的进入这个cloud code实例
-
-在这里说p d to plan
-
-然后在这里传入P2D并按tab自动补全
-
-我们要运行这个技能
-
-看看他的输出是否更好
-
-或者比我们之前做的那个朴素方案更合理
-
-其实也可以把它当做一种基本的合理性检查
-
-我们大概应该进到这些计划里
-
-把原来的那个计划删掉
-
-因为为了让这成为一个公平的测试
-
-我们不一定希望把之前的那个留在上下文里
-
-供LM读取和操作
-
-我们就来做一个干净的测试试试
-
-我们的新规划能力相对于cloud的默认设置
-
-在你浏览这些内容的过程中
-
-我想请你留意这个新计划
-
-和之前那个计划之间的差异
-
-看看这个计划是否真的带来了改进
-
-或者看看你是否还能进一步思考如何改进它
-
-祝你好运
-
-我们解决方案里见
-
-### 043-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p43 Use Tracer Bullets - Demo - 使用追踪子弹-演示.ai-zh
-好的
-
-我们先运行一下
-
-看看现在会发生什么
-
-当然不出所料
-
-它正在执行一个探索阶段
-
-这太棒了
-
-所以在探索代码库的架构时
-
-我们甚至可以看到它正在使用用的是sonnet3.6模型
-
-挺不错的
-
-我就喜欢他在这种时候用更便宜的模型先进入探索阶段
-
-因为这看起来是更合理的资源利用方式
-
-那就等它完成吧
-
-完成了好了好了
-
-现在已经完成了
-
-他给出了一个建议的阶段拆分
-
-我是这样设计的
-
-他会主动向你征求这个阶段的反馈
-
-在他真正开始执行这个计划之前
-
-所以第一阶段要有趣的多
-
-而且非常非常扎实
-
-我们有一个分析服务
-
-加上一个instructor路由
-
-再加上摘要卡片
-
-这就是垂直切片的定义对吧
-
-我们要做服务加上路由
-
-再加上还有一些UI
-
-从定义方式可以看出
-
-下面第一阶段是tracer bullet
-
-一个tracer bullet
-
-用最简单的数据三个汇总数字把整个全站打通
-
-后续的每个阶段都会逐步扩展这个服务和仪表盘
-
-这正是我想要的是
-
-到第一阶段结束时
-
-我们基本上就能知道整个方案是否可行
-
-我们能否把分析服务接到instructor路由上
-
-以及大致该怎么做
-
-那里会有一些奇怪的注意事项
-
-我们也会把所有相关的怪事都摸清功能
-
-换句话说
-
-所有未知的未知都会被暴露出来
-
-现在我我马上看一下
-
-我觉得五个阶段可能有点太多了
-
-第一阶段我觉得这部分安排的很紧凑
-
-这个量挺扎实的
-
-如果要说的话
-
-可能有点太大了
-
-尤其是如果我们遇到任何问题的话
-
-不过也许还行吧
-
-我就当他没问题
-
-但我觉得可以把第二阶段和第三阶段合并在一起
-
-因为他们都是界面相关的问题
-
-然后也许第四阶段和第五阶段也可以合并在一起
-
-因为他们显然是不相关的
-
-管理功能
-
-访问权限和空状态
-
-但他们都会触及代码库的同一区域
-
-所以在同一个会话里一起做是合理的
-
-而且他们都挺小的
-
-所以就那样做
-
-我会告诉UI团队把第二阶段和第三阶段合并起来
-
-然后再做一个
-
-把第四阶段和第五阶段合并
-
-总共变成三个阶段
-
-那么现在如果我运行它的话
-
-应该给我一份新的计划
-
-好的
-
-现在他正在继续编写计划文件
-
-那我们看看它会生成什么好
-
-他吐出了plus instructor analytics
-
-Dashboard markdown
-
-很漂亮
-
-我们可以看到它看起来和之前的计划有些不同
-
-首先底部的这些阶段列的很清楚
-
-所以我们现在有三个阶段
-
-而且我们可以看到每个阶段的说明
-
-也就是要构建什么以及相应的用户故事
-
-他们在负极P2D中有引用
-
-我们可以看到那里并没有太多具体的实现细节
-
-这里有泄漏
-
-换句话说
-
-之前的计划几乎已经是一份实现了
-
-这是伪代码
-
-但本质上它更像是一段文字
-
-是对的
-
-描述功能
-
-之所以这么做
-
-是因为在这个Steal里
-
-我确实添加了一些指令
-
-基本上就是只做出那些持久的决定
-
-确保它们在整个过程中都能奏效
-
-所有阶段
-
-如果你看这个skill的内部
-
-它位于p r d to plan里
-
-然后我们会说识别
-
-在进行切分之前
-
-先把那些不太可能改变的具有持久性的高层架构决策明确下来
-
-在实施过程中随时调整
-
-换句话说
-
-我们是在规划力所能及的部分
-
-你确实需要把一些实现细节写在计划里
-
-因为这有助于让一切按部就班的进行
-
-这意味着输出的结果更可预测
-
-但我们在这里真正想说的是
-
-不要去规划你无法规划的东西
-
-很多东西只有在你的时候才会显现出来
-
-开始真正动手去实现它
-
-所以我们回到手头的实际计划
-
-是的
-
-我们可以看到那些具有持久性的决策
-
-就是在这个路由上提供讲师分析
-
-在这个特定的文件里
-
-在STMA中好的service没有变化
-
-有一个新的分析服务
-
-我们只是在引入一些关于的信息
-
-从仓库中获取当前用户的身份验证id
-
-以及我们正在添加的那些依赖项之类的东西
-
-非常好
-
-但当然计划的证明在于实践
-
-换句话说
-
-我们其实应该动手把它实现出来
-
-看看效果如何
-
-当然你的计划可能和我的不一样
-
-那么你在自己的计划中注意到了哪些你喜欢的点
-
-或者你不喜欢
-
-细节程度是太高还是不够高
-
-你怎么看
-
-把它分享到discord
-
-我很想听你的想法
-
-干得漂亮
-
-我们下次见下一个
-
-### 044-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p44 Executing Our Multi Phase Plan - 执行多阶段计划.ai-zh
-好的
-
-我们现在已经把PD放在p d instructor
-
-ANALYTICSSTCHBOARD里了
-
-我们现在已经在plants目录下的讲师
-
-分析仪表盘中有了我们的计划
-
-我们现在要做的是打开cloud code
-
-进入一个新的绘画
-
-我们将用这个来提示他
-
-然后我们会把几个文件传给他
-
-我们当然会传入PRD
-
-然后再把计划传进去
-
-最后我们会说执行第一阶段作为收尾
-
-我要在这里按下shift加tab来接受编辑
-
-我们这次不使用plan mode
-
-我们只是让他立刻开始
-
-源源不断的生成一些代码
-
-现在我想让你留意接下来会发生什么
-
-他会先进行探索阶段吗
-
-大概可以吧
-
-代码长什么样
-
-进展怎么样
-
-现在当你到达第一阶段的末尾时
-
-你会得到一个选择
-
-你可以清空它
-
-或者继续在相同的上下文中
-
-再次运行同样的提示
-
-但改成说执行第二阶段
-
-或者你也可以直接继续好的
-
-所有信息都在上下文中了
-
-继续进入下一阶段吧
-
-如果你不确定
-
-就默认在每个阶段结束时清空上下文
-
-我也建议你在每个第二阶段结束时提交代码
-
-这样你就有了一个不错的安全的回退点
-
-这就是我要做的事情
-
-除此之外尽情享受吧
-
-这是一种非常非常有趣的构建方式
-
-因为我们已经把前期准备工作都做完了
-
-我们已经知道需要什么了
-
-所有细节都已经在规格里定好了
-
-我们已经有了计划
-
-现在只需看着他顺势滚下山坡
-
-祝你好运
-
-我们在解决方案里见
-
-### 045-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p45 Executing Our Multi Phase Plan - Demo - 执行多阶段计划-演示.ai-zh
-好的
-
-我们运行一下
-
-我当然也假设他会先做一个探索阶段
-
-没错
-
-就在那我一提到他
-
-他就立刻开始探索了
-
-我稍后再回来找你
-
-一旦完成就好好了
-
-现在探索阶段已经完成
-
-他做的相当快
-
-大概花了一分钟
-
-他给自己创建了一堆不同的任务
-
-第一件事是好了
-
-这里已经创建了分析服务
-
-我可能只是粗略的过一遍
-
-那么我们都在上面这个analytics service services里
-
-我们先看看他把这个做的有多大
-
-然后他往里面加了什么嗯
-
-我们可以看到这里其实提供的内容并不多
-
-换句话说
-
-这里只放了刚好够满足tracer bullet的功能
-
-tracer bullet等我们做完时
-
-这可能会变成一个相当大的文件
-
-但现在因为我们明确要求
-
-他应该是一个tracer bullet cloud
-
-就很乐意让他保持小巧
-
-太好了
-
-他现在正在运行测试
-
-这很好
-
-总共12个测试通过了
-
-现在我来构建这个UI组件
-
-所以他在这里只构建了12个测试
-
-之前的计划会在这里花很多时间
-
-把整个东西搭出来
-
-横向层面
-
-但我们现在已经有足够的信号来确认好的
-
-我们正走在正确的方向上
-
-目标明确
-
-我们现在可以继续搭建分析仪表盘了
-
-很好
-
-现在正在搭建路由
-
-我们已接近32
-
-所以我们进展的挺不错
-
-好的我们保持在智能区内推进
-
-而且我们已经覆盖了很多内容
-
-好太酷了
-
-他现在已经给出了关于已完成内容的完整说明
-
-一切看起来都没问题
-
-我要说把这段代码提交吧
-
-现在我就我可以进去实际做个质量检查
-
-看起来挺不错
-
-还挺漂亮的
-
-有点稀疏
-
-我不太喜欢这里把free当成总收入的做法
-
-这事可能是某个地方引入的bug
-
-我们来看看如何在内部进行bug报告
-
-这些循环稍后再说
-
-不过眼下我只能先坐在这
-
-然后用它来排序
-
-我们在第12个月能看到一些收入出现
-
-而如果我把它隐藏起来
-
-看我的脸
-
-这里我们可以看到
-
-如果切换到SARAHCHEN
-
-他是另一位讲师
-
-然后我们会在这里看到其他信息
-
-比如平均评分试四
-
-他有四个报名记录
-
-看起来很不错
-
-注意看我们通过这样构建
-
-能迅速建立对所建项目的信心
-
-尽早做tracer bullet好
-
-我把这一阶段称为完成
-
-然后这现在这就是我之前说的那个决定
-
-34.3
-
-我的意思是我
-
-大概在40的时候
-
-肯定会清空上下文对吧
-
-也许肯定已经到大概35了
-
-所以我觉得还是把这里的上下文清空一下
-
-然后把它清空进入新阶段
-
-然后我会按几次上箭头
-
-直到我拿到这里关于P2D计划的提示为止
-
-我要别说第一阶段了
-
-直接做第二阶段吧
-
-当然接下来因为我们清空后
-
-他会再次探索第一阶段的实现
-
-他会查看我们刚刚清理掉的那些相同的东西
-
-说到上下文
-
-这就是清空上下文让人烦的地方对吧
-
-因为我们还得花30秒才能赶上进度
-
-搞清楚之前到底做了什么
-
-第一阶段的实现其实就是这样
-
-但到了现在
-
-当我们真正开始准备
-
-开始实现了很好
-
-我们才用了15.5的上下文窗口
-
-还在智能区里区域
-
-所以我觉得我们现在已经清楚
-
-他在实会做什么了
-
-正在实现
-
-等它完成实现后
-
-我就加入
-
-你好了
-
-我们现在完成了第二阶段
-
-挺酷的
-
-我们有了一个新的分析服务
-
-一个仪表盘组件
-
-一个路由和一些测试
-
-而且正如我们所见
-
-可以看到在这个分析仪表盘上
-
-我们现在这里有了某种图表
-
-而且我们底部这里有一个按课程细分的部分
-
-现在我们确实已经有了一个
-
-这里有个严重阻塞性缺陷
-
-就是图表上没有线条
-
-你可以把鼠标悬停在它们上面
-
-你知道的就这么做之类的
-
-但问题是你做不到真正看到数据
-
-所以我回到cloud
-
-然后我要比如说你在图表上看不到任何线条
-
-请把它们加上
-
-然后我要运行这个
-
-我来看看会发生什么
-
-现在我更有信心去做了
-
-我们在同一个上下文窗口里继续推进
-
-因为现在才到大概30
-
-我们还有大约10的上下文窗口可以利用
-
-如果我觉得我们正在
-
-如果开始滑向低效区
-
-我会清空上下文
-
-并先把代码提交
-
-然后让他基于这个提交创建一个新的绘画
-
-可能就这个bug
-
-或者我也可以把一堆修复一起打包
-
-他一次性把他们都处理了
-
-好的他已经提出了修复方案
-
-如果我们继续去看一下
-
-就知道他其实已经找到了一个非常修复的不错
-
-那么如果我们看最近30天的话
-
-是的我们得到了一个很不错的结果
-
-这里有个小细节挺酷的
-
-现在到这一步
-
-我确实有很多预算还剩一些
-
-所以我觉得大概还有10到20
-
-上下文快用完了
-
-我可以在这次提交之前再多做些质量检查
-
-把他提交了
-
-或者我也可以继续推进第三阶段
-
-然后最后再统一做质量检查
-
-所以我准备先把这个提交
-
-然后我再我先清空一下
-
-然后完成第三阶段
-
-顺便说一句
-
-我我确实喜欢用cloud code来提交
-
-因为他写的真的很好
-
-详细的提交消息
-
-这样未来的cloud实力就能可以回去阅读
-
-并理解之前做了什么
-
-你的提交历史记录在cloud code里真的非常重要
-
-因为他是一个非常有价值的信号
-
-因为代码和这次改动的原因彼此紧密相关
-
-是啊这有什么新东西呢
-
-你知道的
-
-提交消息就是这些都很重要
-
-所以我准备清空上下文
-
-因为那次提交运行的很好
-
-现在我会往上走
-
-然后那我就去做第三阶段吧
-
-同样的我会看看你这边完成分阶段之后好了
-
-全部搞定
-
-以下是第三阶段所实现内容的总结
-
-管理员权限和空状态
-
-我们现在有了一个管理员路由
-
-他会强制要求用户角色为管理员
-
-并校验讲师id
-
-好的
-
-我们的分析服务已经完成
-
-是时候开始做质量检查了
-
-我我想想
-
-所以我打开了应用和开发用的UI
-
-以管理员ALEXRIVERA的身份登录后
-
-我进入了这是用户管理页面
-
-我可以看到有一个视图
-
-在讲师旁边放一个分析按钮
-
-看看这个
-
-这真的很不错
-
-我在这上面得到了所有页面的面包屑导航
-
-我可以去的地方
-
-而且我看到的完全一样
-
-像SARAHCHE那样提供信息
-
-如果我们看看MARCUS
-
-这是JOHNSON
-
-我也能看到他的分析数据
-
-但如果我要不
-
-我们在这里换成james park
-
-然后他他说只有管理员才能访问这个页面
-
-我不是我真的很喜欢这个
-
-我想这应该可以应该是404
-
-而不是401
-
-换句话说
-
-我们希望说这个页面不存在
-
-而不是这个页面存在
-
-他确实存在
-
-而你试图黑进去的做法行不通
-
-但是不管怎样
-
-这都是可以放到上的东西以后再补
-
-但我对这个结果已经挺满意了
-
-可以就这样吧
-
-我觉得可以了
-
-所以我准备回到里面去
-
-我我打算让他把代码提交
-
-然后我再好了
-
-你大概会注意到这里几乎不需要动手
-
-实施阶段实际上是这样的
-
-还有当然也会有
-
-需要我们亲自介入并补充的时刻
-
-我们的输入并加入我们的偏好
-
-但在大多数情况下
-
-因为我们已经写下了如此明确的目标
-
-并且我们已经明确了整个流程
-
-这个智能体现在世
-
-基本上就是可以直接上手去做这件事
-
-而且明白他接下来要往哪儿走
-
-现在这这种方法可以扩展到
-
-非常非常庞大的构建
-
-我们需要的是一段更长更深入的内容
-
-P2D以及更多时间用来思考整个旅程
-
-不过一旦这两份文档就位
-
-我们已经花时间认真构思了一个真正好计划
-
-包含tracer bullet和早期
-
-有了反馈之后
-
-我们才能真正开始发力
-
-不错好了
-
-我们下期见
-
-### 046-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p46 Ask User Question - 向用户提问.ai-zh
-在上一期学员中出现的很多的一个问题是
-
-有些人会遇到一个cloud特有的UI
-
-有些人很喜欢
-
-也有些人很不喜欢
-
-而这个UI是专门用来向用户提问的
-
-比如我可以让这里的cloud问我眼睛的颜色
-
-而他大概就会直接在这里
-
-用一个简单的问题来回应
-
-所以他只显示你的眼睛是什么颜色
-
-但现在如果我说要是你再问我眼睛是什么颜色
-
-我就让你在这直接用ask user question to
-
-这个ask user question to是cloud独有的功能
-
-它会显示一个非常友好的用户界面
-
-这里的界面让我可以从这些选项里选择
-
-我的同色或者直接输入
-
-比如在这里我可以聊这件事
-
-而这里显示用户拒绝回答问题
-
-所以这个ask user question to
-
-只是一个你可以选择启用的UI
-
-任何技能
-
-任何提示只需说一句
-
-用这个就行
-
-现在这完全是我个人的偏好
-
-但我真的不喜欢那个UI
-
-第一次遇到的时候
-
-我心想哇
-
-这也太酷了
-
-最烦人的是他以多选题的形式向我提问
-
-但我就是觉得有点比直接看cloud说了什么
-
-要更难操作一些
-
-而且说实话这有点幕后的魔法
-
-其实我在我的global cloud md里写了这么一条
-
-别用ask user question to
-
-因为我真的很不喜欢他
-
-现在你知道了
-
-如果你不喜欢那个UI
-
-可以把这段内容放进你的global cloud m d把它加进去
-
-然后永远不再看到它
-
-再看一遍
-
-如果你确实喜欢它
-
-就把它加入你的技能清单
-
-加到你的提示里
-
-这些功能之类的
-
-据我所知
-
-这是cloud独有的
-
-不过等到你看到这个视频的时候
-
-其他平台大概已经推出了类似的实现录屏吧
-
-很多人大概也已经实现了这个功能
-
-只是也许命名方案略有不同
-
-好了就是这样给你一个小插曲干的
-
-### 047-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p47 Day 5 Office Hours - 第5天答疑时间.ai-zh
-大家好
-
-早上好
-
-欢迎来到本期训练营
-
-欢迎欢迎欢迎
-
-我提前几分钟开始
-
-反正也没啥不可以的
-
-挺有意思的
-
-你告诉我
-
-先说说音频怎么样
-
-我这边是不是有点爆音
-
-我觉得音量可能稍微高了点
-
-让我稍微调低一点
-
-哈喽哈喽哈喽
-
-听起来挺合理的
-
-最近怎么样
-
-Fuzzy fox
-
-这一季大家都露面了
-
-你是不是被吓到了
-
-就像你加入ZOM会议室那样
-
-你会想还有20分钟
-
-我总是这样
-
-总是提前加入
-
-我每次都会提前20分钟进入ZM会议
-
-只是偶尔例外
-
-总会有人像我一样疯
-
-那么早就加入
-
-我们就得先聊上这20分钟
-
-都没问题
-
-音频很好
-
-一切正常好的
-
-欢迎欢迎欢迎先告诉我你们是从哪里介入的
-
-我现在在英国牛津
-
-我把灯光调了一下好了
-
-现在好多了
-
-kc kc在哪
-
-Google maps
-
-好的那个大家等待时最爱聊的话题
-
-嗯其实我也不太确定
-
-你们已经有100人了
-
-太棒了
-
-这一期吗
-
-考虑到我们正在沿用
-
-大约之前已经有2500人了
-
-我们又新增了差不多同样数量的人
-
-这出乎我的意料
-
-我本来以为这次销量会稍微小一点
-
-因为你知道我们我们只是没有像上次那样大张旗鼓的宣传
-
-这一期我们大概会有5000人参加
-
-真是疯狂
-
-这会很棒
-
-我是说光是讨论的深度和质量就已经
-
-因为已经有很多人在你之前做过这件事了
-
-如果说的就是你非常感谢你再次加入
-
-我很兴奋的想给大家带来这些更新
-
-也非常期待新加入的朋友们来参与一下
-
-对我来说不是300万
-
-你知道的
-
-很多人是用PPT付费的
-
-也有不少人享受了销售折扣
-
-你懂的
-
-好很好
-
-我很高兴你们这么兴奋
-
-我特别兴奋
-
-嗯我是说面对这一切
-
-在答疑会上我总会有个纠结
-
-我总是很想尝试用discord的原声功能
-
-这里算是某种设置吧
-
-呃就像我这次办的这期学员答疑时间
-
-这里是问答频道
-
-你可以给问题点赞
-
-不过我觉得上次效果特别好的做法是之前用过SWIDO
-
-所以我觉得这次我们可能也会用SWIDO随意
-
-do是一个问答应用
-
-你可以在上面投票选出最好的问题
-
-最好的问题会立刻推送到我这里
-
-而我在这里的工作基本上就是回答你们所有的问题嗯
-
-德国科隆刚从雅典的动漫展回家
-
-路上巴勒斯坦的朋友们怎么样
-
-最近好吗
-
-嗯索一斗不错
-
-我觉得就用思维斗来办
-
-我有点紧张
-
-因为呃这里有200个人
-
-有200个人在场
-
-太棒了
-
-我有点担心
-
-因为我没给
-
-所以豆付钱
-
-所以如果谁有
-
-如果有人在这里遇到额度限制之类的
-
-就告诉我一声
-
-我会当场掏出信用卡来解决
-
-我会付费开通SVIDO
-
-这样大家都能加入
-
-我记得好像有150人的上限
-
-输入这个代码就能进入
-
-我把音量稍微调低一点
-
-因为我看到刚才有点爆音
-
-墨尔本的朋友们怎么样
-
-大家好大家好
-
-大家好
-
-所以我们已经为本期学员推出了各种改进
-
-比如我们现在不再用docker sandbox
-
-而是改用sand castle
-
-我花了整整算是稳步改进sand castle
-
-修复各种bug
-
-并为更多编码智能体添加支持
-
-他现在处于一个非常好的状态
-
-烤箱结束了吗
-
-我的烤箱有个问题
-
-他偶尔会跳闸
-
-而且在两次学员办公时间里都发生过这种情况
-
-这种情况发生了两次
-
-烤箱是关着的
-
-来自德国和泰国的问候
-
-来自比利时
-
-好了
-
-各位请加入这里
-
-你们应该可以回应我
-
-向我提一些问题
-
-如果没有的话
-
-可能是我的设置有问题
-
-让我先把它配置好啊
-
-好的我们开始观众问答环节吧
-
-那么我们现在开放观众问答环节
-
-你们应该可以向我提问
-
-你们这243位真是太棒了
-
-我们为什么不不过趁你们还在查看的时候
-
-要不我们先简单过一遍这门课都包含哪些内容吧
-
-是的就在那上面
-
-我们开始吧
-
-哦这个其实不该出现在这
-
-那不该出现在那
-
-我猜这些是未公开的
-
-是的那个不该出现在那
-
-反正我也得去提醒一下我的团队
-
-各位好
-
-我们基本上呃之前的几期课程
-
-把六天的内容分散安排在两周内进行
-
-我做过那种每天推送新内容的模式
-
-那确实挺疯狂的呃
-
-我们在各个方面都扩展了这部分
-
-最主要的一个
-
-比如在第一天的基础部分
-
-我们把一节讲为什么plan mode很棒的课
-
-换成了讲为什么plan mode很差劲的课
-
-你知道课程结束后
-
-你仍然可以继续访问
-
-当然那么这是这可能是我是说最早也是最大的一个改动
-
-我在课程里用了不少次plan mode
-
-结果真的被他搞得很沮丧
-
-我们先展示了plan mode是如何工作的
-
-然后又不再采用它
-
-所以在课程早期就把它替换掉
-
-在这里是说得通的
-
-我们新增了关于交接的课时
-
-我补充了一些关于非确定性及其运作方式的探索
-
-然后我们进入steering
-
-这部分基本保持不变
-
-所以现在steering主要是关于嗯
-
-主要通过claw md agents
-
-MD和skills来引导这个智能体
-
-第三天全部围绕规划展开
-
-也就是如何攻克庞大的任务
-
-如何写出优秀的PRD以及如何运用
-
-我认为在多智能体会画中至关重要的东西
-
-什么是tracer bullets
-
-Tracer bullets
-
-让你可以把工作切成纵向切片
-
-并且本质上就是找到在大量工作中找到正确的路径
-
-这适用于你想用AI完成大量工作的任何场景
-
-无论目标是什么
-
-无论是AFK智能体
-
-这部分我会在课程里展示给你看
-
-大家怎么样好
-
-我们收到问题了
-
-好的
-
-这些问题的意义在于
-
-你可以在这里点赞投票
-
-这个问题目前有19票
-
-我们会逐一回答这些问题
-
-这次我想尝试点不一样的做法
-
-我会同时用我的录屏软件把这场也录下来
-
-好那我们就开始吧
-
-好的那我们开始吧
-
-嗯我这边还能看到聊天
-
-也能看到你们大家啊
-
-我们开始吧
-
-过去一两个月里
-
-AI领域最大的变化是什么
-
-它如何改变了我的工作流程
-
-好的
-
-我在这方面的态度是
-
-我倾向于并没有太关注AI领域
-
-这话听起来有点奇怪
-
-我觉得对新模型更新的病态式关注其实偏离了重点
-
-你是什么
-
-每当看到新模型发布时
-
-最让我兴奋的就是它会带来的全新能力
-
-你知道到目前为止我们看到的情况就是这样
-
-我的意思是
-
-显然当欧帕斯4.5发布时
-
-我把那一刻视为AI编码真正变得可行的起点
-
-所以大家都在等待那个重大的下一步
-
-在那个关键时刻
-
-那其实是在发布大约一个月后才真正显现出来的
-
-随着大家开始真正开始用它的时候
-
-你会看到一股热潮涌现
-
-大家会说好吧
-
-这确实改变了一些东西
-
-那么我觉得那种病态的付费的方式
-
-对每一个新模型的发布和每一个新上线的测试框架都给予高度关注
-
-是不好
-
-我觉得你不应该这么做
-
-主要原因是他会分散你的注意力
-
-让你偏离真正该做的事
-
-这关乎你对自己技能的重视
-
-以及你对这些系统如何运作的理解
-
-其实就是看看那些你尊敬的人都在做什么故事
-
-那么对我来说最大的个人改变是嗯
-
-过去几周确实发生了一些事
-
-那就是我开始把GITHUB当做一等公民来使用
-
-我的智能体的runner
-
-这门课里我们做的很多东西都聚焦在本地开发上
-
-也就是如何在本地运行之前用的是docker sandbox
-
-现在我开始在里面用sand castle github actions
-
-所以当我触发一个issue的标签时
-
-它就会启动一个github action去做各种事情
-
-我们可以在这次答疑时间里一起探讨
-
-他来的太晚了
-
-基本上没赶上放弃这门课
-
-但对我来说
-
-最大的改变可能是开始更多的依赖
-
-直接用GITHUB
-
-而不是
-
-啧其实主要是做本地的东西
-
-但那并不是来自某个AI模型的
-
-这是我在一次会议上看到的
-
-当时有人这么做
-
-我心想天啊
-
-这真是个好主意
-
-那么本周和下周你最少和最多应该为这门课投入多少时间
-
-我觉得这个问题太难回答了
-
-嗯我们基本上有一份指南
-
-每周大约需要八小时
-
-这门课比上次稍微多了一些内容
-
-关键在于这里有互动式课程
-
-他们会根据你投入的注意力多少而展开或收缩
-
-你完全可以只看课程内容
-
-而不做任何练习
-
-你知道吗
-
-既然这样
-
-你为什么要上这门课呢
-
-你可以参与讨论
-
-也可以选择不参与
-
-所以这真的是一门给你一大堆材料
-
-一堆沙香
-
-让你随便折腾的课程
-
-接下来就看你自己了
-
-怎么样
-
-你在他们上面花了多长时间
-
-以及我每周大概以八小时作为粗略的指导时间
-
-在云里跑智能体和在本机跑harness相比的好处
-
-就我的体会来说
-
-你基本上有两类需要完成的任务对吧
-
-这两类任务可以分为需要人类参与的任务
-
-还有AFK任务
-
-我在课程里讲过这个human in the loop任务
-
-HITL是指你和智能体需要在同一个会话中协作的任务
-
-比如grill me就是一个很好的例子
-
-因为它是一种面试式的来回对话
-
-所以在grill me环节里
-
-你就能我们来聊聊讨论过程
-
-也聊聊你们可能会有的想法嗯如果你要跑a ask
-
-就会错过一些东西
-
-你基本上没法完全以a ask的方式去跑
-
-A ask
-
-away from keyboard的时间更长
-
-这类绘画指的是那些定义明确
-
-耗时较长的任务
-
-你可以让智能体在你不在场的情况下完成
-
-并且对在云端运行的同学来说
-
-这非常有意义
-
-因为你可以启动一个AFK绘画
-
-比如说去实现某项工作
-
-或者去评审某项工作
-
-当他通知你时
-
-你再回来就行
-
-所以它带来的好处并没有那么多
-
-比如说
-
-但更多是不同的人有不同的做法
-
-这很正常
-
-在云端运行智能体的妙处在于
-
-你不必担心把工作数彼此隔离
-
-你可以随时再启动一个沙箱
-
-比如cell的沙箱或者github actions
-
-你懂的
-
-凡是需要启动服务器的
-
-比如uber nice之类的
-
-他们可以直接启动一个服务器
-
-让智能体在那个服务器里工作
-
-并且它与外界完全隔离
-
-而在你自己的机器上
-
-你得自己管理这种隔离
-
-这会有点麻烦
-
-好问题
-
-你如何决定什么时候应该完全由人类介入来做
-
-而不是触发AFK工作流
-
-那么在这门课里
-
-我们会频繁讨论a ask和human in the loop
-
-因为我认为a ask你能扩展自身能力的最佳方式是什么
-
-并且扩展团队规模
-
-优化你的开发工作流程
-
-前几天我第一次把20倍上限用完了
-
-以前从没这样过
-
-我从来没达到过20倍上限
-
-而且提前好几个小时就完成了
-
-我当时的方法是同时启动一堆后台任务和一堆AFK工作流
-
-并且我已经开始上手了
-
-对我来说
-
-这么做成本很低
-
-而且能收获很多价值
-
-这只是意味着
-
-本质上你在AFK工作流里做的就是把任务委派出去
-
-而这种委派非常有用
-
-也非常省时
-
-而且我相信这是让你最大程度发挥AI潜力的方法
-
-本质上你是在人类参与下做规划
-
-在a ask状态下执行
-
-而且通常也在人类参与下进行审查
-
-cloud20x max是他们最高档的配置计费选项
-
-你能讲讲你在编写skills技巧窍门和最佳实践时的思考过程吗
-
-嗯好的
-
-我在这方面的想法还在不断演变
-
-不知道的人说一下我的skills仓库最近简直爆了
-
-大概已经有11.4万星了
-
-他是也许你们来这的原因很大程度上是尤其是新来的朋友们
-
-那是那个吗
-
-太棒了
-
-你知道吗
-
-这对我来说太棒了
-
-而且你知道这些就是我每天都在用的skills
-
-看到大家真的很投入
-
-真是太棒了
-
-当我在编写那些skills时
-
-我是我
-
-我确实是在边讲边理清思路
-
-所以我一直在尝试不同的skills
-
-我不确定我能不能推荐所谓的最佳实践
-
-不过我认为你需要保持一种尽可能删除的态度
-
-如果你让AI来搭建你的skills脚手架
-
-这通常也是我会做的
-
-你会发现他有很多重复
-
-它包含大量毫无意义的文字
-
-尽可能精简这个skill真的很有用
-
-最终你会遇到的情况是
-
-如果你的skill很长
-
-skill里有很多东西在争夺注意力对吧
-
-里面的内容非常多
-
-因此被接收并使用该技能的智能体来说
-
-要在技能里找到关键部分相当困难
-
-所以我觉得简短的steel更好
-
-因为这样更容易
-
-你可以想象一下skill里的那些词
-
-有点像波峰和波谷对吧
-
-就像这样更能体现重要性
-
-比如说在这个部分里
-
-你可能在skill里有一条关键指令
-
-然后还有一些辅助信息
-
-有些人通过全大写来管理这件事
-
-你会说你必须这么做
-
-比如在GRIMI里
-
-你就得做XYXY
-
-我本可以这么说嗯
-
-就XY和Z这些点不停的追问用户
-
-但我发现如果你这么做
-
-有点像你在用那个呃做过CSS的人都懂的
-
-它就像CSS里的important标记
-
-会把所有相关的样式都覆盖掉
-
-所以你本质上是在用锤子
-
-该用的是凿子
-
-或者说手术刀是一种更精密的工具
-
-所以我觉得写skill时一定要字斟句酌
-
-随着时间推移
-
-不断打磨这些措辞
-
-一旦发现问题就要立刻调整
-
-另外尽量让skill简短精炼
-
-不要把指令写的过于复杂
-
-因为他们往往会主导其余的skill
-
-不过我的想法还在不断演变
-
-你能解释一下良好软件设计的一些第一性原理吗
-
-另外有哪些不同的框架可以发挥be MAD和super powers的能力
-
-以及你自己的方法哦
-
-我在课程里确实会谈到这一点
-
-我的意思是第一性原理其实挺棘手的
-
-因为软件设计充满了各种权衡
-
-你一直在努力做的事情
-
-如果你正在努力让代码库易于修改
-
-这就是优质代码库的定义
-
-这句话出自
-
-其实让我翻出一本书来
-
-准备好了吗
-
-这是第一波我们martin forward的重构嗯
-
-由can bag参与贡献重构是一个经典的呃
-
-关于易于变更的代码库的定义
-
-可以在john oster hot的书中找到
-
-软件设计哲学里也提到过这一点
-
-重构那本书也提到了
-
-如果你的代码库很容易修改
-
-那就很容易调整嗯
-
-在不的情况下修改功能
-
-如果你的代码库很难改动
-
-就会更容易引入bug
-
-也就更难做到这一点
-
-如何打造易于变更的代码库
-
-你要把它们设计成这样
-
-你在一个地方做改动时
-
-不会波及到上千个其他地方对吧
-
-如果你
-
-如果你有自动化测试
-
-比如说可以看到某个改动是否引入了缺陷
-
-那就非常好
-
-这会让你的代码库更容易修改
-
-那么我把它们看作是一种不同于
-
-比如be MAD和superpowers之类的
-
-我是说像be MAD和superpowers这样的
-
-你在多大程度上把软件基础强加给他们
-
-其实完全取决于你自己
-
-说实话我其实没怎么用过它们
-
-因为我一直太专注于打造自己的那套skills
-
-这正好符合我的偏好
-
-但我收到的反馈
-
-尤其是上过这门课的人给我的反馈
-
-be MAD和super powers是不是都很喜欢抢方向盘
-
-本质上他试图引导你
-
-而我则认为作为用户
-
-你应该始终掌握控制权
-
-我就快速回答这个问题
-
-我们第四期的同学能否访问未来各期的课程内容
-
-我给了
-
-因为第三期到第四期的跨度相对较小
-
-我已经让第三期学员免费加入了第四期
-
-但这在未来并不能保证
-
-所以你购买的是这一期
-
-这就是你得到的一期
-
-有哪些最有效的方法来描述代码应该如何编写
-
-我发现很难让codex cloud code完全按照我想要的方式去写代码
-
-嗯这里有两件事
-
-那就是如果你把工作委派出去
-
-无论你把他委派给谁
-
-由人来完成
-
-还是把它交给AI
-
-确实存在一种叫做微观管理的情况
-
-你不应该去微观管理你的AI
-
-你也不一定要
-
-让他在每一个方面都完全按照你想要的方式去编码
-
-你应该允许他一定程度上采用自己的风格
-
-只要这种风格是就是呃你认可的东西
-
-你知道算是处在可接受的范围内
-
-这意味着你可能需要稍微放宽可接受的范围
-
-不过额有些智能体会做一些你不喜欢的事
-
-而且你觉得这些事将来可能会引发问题
-
-这些问题会是实质性的问题
-
-他们会让代码库更难修改
-
-或者他们会直接引发bug
-
-在那些情况下
-
-比如说呃我有一个react应用
-
-在那个react应用里
-
-我使用了react router
-
-并且不知为何这个智能体总爱用UEFFECT
-
-而不是像react router那样的原生方案
-
-所以我有一个具体的指令想告诉这个智能体
-
-我想说好的
-
-别用这个用这个
-
-那么在这个流程中的哪个阶段呢
-
-告诉他这个是个好主意
-
-那么我们就在这里放一个示意图吧
-
-那么本质上我们说的是引导方向对吧
-
-开始吧
-
-别那座
-
-那么我们应该什么时候添加这条指令呢
-
-有好几个地方可以放进去
-
-我们可以在规划阶段就做这件事
-
-就在我们嗯进行深度盘问或者撰写PRD的时候
-
-我们可以说别用UEFFECT
-
-直接用react router的原语
-
-这样我们就能把它固化到我们的计划里
-
-这是我针对某些事情的做法
-
-并不是对所有事都这么做
-
-我们可以把它放在cloud md或者agents md里
-
-本质上就是推送给智能体
-
-然后我们说好了
-
-每当你在这个代码库里运行一个智能体时嗯
-
-别用UEFFECT
-
-也别用react router
-
-对我来说
-
-这有点太重了
-
-我们可以在实现阶段来做这件事
-
-所以我们可以说比如在用于实现的skill里
-
-或者嗯我们用于实现的提示词
-
-比如说当我们运行一个AFK智能体时
-
-我们可以说把这件事做好
-
-然后给他下达指令
-
-或者我们也可以把它放到评审环节来跑
-
-所以当我们对代码库进行自动化审查时
-
-可以在那时加入这条指令
-
-现在在我看来
-
-把这件事放在规划阶段是不对的
-
-之所以说这是个错误的地方
-
-是因为你别正确的说法是什么
-
-当你在做规划时
-
-你其实是在从用户的角度来思考问题
-
-你在非常高的层面思考
-
-像这样加入实现细节
-
-对我来说有点不太靠谱
-
-感觉这不是合适的地方
-
-因为如果我们从这个指令来思考的话
-
-这是一条我们必须叠加在所有其他指令之上的说明对吧
-
-我们说的其他事情里做规划往往是你拥有最高指令密度的时刻对吧
-
-你要把你正在构建的应用或功能所需的一切都明确指定出来
-
-所以规划似乎也不是合适的地方
-
-把这事放在CMD里很糟糕
-
-因为他会把内容推送到每一个绘画
-
-这个嘛
-
-你知道的
-
-我们可能在讨论一个非常小的
-
-我们想做一个小小的调整
-
-把它放在cloud md里
-
-就意味着它会推送到每一个绘画
-
-不管他愿不愿意
-
-这可不太好
-
-在实现阶段
-
-我也觉得这里不是合适的地方
-
-因为在实现阶段
-
-这大概是最会让上下文窗口吃紧的地方了对吧
-
-因为我们正在大量产出并不好的代码
-
-那么你知道我们要不要把这条指令加在上面呢
-
-我觉得没必要
-
-反正我们都要跑自动化审查
-
-自动化审查是添加这条指令的好地方
-
-因为我们希望自动化审查能对代码进行修改
-
-然后说好的
-
-那就开始吧
-
-我们得给他权限去修改东西
-
-所以我觉得需要审查
-
-审查阶段是做这件事的最佳时机
-
-现在当你做评审的时候
-
-比如你可以让他去创建一个pr
-
-你给那个P21个标签
-
-然后他就会去审查
-
-然后把这些引导指令应用到它上面
-
-所以在我看来
-
-审查这是添加这类引导逻辑的最佳位置吗
-
-我在整理最新课程材料时
-
-最大的顿悟是什么
-
-我讨厌这类问题
-
-因为他们太宽泛了
-
-我是说这客观上是个好问题
-
-但感觉就像
-
-额最大的顿悟是什么
-
-我想应该是plan mode这件事
-
-我想这就是那个plan mode的问题吧
-
-我也不太确定
-
-我的意思是
-
-每次我整理跨领域材料时
-
-总会有一些嗷嗷时刻
-
-我的工作其实就是去找那些嗷嚎时刻
-
-所以他们全都是嗷号时刻
-
-你一直很明确的支持使用cloud code
-
-我有没有试过其他智能体框架
-
-如果真是这样
-
-是什么让你一直回到cloud code呢
-
-嗯呃我的意思是cloud code还行吧
-
-我也不太确定自己是不是特别为他发声
-
-如果要说的话
-
-我就像昨天我才发了一条推文
-
-吐槽他们新家的那个东西有多让我讨厌
-
-嗯我确实在用
-
-因为我已经把它嵌进了我所有的流程里
-
-不过呢这我构建的工具
-
-比如sand castle是与harness无关
-
-所以你不需要基本上就是把它们插进去
-
-就这样
-
-让我一直回到clock code的原因吗
-
-我想大概是因为我开了订阅
-
-当嗯到6月16日
-
-他们会改变ASK运行与cloud code配合的方式
-
-这大概会让我下定决心把我推向codex
-
-我已经有codex的订阅了
-
-我其实不怎么用它
-
-但也许我应该多用
-
-其实我只是我有作为老师
-
-有一种责任去使用大多数人正在用的东西
-
-你懂的
-
-这样我才能有效的教学
-
-这也是我为什么主要用clock code的原因
-
-并不是出于特别的偏好
-
-我对ANTHROPIC最近的变化有什么看法
-
-他们可能正在从设置令牌切换到使用all of令牌来运行cloud code
-
-这听起来会影响AFK智能体
-
-是的
-
-这正是我刚才提到的呃
-
-我的看法是
-
-这对来说是一次巨大的削减
-
-运行AFK智能体
-
-我把它当做一个额外福利来讲
-
-当时我还为此做了个YOUTUBE视频
-
-你可以去看看那个视频
-
-如果你发现自己的上下文窗口里token太多
-
-该怎么办
-
-嗯我想问题是你是做什么的
-
-如果你正陷入dumb zone对吧
-
-这是我在课程里讲到的概念
-
-当你遇到呃
-
-你会怎么做
-
-你会觉得AI越来越笨
-
-注意力关系开始退化
-
-他开始忘记你告诉过他的东西
-
-也开始偏离你的引导指令
-
-做出一些奇怪的决定
-
-你是做什么的
-
-所以你其实有两个选择
-
-大概也可以说是三个选择啊
-
-我们再加一个怎么样
-
-我在做什么啊
-
-让我找些架构图
-
-那么第一点是你可以进行交接
-
-那我们就来处理这个问题吧
-
-比如说你正在参加一场grooming环节对吧
-
-你在追问同时也在逐步构建这里的蓝色上下文窗口
-
-你脑子里大概有个概念
-
-就是那条虚线标示着所谓的DUMS
-
-现在你在不停的追问追问在追问
-
-然后你意识到这里有个问题
-
-我得先回答一下
-
-但如果我如果我在这里做一些原型开发
-
-尝试构建点东西
-
-那我很快就会超出当纵
-
-我需要把它交给一个独立的绘画来完成
-
-你可以用我的hand of skill
-
-这是我在基础部分教过的内容
-
-然后你把它交接给一个独立的圆形设计环节
-
-在这里面你可以直接进入
-
-我现在有一个新的上下文窗口
-
-我想怎么做就怎么做
-
-我可以彻底放飞自我
-
-我可以先做大量原型设计
-
-然后也许把它交给最初的grill me环节
-
-以便继续我的绘画
-
-或者看看我这边还有没有别的示意图
-
-就用这张吧
-
-或者你也可以进行压缩
-
-再说一次
-
-这是我在基础部分讲到的内容
-
-这是所有智能体的共性吗
-
-还是编码类智能体似乎都会这样
-
-你不断把token加进你的上下文窗口里
-
-让对话继续下去
-
-工具调用网络搜索文件权限之类的事情一出现
-
-你就开始有点进入dumb zone
-
-心里会有点发怵
-
-但假设你正在进行一次调试会话
-
-而你想从上次停下的地方接着做对吧
-
-你想说好的吗
-
-我想记住这次对话
-
-但我不想再待在dumb zone了
-
-你可以运行compact
-
-然后我们回到这里
-
-基本上把所有东西都compact
-
-把我们到目前为止的绘画历史压缩到更小的空间里
-
-我们把它总结起来
-
-这样就能在同一个对话里继续下去
-
-在你看来
-
-最高杠杆的AI编码技能是什么
-
-高杠杆
-
-你是指像skill这样的东西吗
-
-这个问题有点难回答
-
-因为他确实他们说的skill到底指的是什么
-
-个人技能还是字面意义上的技能
-
-和DOS一起做的grill对我来说真是不可思议
-
-这绝对是我最常用的技能
-
-12万差不多就是当zone的范围
-
-这就是我对所谓DZONE目前所在位置的看法
-
-大家怎么看把模式文档放在项目特定文件夹里
-
-而不是写在cloud rules里的做法
-
-我在课程里谈到的一点是嗯
-
-渐进式披露
-
-而渐进式披露则是本质上
-
-我们来看看嗯
-
-我们来添加一张新图表
-
-渐进式披露的意思是
-
-比如说你把智能体的上下文窗口放在这里
-
-然后当你拥有这个上下文窗口时
-
-你基本上有两种选择
-
-要么用更多信息去扩展它
-
-或者你也可以在这里留下一些小指针
-
-比如说一个指针看起来像这样
-
-它指向另一个文件
-
-所以这个文件会有更多信息
-
-而这个文件本身也可能指向其他文件
-
-好的这样你就可以在整个仓库里构建起一种由不同文件组成的网络
-
-所有这些你知道的
-
-我们就说这个是主要的吧
-
-这就是上下文窗口
-
-所有这些内容都在其他文件里
-
-那么当我看这个的时候呃
-
-我看到cloud rules
-
-他们就直接把自己塞进context window
-
-这里没有所谓的上下文指针
-
-本质上就是你把它展开
-
-让它变得更大
-
-你在网上下文窗口里塞更多东西
-
-而上下文窗口尤其是在绘画刚开始时非常非常宝贵
-
-因为你的上下文窗口里塞的垃圾越多
-
-你就离越近
-
-在你还没做任何实质性工作之前
-
-就先陷入DZONE
-
-我见过有人这样
-
-他们的上下文窗口可容纳25万个token
-
-当他们开始编码的时候
-
-这对我来说简直疯了
-
-这太离谱了
-
-因为你正身陷dub zone
-
-那样你永远没法从AI那里得到任何东西
-
-那么项目特定文件夹中的模式文档
-
-对我来说
-
-这听起来像是这样
-
-你在cloud md里有一个context
-
-window里面有一个指向呃
-
-比如说文档
-
-coding下划线
-
-standards md大概是这样的
-
-那个指针只是指向那个文件以及内部的编码规范
-
-你在这里下面可能还有一个更进一步的文件
-
-它指向比如说文档react
-
-别这样使用UEFFECT或者类似的机制对吧
-
-这样就能构建这些相互连接的不同网络
-
-整个仓库中的文件智能体都能轻松引用
-
-因为他们都有这些小小的上下文指针指向他们
-
-这是一个我定制过的till drive白板
-
-按照我喜欢的方式加入了持久化功能
-
-我对在没有人类参与的情况下
-
-让AI审查生产环境P2这件事怎么看
-
-自动化审查是你工具箱里的一项必备工具
-
-虽然我在课程里没有讲到它
-
-但配置起来其实很简单
-
-呃
-
-我之所以还没在课程里讲它
-
-是因为我对应的skill还没完全准备好
-
-我发现很难就review给出明确的建议
-
-因为每个人的评审风格都很不一样
-
-大家关注的点也各不相同
-
-但本质上你要做的就是在一个上跑一个智能体
-
-我们回到正题吧
-
-我们来看这里
-
-那么让我们进入这些阶段
-
-在这个阶段
-
-所以你只有实现和评审
-
-我们把这个改成自动化评审吧
-
-然后往下走
-
-我们来进入人工审核环节
-
-所以你有一个实现
-
-它会生成一些提交对吧
-
-然后你立刻进入自动化评审
-
-自动划屏审
-
-随后生成一些提交
-
-这些提交会直接合入分支
-
-也许还有一些观察和类似的东西
-
-然后由人工审核介入完成最终检查
-
-现在自动化审查的任务就是尽可能让人工审查变得轻松
-
-把所有非常明显的问题都先抓出来
-
-在这里做一些显而易见的安全措施
-
-现在你可以使用像code rabbit这样的东西
-
-或者随便什么别的
-
-但我你知道我现在更倾向于自己搭建
-
-而不是直接购买
-
-那么是的
-
-自动化评审
-
-我先回到刚才那个问题
-
-说的是什么
-
-我怎么看这件事
-
-我认为它是提升实现质量的必备工具
-
-实际上人类只应该去碰那些AI已经审查过的东西
-
-sand castle是否在做相应调整
-
-会的我们会的
-
-我只是还不太清楚他们最终会采用什么样的机制
-
-所以我一旦做完这些就能进行调整了
-
-为什么我认为GOMMY这个skill虽然很短
-
-却对提示工程如此有影响力
-
-我们可以从中学习
-
-是的呃
-
-这有点触及我之前谈到的话题
-
-也就是那个人们总觉得Steal写的很大很全
-
-他们不会喜欢
-
-如果你想想那些最有影响力的嗯
-
-我不知道句子段落
-
-世界历史上的明天都不太长
-
-你可以把很多力量都打包进去
-
-用几句简短的话
-
-那么我觉得grill me就是一个恰到好处的技能范例
-
-skill越短越好
-
-越容易维护
-
-也越容易做安全审查
-
-并且我觉得你从智能体那里得到的产出会更聚焦
-
-嗯是的嗯
-
-简短的Steal很棒
-
-矮个子兄弟们
-
-我觉得memory md会随着时间在我的上下文中膨胀
-
-把只提过一次
-
-但只属于那次绘画的东西也加进去
-
-真正的收益跟把它放进cloud md相比呢
-
-呃毙掉它
-
-毙掉它
-
-我真的不太信任嗯
-
-任何记忆系统其实有任何问题吗
-
-呃我觉得在你的代码库里
-
-让智能体保持无状态是件好事
-
-因为优化一个无状态的智能体
-
-比优化一个有状态的智能体更容易
-
-一个无状态的智能体版本就行
-
-嗯基本上是这样
-
-我在说什么
-
-他会一次又一次的在相同的边界内以相同的方式运作
-
-因为设置始终是一样的
-
-而另一方面臃肿的那个还是抱歉
-
-是有状态的
-
-那个他的表现会有所不同
-
-因为他依赖的状态每次都不同
-
-那么呃我就是真的不喜欢这些自动记忆功能
-
-至于工具
-
-我认为你应该非常谨慎的管理自己的上下文窗口
-
-而不是把它交给别人来管
-
-在cloud code中使用go和RALFLOOP有什么区别
-
-你会把哪种方式用于asp的实现
-
-为什么会在两者之间选择其一
-
-所以我注意到的是关于目标
-
-我已经用过几次了
-
-而且每次用它的时候嗯
-
-我们回到我的上下文窗口示意图吧
-
-我每次用它
-
-它都会这样
-
-没错
-
-他会把上下文窗口撑爆
-
-不过它会自动进行压缩
-
-但天哪
-
-这真的太浪费了
-
-就那种你懂的
-
-我有过绘画达到50万个token的情况
-
-你懂我的意思吧
-
-这对我来说简直像外星科技
-
-所以我真正不喜欢的是他的实现方式
-
-为什么不早点做compact
-
-你为什么不
-
-你知道吧
-
-我觉得这太疯狂了
-
-使用a ask智能体时
-
-你拥有更大的控制权
-
-因为你可以按照自己的需要来切分任务
-
-这意味着每次你运行一个时
-
-比如说我们就说我们有一个一个需要五个
-
-或者说三个垂直切片的任务对吧
-
-你像这样有三个垂直切片
-
-然后你就可以大致的嗯可能会稍微进入dumb zone
-
-也许第二个切片要小一点
-
-也许这些切片有点撞到你
-
-只是你对他的掌控力更强了
-
-这种做法比用巨大的上下文窗口来做要便宜得多
-
-因为你知道吗
-
-你只是随着你不断推进
-
-token的成本会不断叠加
-
-至于上下文窗口
-
-所以有了
-
-当你已经深入到这个上下文窗口时
-
-比如到了400000token的时候
-
-去发起一次模型请求
-
-当你已经做到这一步时
-
-这比从头开始做要贵得多
-
-没错关键在于你能获得大量控制权
-
-以及在聪明区里完成更多工作
-
-这就是为什么我觉得我能得到更好的输出结果的原因
-
-使用AFK智能体
-
-或者用一个rail fp
-
-比如说或者直接与其一次性在一个大绘画里完成
-
-不如把它拆成多个绘画
-
-我有没有试过用KIMI或其他中国模型来写代码
-
-另外miss rod模型
-
-cloud和codex都有价格标签吗
-
-我没有不对
-
-我是说我没有
-
-我目前主要没有把精力放在成本上
-
-我的意思是
-
-反正我受限于我的订阅额度
-
-所以我只付得起这些
-
-你知道每月200英镑是200英镑还是180英镑来着啊
-
-那么我认为这很便宜
-
-你知道以我的情况来看
-
-并且我们来看看
-
-所以我其实还没有真正尝试过使用开源权重模型
-
-我听到的所有反馈都是他们还不够给力
-
-而且他们做不到那些事啊
-
-那个opus和GPT4.5能做到
-
-我在开发中使用AI时最推荐的MCP服务器有哪些
-
-你如何确保AI能为某个特定的库或框架获取到相关的文档
-
-我其实不怎么用MCP服务器嗯
-
-我唯一可能会用的mc p server是那种能把我的连接起来的嗯
-
-从前端代码到智能体的应用
-
-你可以直接使用agent browser ci
-
-或者用playwright ci
-
-直接进入正题吧
-
-是啊我其实不太这么做
-
-我也觉得我们要看看研究阶段呃
-
-也许我可以调出我的七个阶段的示意图
-
-好的嗯
-
-完整版在哪里嗯
-
-我这边有
-
-你们可能已经看过了
-
-我的七个阶段的AI编码
-
-其中一个阶段是研究
-
-现在我们来研究一下这个场景
-
-假设你已经有了想法
-
-那就来让我好好盘问你的想法吧
-
-嗯你先从它生成一份产品需求文档
-
-再把它拆成若干ISSU
-
-你可以把它实现在一个rail floop里
-
-或者A你知道的
-
-用一个AFK智能体的循环来跑
-
-然后再去审查结果
-
-这就是这里的基础
-
-当你已经把一个想法彻底盘问清楚后
-
-接下来你可能需要研究一下外部库
-
-现在我的建议是你专门留出一段时间
-
-其实花不了多久去做一些调研
-
-嗯把需要的文档整理好
-
-然后把它存到某个资源里啊
-
-这样智能体就能引用它了
-
-我不这么认为
-
-因为一旦你有了那个东西
-
-它就成了实现层面
-
-每次都能拿来用的东西了
-
-我
-
-别以为你需要为此搞个MCP服务器之类的
-
-他会永久的在你的上下文窗口中添加一些类似上下文指针的东西
-
-用来去抓取所需的信息
-
-比如文档
-
-我觉得这对我来说不太说得通
-
-把你需要做的研究缓存到本地的markdown文件里更有意义
-
-这正好能在那一刻给你所需的一切
-
-所以我觉得在研究这件事上更有意识的去做
-
-比单纯依赖mc p server更好
-
-我猜你说的那个mc p server是context7吧
-
-我听说很多人都在用它
-
-说实话额
-
-我其实没怎么用过它
-
-当你在学习真正困难的东西时
-
-你自己是怎么学的呢
-
-嗯我用的是什么方法
-
-我最近一直在折腾一个用于此的skill
-
-如果我们进入skills这里
-
-这是一个正在进行的teach
-
-现在来看这个skill
-
-因为你知道我当老师已经很久了
-
-我以前是声乐老师
-
-在我成为开发者之前是声乐老师
-
-所以我做了大约7年的开发
-
-在那之前当了6年老师
-
-我干这行已经4年了
-
-如果这么算的话
-
-呃我当老师大概有10年了
-
-我对教学还算有点心得
-
-而教学其实就是呃在学习
-
-但感觉就像别人在替你系鞋带一样
-
-那么这个skill的作用是什么
-
-我还在摸索
-
-这有点像把我的教学方法编码成一个Steal
-
-你可以用它来让智能提交你一些东西
-
-你需要三样东西
-
-你需要知识
-
-这门课是通过讲解来教授的
-
-你需要掌握一些技能
-
-而本课程正是通过这些来教授的互动练习
-
-然后你需要的是智慧
-
-而这里的智慧在于互动
-
-现实世界吗
-
-你知道就是真实世界里的东西
-
-而这恰恰是最难教的部分
-
-这门课的真正智慧其实来自discord上
-
-大家和你的交流
-
-而且你也会参与到讨论里
-
-看到这也是我如此兴奋的原因
-
-这个DISCORT里有5000人
-
-因为即将分享的智慧会非常庞大
-
-你需要一个使命
-
-需要一个你之所以对学习这个主题感兴趣的理由
-
-你知道我其实可以去了解一下果蝇的历史之类的
-
-但我没有一个把他和我真正在意的事情联系起来的目标
-
-那我为什么要去学他呢
-
-最终用户应该始终感到自己受到的挑战恰到好处对吧
-
-所以他们处在最近发展区里
-
-这是我特别着迷的一个概念
-
-我在考虑如何设计我的课程时
-
-需要确保你们既感到有挑战
-
-又不会不堪重负
-
-这确实很难
-
-尤其是当有不同水平的人加入这门课程时
-
-那么所有这些呃都编码在我目前正在开发的这个skill里
-
-嗯你可以拿过来试试
-
-看看他对你是否适用
-
-嗯我很想听听你用这个skill的感受如何
-
-我现在正用它来教我了解嗯
-
-这是一个我略知一二
-
-但不算精通的领域
-
-就是LINUX和用户权限
-
-因为这是我正在用sand castle时遇到的问题
-
-我的目标是解决那个领域的很多问题
-
-因为我对他还不够了解
-
-所以我正在用这个skill来教我了解那件事
-
-我很想听听你用下来的感受
-
-嗯我们现在讲到哪儿了啊
-
-我还觉得代码质量还重要吗
-
-对吧
-
-我们正进入这次答疑会的最后一点时间
-
-我们就以这个问题收尾吧
-
-因为我特别喜欢这个问题
-
-而且
-
-呃这个问题其实正是我做这门课的原因
-
-我还认为代码质量重要吗
-
-还是说既然最终也是由AI来消费这些代码
-
-不如就让AI生成的代码就那样放着更好
-
-对人类来说更容易修改的代码库
-
-对AI也会更容易修改
-
-听起来挺有道理的吧
-
-因为这些事情人类觉得困难的事情
-
-智能体也会觉得困难
-
-已经有研究证实了这一点
-
-如果你的应用里有全局状态
-
-全局变量
-
-然后你将拥有一个作为人类最糟糕的时刻要监控这一点
-
-因为依赖关系很难看清
-
-而智能体也会难以察觉
-
-因为没有指向那里的上下文指针
-
-他们看不到全局状态
-
-也看不到正在交互的那些东西
-
-所以如果你的东西耦合的太紧
-
-智能体就很难处理
-
-所以我觉得
-
-由人类参与
-
-人类多少还能应付一下啊
-
-因为你可以一遍又一遍地撞墙
-
-直到达到那个临界点
-
-所以代码质量会很差
-
-你去哪了
-
-好吧
-
-我想我现在明白了
-
-你会形成关于那件事的记忆
-
-而人类的记忆比智能体的记忆要好得多
-
-智能体
-
-因为他们基本上他们本质上就像第一天到岗的外包人员
-
-每一次他们都是你代码库的新手
-
-每一次你把他们丢进去
-
-代码质量极其重要
-
-这对他们来说很重要
-
-因为如果他们的代码库难以修改
-
-AI就不会产出好代码
-
-所以为了最大限度的发挥AI的作用
-
-你需要一个高质量的代码库
-
-这意味着高质量的代码库比以往任何时候都更重要
-
-因为如果你能让智能提跑起来
-
-在高质量的代码库里进行a ask并产出高质量代码
-
-那你就做到了
-
-你知道吧
-
-你已经解锁了AI的宝藏
-
-如果你有一个高质量的代码库
-
-它就能为你所用
-
-所以我觉得这比以往任何时候都更重要
-
-好的非常感谢
-
-这真的很有趣
-
-一个关于课程的实操问题呃
-
-你能讲解并演示一下研究吗
-
-european port呃
-
-有个视频可以帮你搞定这个
-
-那么祝你好运
-
-祝你们课程顺利
-
-我会整天都在discord上待着
-
-这一周都在有任何问题的话
-
-随时都可以找我
-
-嗯非常感谢大家的参与
-
-没错就是代码库垃圾进垃圾出
-
-完全正确嗯
-
-聊天里有335个人在线
-
-这段录像会一直留在YOUTUBE上
-
-所以大家之后可以嗯
-
-随时观看
-
-永久享受
-
-你对课程内容拥有终身访问权限
-
-好的DISCORT键
-
-干得漂亮
-
-### 059-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p59 What Is An AFK Agent - 什么是AFK代理.ai-zh
-我想让你稍微回想一下
-
-回到我们关于多阶段计划的这种心智模型
-
-这些计划的核心理念
-
-当然基本上就是把大块的工作拆解开来
-
-这样我们就能把它们放进代理的智能区
-
-最佳工作区间内
-
-这样我们就能得到最好的输出
-
-这意味着我们需要给他三个输入作为提示
-
-我们需要给他提示目标位置和P2D
-
-这份计划也就是这段旅程
-
-然后是一条执行某一阶段的指令
-
-那就执行第一阶段
-
-第二阶段
-
-第三阶段等等
-
-在我看来
-
-这种设置有一个问题
-
-也就是这个执行第N阶段的命令
-
-这意味着需要有人坐在代理旁边
-
-告诉他要执行哪个阶段
-
-这感觉真的很浪费
-
-换句话说
-
-这个完整的流程都需要人在回路
-
-或者按大家熟知的说法叫HITL
-
-而事实是这完全可以自动化
-
-与其总是执行DN阶段
-
-你懂的
-
-我们看到的那个就是一个for2循环
-
-这里面的所有东西都已经自动化了
-
-你可能已经感觉到这一点
-
-当你正在监控这个代理时
-
-在你做计划的时候
-
-你可能会有这样的感觉
-
-我其实根本不需要在这对吧
-
-你知道我们已经把目的地完全规划好了
-
-我们已经为LLM规划好了整个旅程
-
-我们只需在最后等着把出来的东西都收走就行
-
-执行第N阶段这件事
-
-当然可以直接用一个for循环来完成
-
-这确实是我个人一直以来的感受
-
-在我一直使用cloud code的过程中
-
-一直到2025年12月
-
-但在2025年12月
-
-这似乎是一个某种意义上的拐点
-
-当模型的能力变得足够强时
-
-你真的可以直接把他们派出去去
-
-完成这些定义的非常明确的任务
-
-而且他们做的非常好
-
-JEFFREYHUNTLEY关于ralf way g的文章
-
-真的让我开始重视这件事
-
-他在这里谈到用一个简单的for循环
-
-只是反复运行同一个提示而已
-
-已完成各个任务批次
-
-起初我采用的是RALF的做法
-
-但我发现自己开始稍微远离他
-
-偏离了他最初的愿景
-
-因此我喜欢把这种模式称为ASK代理
-
-让你可以离开键盘时也能运行的代理
-
-这让你能够把大量工作交给代理来完成
-
-并让他们生成一大堆代码
-
-当你正忙着规划未来的工作时
-
-或者对其他代理的运行进行QA
-
-这对我来说真的是个改变游戏规则的东西
-
-就我能完成的工作量而言
-
-在这一部分
-
-我们将要着手进行
-
-我们一直在构建的这些多阶段计划
-
-而且我们将让他们以AFK的方式运行
-
-到目前为止
-
-我们学到的一切
-
-从反馈循环到规划
-
-从规格说明到追踪子弹
-
-一切最终都回到这一点
-
-祝你好运
-
-希望你们都很兴奋
-
-我们下期再见
-
-### 068-[中配] AI Coding for Real Engineers - Matt Pocock训练营第二期 p68 Hooking Up Agents To Your Backlog - Demo - 将代理连接到待办列表-演示.ai-zh
-既然我们的仓库已经准备好接收github issue
-
-现在就来把流程真正接起来
-
-正如你之前看到的
-
-我们在这里是通过github coo i来做的
-
-这是LLM与GITHUB交互的一种
-
-非常非常优雅的方式
-
-他们似乎非常熟悉GITHUBCLI
-
-几乎很少出错
-
-所以看着他们用它真的非常酷
-
-我们在这里的send castle
-
-提示扩展设置里调用它们
-
-所以我们有这个感叹号
-
-它会在sandbox里运行这段代码
-
-它会抓取所有处于打开状态的issue
-
-这一点很关键
-
-而且并以JSN形式返回它们
-
-包含is序的编号和标题
-
-issue的正文以及已添加的所有评论
-
-这马上就会很重要
-
-然后我们运行一遍之前看过的任务选择提示
-
-最后就在提交之后
-
-我们再回到这个issue
-
-这里写着
-
-如果任务已经完成
-
-你就可以关闭原始的GITHUB问题
-
-但如果任务还没完成
-
-就在上面留个评论
-
-说明已经做了什么
-
-这非常有用
-
-因为detail issue的评论
-
-就会变成一份持续更新的记录
-
-关于在该github issue上完成的所有工作的总结
-
-如果你想把一个多阶段的计划放进github issue
-
-完全可以
-
-他会每次都留下一条评论
-
-而这些评论随后都会被拉去
-
-通过把这里的评论拉进来
-
-把他们重新纳入我们a f k agent的上下文
-
-不过第一步是进入EMV
-
-然后我们需要提供一个github personal access token
-
-这个personal access token
-
-将允许沙箱内的智能体调用GITHUB
-
-通过CLI去触发并把事情推送到我们的GITHUB仓库
-
-我们还可以看到
-
-比如在docker file里就有GITHUBCAI这里已经装好了
-
-所以这个设置很有用
-
-但我们只需要找到这个personal access token就行了
-
-把它传入环境变量
-
-这样sand castle就能使用了
-
-我在下方给你提供了一些说明
-
-告诉你如何获取它个人访问令牌
-
-以及你需要保存它的文件
-
-一旦你把这些都设置好
-
-当然就会有一个像这样的仓库
-
-这是一个cohort004项目的分支
-
-我要在里面新增一个issue
-
-这个issue是个小问题
-
-几乎每个用过它的人都遇到过
-
-这个团队一直为此感到恼火
-
-问题是当你在开发服务器里切换用户时
-
-然后你会注意到
-
-如果你选择一个用户
-
-比如SARAHCHEN
-
-这东西就是不关
-
-它压根就不会自动合上
-
-所以我们要把这个终于修好了
-
-而且我们打算先加一个小问题
-
-然后运行a f k agent来修复这个bug
-
-我想让你进入你的fork
-
-打开issues
-
-然后点击这里的新建issue
-
-然后我们会在这里加一些文字
-
-我是这样来写这个issue的开发
-
-UI面板中的用户选择器
-
-在选择用户后不会自动关闭
-
-这真让人烦
-
-修一下
-
-我要在我的fork仓库里创建这个issue
-
-然后在仓库里我会运行pp m sand castle
-
-Docker build image
-
-由于我们在一个新的仓库里工作
-
-他只需要先构建镜像
-
-再次以这个新名称运行
-
-不过应该不会花太久
-
-之前这是scasel cohort004项目
-
-但现在需要一个新的镜像
-
-用于cohort004项目分支之后
-
-我们就可以运行np x t s x scastle main ts
-
-来启动我们的a f k agent
-
-当我们运行这个时
-
-他应该会抓取到我们在问题跟踪器里的那个bug
-
-他应该修复这个bug
-
-然后关闭这个issue
-
-非常非常酷
-
-祝你好运
-
-我们下期再见
